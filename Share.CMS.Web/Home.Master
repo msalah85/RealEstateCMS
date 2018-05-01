@@ -1,0 +1,514 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="Share.CMS.Web.HomeMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - مسكن الامارات - مصر</title>
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/font-awesome.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/bootstrap.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/bootstrap-rtl.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/style.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/ar_style.css" media="screen,projection" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link href="/Content/sys/assets/css/jquery.gritter.min.css" rel="stylesheet" />
+
+    <script src="/Scripts/site/DataService.js"></script>
+    <script src="/Scripts/site/jquery.xml2json.js"></script>
+    <script src="/Scripts/site/lz-string.min.js"></script>
+    <script src="/Content/sys/assets/js/jquery.gritter.min.js"></script>
+    <script src="/Scripts/site/Common.js"></script>
+    <script src="/Scripts/site/service.utilities.js"></script>
+
+    <asp:ContentPlaceHolder runat="server" ID="head" />
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <script src="/Scripts/site/controllers/homeMasterController.min.js"></script>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <div class="bg">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo right">
+                    <img src="/content/masknvr1/img/logo.png" class="responsive-img"></a>
+                <ul class="left">
+                    <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    </li>
+                    <%--<li><a href="/en">Eng</a></li>
+                    <li><a href="#modal1"><i class="material-icons right">input</i>دخول </a></li>--%>
+                    <li class="ListProperty"><a href="#add-new-login-first"><i class="material-icons right">home</i> أضف عقارك</a></li>
+                    <li class="download"><a href="/download-mobileapp"><i class="material-icons icon-app right">phone_android</i> تحميل تطبيق مسكن</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-push-3" style="margin-top: 290px;">
+                    <a href="javascript:;" data-type="2" class="waves-effect waves-light btn login search-prop-type orange">تأجير</a>
+                    <a href="javascript:;" data-type="1" class="waves-effect waves-light btn login search-prop-type search-deactive-optn">شراء</a>
+                    <div class="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg txt-srch" placeholder="بحث عقار للإيجار" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg btn-srch" type="button">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <a href="#login">
+                        <img class="circle" src="/content/masknvr1/img/user-default.png"></a>
+                    <a href="#login"><span class="name">مرحباً</span></a>
+                </div>
+            </li>
+            <li><a href="#journey">رحلتى مع مسكن</a></li>
+            <li><a href="/default#news-list">أحدث الأخبار</a></li>
+            <li><a class="waves-effect" href="/search?k=uae">عقارات الامارات</a></li>
+            <li><a class="waves-effect" href="/search?k=egypt">عقارات مصر</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="waves-effect" href="download-mobileapp"><i class="material-icons left">phone_android</i> تحميل التطبيق </a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+        </ul>
+    </div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <div class="footer-color">
+        <div class="row" style="padding: 0">
+            <div class="col l4 s4">
+                <div class="green" style="height: 20px"></div>
+            </div>
+            <div class="col l4 s4">
+                <div class="blue" style="height: 20px"></div>
+
+            </div>
+            <div class="col l4 s4">
+                <div class="orange" style="height: 20px"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12 " style="float: right">
+                    <p class=" text-lighten-4">&copy; <%: DateTime.Now.Year %> جميع الحقوق محفوظة لموقع مسكن.كوم.</p>
+                    <p class=" text-lighten-4">فيسبوك  ·تويتر · انستجرام  ·</p>
+                    <p class=" text-lighten-4">استخدام آمن</p>
+                    <ul class="pay">
+                        <li>
+                            <a href="#visa">
+                                <img src="/content/masknvr1/img/visa.png" class="img-responsive" alt="visa" title="visa"></a>
+                        </li>
+                        <li>
+                            <a href="#Master">
+                                <img src="/content/masknvr1/img/masterCard.png" class="img-responsive" alt="Master" title="Master">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#American">
+                                <img src="/content/masknvr1/img/American-Express.png" class="img-responsive" alt="American Express" title="American Express">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#paypal">
+                                <img src="/content/masknvr1/img/paypal.png" class="img-responsive" alt="paypal" title="paypal">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <ul class="ar-footer">
+                        <li><a class=" text-lighten-3" href="#about">عن الشركة </a></li>
+                        <li><a class=" text-lighten-3" href="#carerrs">وظائف </a></li>
+                        <li><a class=" text-lighten-3" href="#policy">شروط الخدمة </a></li>
+                        <li><a class=" text-lighten-3" href="#privacy">سياسة الخصوصية  </a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <ul>
+                        <li><a class=" text-lighten-3" href="/download-mobileapp">تطبيق مسكن</a></li>
+                        <li><a class=" text-lighten-3" href="/default#news-list">أحدث الأخبار</a></li>
+                        <li><a class=" text-lighten-3" href="/search?k=uae">عقارات الامارات</a></li>
+                        <li><a class=" text-lighten-3" href="/search?k=egypt">عقارات مصر</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>masterController.Init();</script>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row" style="margin-bottom: 0">
+                <div class="loginRight col m6 s12">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login">الحل الأمثل للحصول على عقـــارك  موقع مسكن سهولة ومتعه</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="loginLeft col m6 s12">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="responsive-img shapeLogin" src="/content/masknvr1/img/loginShape.png">
+                            <h5>تسجيل دخول سريع</h5>
+                        </div>
+                        <div class="col m12 s12">
+                            <div class="text-center center-block">
+                                <a href="#"><i class="fa fa-google-plus-square fa-3x social" style="color: #dd4c3b"></i></a>
+                                <a href="#"><i class="fa fa-twitter-square fa-3x social" style="color: #00aced"></i></a>
+                                <a href="#"><i class="fa fa-facebook-square fa-3x social" style="color: #3b5997"></i></a>
+                            </div>
+                        </div>
+                        <div class="col m12 s12">
+                            <h5 style="margin-top: 30px;">أو  </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <a href="#modal2" class="waves-effect waves-light btn login" style="width: 50%">دخول  بالايميل</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <a href="#modal3" class="waves-effect waves-light btn signup" style="width: 50%">حساب جديد </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="back" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+
+                        <div class="col m12 s12">
+                            <img class="responsive-img shapeLogin" src="/content/masknvr1/img/loginShape.png">
+                            <h5>Let the joy begin </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="الاسم ">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="الايميل ">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="كلمة المرور ">
+                                    </div>
+                                    <div class="forget" style="margin-bottom: 20px">
+                                        <a href="#modal4" style="color: #ff8d0d">استعادة كلمة المرور </a>
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#" class="waves-effect waves-light btn login">دخول </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backLogin" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="responsive-img shapeLogin" src="/content/masknvr1/img/loginShape.png">
+                            <h5>Let the joy begin </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="الاسم ">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="الايميل ">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="كلمة المرور ">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#" class="waves-effect waves-light btn login">تسجيل  </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backLogin2" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <h5>استعادة كلمة المرور  </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="  الايميل   ">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#modal5" class="waves-effect waves-light btn login">استعادة   </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backRestore" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <h5>Restore Password </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" أدخل الكود   ">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#modal6" class="waves-effect waves-light btn login">التاي  </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backRestore2" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <h5>Restore Password </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" كلمة السر الجديدة    ">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" تأكيد كلمة السر ">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#" class="waves-effect waves-light btn login">استعادة    </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/content/masknvr1/js/materialize.min.js"></script>
+
+    <script>
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true // Choose whether you can drag to open on touch screens
+        }
+        );
+    </script>
+    <script>
+        $(document).ready(function () {
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+        });
+
+    </script>
+    <script>
+        $("#back").click(function () {
+            $('#modal2').modal('close');
+            $('#modal1').modal('open');
+
+        })
+    </script>
+    <script>
+        $("#backLogin").click(function () {
+            $('#modal3').modal('close');
+            $('#modal2').modal('open');
+
+        })
+    </script>
+    <script>
+        $("#backLogin2").click(function () {
+            $('#modal4').modal('close');
+            $('#modal2').modal('open');
+
+        })
+    </script>
+    <script>
+        $("#backRestore").click(function () {
+            $('#modal5').modal('close');
+            $('#modal2').modal('open');
+
+        })
+    </script>
+    <script>
+        $("#backRestore2").click(function () {
+            $('#modal6').modal('close');
+            $('#modal2').modal('open');
+
+        })
+
+        // search option selection (property type)
+        $('.search-prop-type').click(function (e) {
+            e.preventDefault();
+            var $srchText = $('.txt-srch'),
+                _this = $(this),
+                _type = _this.attr('data-type');
+
+            $('.search-prop-type').removeClass('orange').addClass('search-deactive-optn'); // reset all;            
+            _this.addClass('orange').removeClass('search-deactive-optn');
+
+
+            $srchText.attr('placeholder', 'بحث عقار ' + (_type === '2' ? 'للإيجار' : 'للشراء'));
+        });
+
+
+        // start search
+        $('.btn-srch').click(function (e) {
+            e.preventDefault();
+
+            var txtSearch = $('.txt-srch').val();
+            if (txtSearch !== '') {
+                window.location.href = 'Search?t=' + $('a.search-prop-type.orange').attr('data-type') + '&k=' + txtSearch;
+            }
+        });
+        $('.txt-srch').keypress(function (e) {
+            var cde = e.which || e.keyCode;
+            if (cde == 13) {
+                e.preventDefault();
+                $('.btn-srch').trigger('click');
+            }
+        });
+    </script>
+</body>
+</html>

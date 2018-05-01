@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/Core/AccountManager.js")
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/font-awesome.css" media="screen,projection" />
+    <script type="text/javascript" src="/content/masknvr1/js/materialize.min.js"></script>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/font-awesome.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/bootstrap.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/content/masknvr1/css/style.css" media="screen,projection" />
+
+    @RenderSection("scripts", required: false)
+
+    @using Business.Globalization
+    @using Business.SessionImpl
+    @using Business.Enums
+    @using Business.Services.Models
+
+    @{
+        bool isRight = false;
+        GlobalizationManager _GlobalizationManager = SessionHandler.Instance.Get<GlobalizationManager>(SessionEnum.Language_Info);
+        if (_GlobalizationManager.IsUserLang_RTL)
+        {
+            isRight = true;
+        }
+        var user = SessionHandler.Instance.Get<UserViewModel>(SessionEnum.User_Info);
+    }
+
+    @{
+        if (isRight)
+        {
+            <text>
+                @Styles.Render("~/content/masknvr1/css/bootstrap-rtl.css")
+                @Styles.Render("~/content/masknvr1/css/ar_style.css")
+            </text>
+        }
+        else
+        {
+
+        }
+    }
+
+    @{
+        var controller = ViewContext.RouteData.Values["Controller"].ToString();
+        var action = ViewContext.RouteData.Values["Action"].ToString();
+        //var area = ViewContext.RouteData.Values["area"].ToString();
+    }
+
+
+</head>
+
+<body>
+
+    @{
+        if (action != "index" && controller != "Home")
+        { 
+        <div class="header">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo right">
+                        <img alt="مسكن" src="/content/masknvr1/img/logo.png" class="responsive-img">
+                    </a>
+                    <ul class="left">
+                        <li>
+                            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                        </li>
+                        <li><a href="#" onclick="ChangeLanguage()">@_GlobalizationManager.GetTranslatedText("عربي", Enum_LangModule.MaskanWeb, "32")</a></li>
+                        <li><a href="#modal1"><i class="material-icons right">input</i>@_GlobalizationManager.GetTranslatedText("LogIn", Enum_LangModule.MaskanWeb, "1")</a></li>
+                        <li class="ListProperty"><a href="#"><i class="material-icons right">home</i>@_GlobalizationManager.GetTranslatedText("Your Properities", Enum_LangModule.MaskanWeb, "47")</a></li>
+                        <li class="download">
+                            <a href="/download-mobileapp" style="border-right: 1px solid #b6b6b6;">
+                                <i class="material-icons icon-app right">phone_android</i>@_GlobalizationManager.GetTranslatedText("Download App", Enum_LangModule.MaskanWeb, "10")
+                            </a>
+                        </li>
+                        <li>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="@_GlobalizationManager.GetTranslatedText("Search", Enum_LangModule.MaskanWeb, "48")">
+                                </div>
+                            </form>
+                        </li>
+                        <li>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-button ' href='#' data-activates='dropdown1' style="border-left: 1px solid #b6b6b6;"><i class="material-icons left">arrow_drop_down</i> @_GlobalizationManager.GetTranslatedText("Buying", Enum_LangModule.MaskanWeb, "49")</a>
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="#" style="text-align: right; color: #b5b5b5">@_GlobalizationManager.GetTranslatedText("Buying", Enum_LangModule.MaskanWeb, "49") </a></li>
+                                <li><a href="#" style="text-align: right; color: #b5b5b5">@_GlobalizationManager.GetTranslatedText("Rent", Enum_LangModule.MaskanWeb, "4") </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+            <ul id="slide-out" class="side-nav">
+                <li>
+                    <div class="userView">
+                        <a href="#login">
+                            <img class="circle" src="/content/masknvr1/img/user-default.png">
+                        </a>
+                        <a href="#login"><span class="name">@_GlobalizationManager.GetTranslatedText("Welcome", Enum_LangModule.MaskanWeb, "6")</span></a>
+                    </div>
+                </li>
+                <li><a href="#journey">@_GlobalizationManager.GetTranslatedText("My Adventure with Maskan", Enum_LangModule.MaskanWeb, "7")</a></li>
+                <li><a href="/default#news-list">@_GlobalizationManager.GetTranslatedText("Latest News", Enum_LangModule.MaskanWeb, "12")</a></li>
+                <li><a class="waves-effect" href="/search?k=uae">@_GlobalizationManager.GetTranslatedText("3Qarat El Imarat", Enum_LangModule.MaskanWeb, "8")</a></li>
+                <li><a class="waves-effect" href="/search?k=egypt">@_GlobalizationManager.GetTranslatedText("3Qarat Masr", Enum_LangModule.MaskanWeb, "9")</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="waves-effect" href="download-mobileapp"><i class="material-icons left">phone_android</i>@_GlobalizationManager.GetTranslatedText("Download App", Enum_LangModule.MaskanWeb, "10")</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+            </ul>
+
+    </div>
+        }
+    }
+
+    
+    @{
+        if (action == "Index" && controller == "Home")
+        { 
+         <div class="bg">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo right">
+                    <img src="/content/masknvr1/img/logo.png" class="responsive-img">
+                </a>
+                <ul class="left">
+                    @{
+                        if (user != null)
+                        {
+                            if (user.Username != null)
+                            {
+                                <li>
+                                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                                </li>
+                            }
+                        }
+                    }
+
+                    <li><a href="#" onclick="ChangeLanguage()">@_GlobalizationManager.GetTranslatedText("عربي", Enum_LangModule.MaskanWeb, "32")</a></li>
+                    <li><a href="#" id="btnLoginShowModal"><i class="material-icons right">input</i>@_GlobalizationManager.GetTranslatedText("Login", Enum_LangModule.MaskanWeb, "1")</a></li>
+                    <li class="ListProperty"><a href="@Url.Action("Index", "Property", new { area = "Core" })"><i class="material-icons right">home</i>@_GlobalizationManager.GetTranslatedText("Add your properity", Enum_LangModule.MaskanWeb, "2")</a></li>
+                    <li class="download"><a href="@Url.Action("Index", "DownloadMobApp")"><i class="material-icons icon-app right">phone_android</i>@_GlobalizationManager.GetTranslatedText("Download Mobile App", Enum_LangModule.MaskanWeb, "3")</a></li>
+                </ul>
+            </div>
+        </nav>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-3" style="margin-top: 290px;">
+                            <a href="javascript:;" data-type="2" class="waves-effect waves-light btn login search-prop-type orange">@_GlobalizationManager.GetTranslatedText("Rent", Enum_LangModule.MaskanWeb, "4")</a>
+                            <a href="javascript:;" data-type="1" class="waves-effect waves-light btn login search-prop-type search-deactive-optn">@_GlobalizationManager.GetTranslatedText("selling", Enum_LangModule.MaskanWeb, "5")</a>
+                            <div class="custom-search-input">
+                                <div class="input-group col-md-12">
+                                    <input type="text" class="form-control input-lg txt-srch" placeholder="@_GlobalizationManager.GetTranslatedText("Search for rent", Enum_LangModule.MaskanWeb, "11")" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info btn-lg btn-srch" type="button">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="userView">
+                            <a href="#login">
+                                <img class="circle" src="/content/masknvr1/img/user-default.png">
+                            </a>
+                            <a href="#login"><span class="name">@_GlobalizationManager.GetTranslatedText("Welcome", Enum_LangModule.MaskanWeb, "6")</span></a>
+                        </div>
+                    </li>
+                    <li><a href="#journey">@_GlobalizationManager.GetTranslatedText("My Adventure with Maskan", Enum_LangModule.MaskanWeb, "7")</a></li>
+                    <li><a href="/default#news-list">@_GlobalizationManager.GetTranslatedText("Latest News", Enum_LangModule.MaskanWeb, "12")</a></li>
+                    <li><a class="waves-effect" href="/search?k=uae">@_GlobalizationManager.GetTranslatedText("3Qarat El Imarat", Enum_LangModule.MaskanWeb, "8")</a></li>
+                    <li><a class="waves-effect" href="/search?k=egypt">@_GlobalizationManager.GetTranslatedText("3Qarat Masr", Enum_LangModule.MaskanWeb, "9")</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a class="waves-effect" href="download-mobileapp"><i class="material-icons left">phone_android</i>@_GlobalizationManager.GetTranslatedText("Download App", Enum_LangModule.MaskanWeb, "10")</a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                </ul>
+
+    </div>
+        }
+        
+    }
+
+
+    
+
+    @RenderBody()
+
+    <div class="footer-color">
+        <div class="row" style="padding: 0">
+            <div class="col l4 s4">
+                <div class="green" style="height: 20px"></div>
+            </div>
+            <div class="col l4 s4">
+                <div class="blue" style="height: 20px"></div>
+            </div>
+            <div class="col l4 s4">
+                <div class="orange" style="height: 20px"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12 " style="float: right">
+                    <p class="text-lighten-4">
+                        &copy;@DateTime.Now.Year.ToString()  @_GlobalizationManager.GetTranslatedText("All Rights Recived For Maskan.com", Enum_LangModule.MaskanWeb, "13")
+
+                    </p>
+                    <p class=" text-lighten-4"></p>
+                    <p class=" text-lighten-4">@_GlobalizationManager.GetTranslatedText("Safe Usage", Enum_LangModule.MaskanWeb, "14")</p>
+                    <ul class="pay">
+                        <li>
+                            <a href="#visa">
+                                <img src="/content/masknvr1/img/visa.png" class="img-responsive" alt="visa" title="visa">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Master">
+                                <img src="/content/masknvr1/img/masterCard.png" class="img-responsive" alt="Master" title="Master">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#American">
+                                <img src="/content/masknvr1/img/American-Express.png" class="img-responsive" alt="American Express" title="American Express">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#paypal">
+                                <img src="/content/masknvr1/img/paypal.png" class="img-responsive" alt="paypal" title="paypal">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <ul class="ar-footer">
+                        <li><a class=" text-lighten-3" href="#about">@_GlobalizationManager.GetTranslatedText("About Maskan", Enum_LangModule.MaskanWeb, "15")</a></li>
+                        <li><a class=" text-lighten-3" href="#carerrs">@_GlobalizationManager.GetTranslatedText("Jobs", Enum_LangModule.MaskanWeb, "16") </a></li>
+                        <li><a class=" text-lighten-3" href="#policy">@_GlobalizationManager.GetTranslatedText("Service terms", Enum_LangModule.MaskanWeb, "17")</a></li>
+                        <li><a class=" text-lighten-3" href="#privacy">@_GlobalizationManager.GetTranslatedText("Policy usage", Enum_LangModule.MaskanWeb, "18")</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <ul>
+                        <li><a class=" text-lighten-3" href="/download-mobileapp">@_GlobalizationManager.GetTranslatedText("Maskan Mobile App", Enum_LangModule.MaskanWeb, "19")</a></li>
+                        <li><a class=" text-lighten-3" href="/default#news-list">@_GlobalizationManager.GetTranslatedText("Latest News", Enum_LangModule.MaskanWeb, "12")</a></li>
+                        <li><a class=" text-lighten-3" href="/search?k=uae"> @_GlobalizationManager.GetTranslatedText("3Qarat El Imarat", Enum_LangModule.MaskanWeb, "8")</a></li>
+                        <li><a class=" text-lighten-3" href="/search?k=egypt">@_GlobalizationManager.GetTranslatedText("3Qarat Masr", Enum_LangModule.MaskanWeb, "9")</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row" style="margin-bottom: 0">
+                <div class="loginRight col m6 s12">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login">@_GlobalizationManager.GetTranslatedText("Best soultion to find a shulter", Enum_LangModule.MaskanWeb, "20")</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="loginLeft col m6 s12">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="responsive-img shapeLogin" src="/content/masknvr1/img/loginShape.png">
+                            <h5>@_GlobalizationManager.GetTranslatedText("Faster LogIn", Enum_LangModule.MaskanWeb, "21")</h5>
+                        </div>
+                        <div class="col m12 s12">
+                            <div class="text-center center-block">
+                                <a href="#"><i class="fa fa-google-plus-square fa-3x social" style="color: #dd4c3b"></i></a>
+                                <a href="#"><i class="fa fa-twitter-square fa-3x social" style="color: #00aced"></i></a>
+                                <a href="#"><i class="fa fa-facebook-square fa-3x social" style="color: #3b5997"></i></a>
+                            </div>
+                        </div>
+                        <div class="col m12 s12">
+                            <h5 style="margin-top: 30px;">@_GlobalizationManager.GetTranslatedText("OR", Enum_LangModule.MaskanWeb, "22")</h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <a href="#" id="btnUsingEmail" class="waves-effect waves-light btn login" style="width: 50%">@_GlobalizationManager.GetTranslatedText("LogIn with Email", Enum_LangModule.MaskanWeb, "23")</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <a href="#" id="btnNewAccount" class="waves-effect waves-light btn signup" style="width: 50%">@_GlobalizationManager.GetTranslatedText("New Account", Enum_LangModule.MaskanWeb, "24") </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="back" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="responsive-img shapeLogin" src="/content/masknvr1/img/loginShape.png">
+                            <h5>Let the joy begin </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" id="txtLogInEmail" class="form-control" placeholder="@_GlobalizationManager.GetTranslatedText("Email", Enum_LangModule.MaskanWeb, "28")">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" id="txtLogInPassword" class="form-control" placeholder="@_GlobalizationManager.GetTranslatedText("Password", Enum_LangModule.MaskanWeb, "29")">
+                                    </div>
+                                    <div class="forget" style="margin-bottom: 20px">
+                                        <a href="#" id="btnRecoverPass" style="color: #ff8d0d">@_GlobalizationManager.GetTranslatedText("Recover your password", Enum_LangModule.MaskanWeb, "30")</a>
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#" onclick="_AccountManager.LogInWithMail()" class="waves-effect waves-light btn login">@_GlobalizationManager.GetTranslatedText("LogIn", Enum_LangModule.MaskanWeb, "1")</a>
+                                    </div>
+                                </form>
+                            </div>
+                            <label id="lblLogInMsg" style="margin:0 auto;margin-top:20px;"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backLogin" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="responsive-img shapeLogin" src="/content/masknvr1/img/loginShape.png">
+                            <h5>Let the joy begin </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" id="txtNewAccName" class="form-control" placeholder="@_GlobalizationManager.GetTranslatedText("Name", Enum_LangModule.MaskanWeb, "27")">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="txtNewAccEMail" class="form-control" placeholder="@_GlobalizationManager.GetTranslatedText("Email", Enum_LangModule.MaskanWeb, "28")">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" id="txtNewAccPassword" class="form-control" placeholder="@_GlobalizationManager.GetTranslatedText("Password", Enum_LangModule.MaskanWeb, "29")">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#" onclick="_AccountManager.CreateNewAccount()" class="waves-effect waves-light btn login">@_GlobalizationManager.GetTranslatedText("Register", Enum_LangModule.MaskanWeb, "31")</a>
+                                    </div>
+                                </form>
+                            </div>
+                            <label style="margin:0 auto" id="lblCreateNewAccMsg"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backLogin2" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <h5>استعادة كلمة المرور  </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" الايميل ">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#modal5" class="waves-effect waves-light btn login">استعادة   </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backRestore" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login"> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <h5>Restore Password </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" أدخل الكود ">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#modal6" class="waves-effect waves-light btn login">التاي  </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <i class="material-icons" id="backRestore2" style="font-size: 30px; cursor: pointer; color: #ff8d0d; margin-left: 21px; margin-bottom: 20px;">keyboard_return </i>
+            <div class="row">
+                <div class="loginRight col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <img class="logo responsive-img" src="/content/masknvr1/img/logo.png">
+                        </div>
+                        <div class="col m12 s12">
+                            <img src="/content/masknvr1/img/loginImg.png" class="imgLogin responsive-img">
+                        </div>
+                        <div class="col m12 s12">
+                            <p class="login"> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" loginLeft col m6 s6">
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <h5>Restore Password </h5>
+                        </div>
+                        <div class="row">
+                            <div class="col m12 s12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" كلمة السر الجديدة ">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder=" تأكيد كلمة السر ">
+                                    </div>
+                                    <div class="col m12 s12">
+                                        <a href="#" class="waves-effect waves-light btn login">استعادة    </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+
+        function ChangeLanguage() {
+            debugger;
+            $.ajax({
+                url: '../Home/SetActiveLanguage',
+                dataType: "json",
+                type: "GET",
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+
+                },
+                error: function (xhr) {
+                    var uri = "@Url.Action("Index", controller)";
+                    window.location.href = uri;
+                }
+            });
+        }
+
+        function SuccessLogIn() {
+            var uri = "@Url.Action("Index", "Home")";
+            window.location.href = uri;
+        }
+
+
+        var _AccountManager;
+        $(function () {
+            _AccountManager = new AccountManager();
+            $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 300
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true // Choose whether you can drag to open on touch screens
+            });
+
+            $("#btnLoginShowModal").on("click", function () {
+                $("#modal1").show();
+            });
+
+            $("#btnUsingEmail").on("click", function () {
+                $("#modal2").show();
+            });
+
+            $("#btnNewAccount").on("click", function () {
+                $("#modal3").show();
+            });
+
+            $("#btnRecoverPass").on("click", function () {
+                $("#modal4").show();
+            });
+
+
+        });
+    </script>
+
+</body>
+</html>

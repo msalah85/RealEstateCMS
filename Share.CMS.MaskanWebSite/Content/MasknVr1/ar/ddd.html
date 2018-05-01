@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Maskn </title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/animate.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/style.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/ar_style.css" media="screen,projection"/>
+    <style>
+
+        .dropdown.dropdown-lg .dropdown-menu {
+            margin-top: -1px;
+            padding: 6px 20px;
+        }
+        .input-group-btn .btn-group {
+            display: flex !important;
+        }
+        .btn-group .btn {
+            border-radius: 0;
+            margin-left: -1px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: transparent;
+
+            box-shadow: none;
+        }
+        .btn-group .btn:last-child {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .btn-group .form-horizontal .btn[type="submit"] {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        .form-horizontal .form-group {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .form-group .form-control:last-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .adv-search {
+                width: 500px;
+                margin: 0 auto;
+            }
+            .dropdown.dropdown-lg {
+                position: static !important;
+            }
+            .dropdown.dropdown-lg .dropdown-menu {
+                min-width: 279px;            }
+        }
+        .collection .collection-item{
+            padding: 10px;
+        }
+        .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{
+            background-color: transparent;
+        }
+
+        .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus{
+            background-color: transparent;
+
+        }
+    </style>
+</head>
+
+<body style="background-color: #fbfbfb">
+<div class="header">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right"><img src="../img/logo.png" class="responsive-img"></a>
+                <ul class="left">
+                    <li>  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    </li>
+                    <li><a href="#"> ع  | EN </a></li>
+                    <li><a href="#modal1"><i class="material-icons right">input</i>دخول </a></li>
+                    <li class="ListProperty"><a href="#"><i class="material-icons right">home</i> ممتلكاتك الخاصة</a></li>
+                    <li class="download">
+                        <a href="#" style="border-right: 1px solid #b6b6b6;">
+                            <i class="material-icons right">phone_android</i> تحميل التطبيق  </a>
+                    </li>
+                    <li>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="بحث ..  ">
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-button ' href='#' data-activates='dropdown1' style="border-left: 1px solid #b6b6b6;"><i class="material-icons left">arrow_drop_down</i> شراء   </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content' >
+                            <li><a href="#"style="text-align: right;color: #b5b5b5"> شراء </a></li>
+                            <li><a href="#"style="text-align: right;color: #b5b5b5">تأجير </a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul id="slide-out" class="side-nav">
+        <li><div class="userView">
+            <a href="#"><img class="circle" src="../img/user.png"></a>
+            <a href="#"><span class="name"> غسان هاني </span></a>
+        </div></li>
+        <li><a href=""> رحلتي </a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#"><i class="material-icons left">favorite_border</i> المفضلة  </a> </li>
+        <li><div class="divider"></div></li>
+        <li><a href="#"> خدمات الشركاء   </a> </li>
+        <li><div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons left">arrow_drop_down</i>أهم المدن </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li> <div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons left">arrow_drop_down</i>أفضل بناة </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li><div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons left">arrow_drop_down</i>أفضل الوسطاء  </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../eng/brokers.html">وسيط 1 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 2 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 3 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 4 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 5 </a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li><div class="divider"></div></li>
+
+        <li><div class="divider"></div></li>
+
+        <li><a class="waves-effect" href="#">Makaaniq </a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="#"><i class="material-icons left">phone_android</i> تحميل التطبيق </a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="#"> ممتلكاتك الخاصة </a></li>
+    </ul>
+</div>
+
+<div class="buildings text-center" style="margin-top: 50px;">
+    <div class="buildingsDetails">
+        <div class="container">
+            <div class="filter">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="input-group adv-search" >
+                            <div class="input-group-btn">
+                                <div class="btn-group" role="group">
+                                    <div class="dropdown dropdown-lg">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> الميزانية  <span class="caret"></span></button>
+                                        <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                            <form class="form-horizontal" role="form">
+                                                <div class="row">
+                                                    <div class="col m6 l6">
+                                                        <div class="form-group">
+                                                            <label> $ </label>
+                                                            <input class="form-control" type="text"  id="contain"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col m6 l6">
+                                                        <div class="form-group">
+                                                            <label> $ </label>
+                                                            <input class="form-control" type="text"  id="contain2"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="collection">
+                                                    <a href="#" class="collection-item">100</a>
+                                                    <a href="#" class="collection-item ">200</a>
+                                                    <a href="#" class="collection-item">300</a>
+                                                    <a href="#" class="collection-item">400</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="input-group adv-search bedroom" >
+                            <div class="input-group-btn">
+                                <div class="btn-group" role="group">
+                                    <div class="dropdown dropdown-lg">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> غرف النوم  <span class="caret"></span></button>
+                                        <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                            <form class="form-horizontal" role="form">
+                                                <div class="row">
+                                                    <div class="col m3">
+                                                        <label>
+                                                            <input type="checkbox" />
+                                                            1 BHK
+                                                        </label>
+                                                    </div>
+                                                    <div class="col m3">
+                                                        <label>
+                                                            <input type="checkbox" />
+                                                            2 BHK
+                                                        </label>
+                                                    </div>
+                                                    <div class="col m3">
+                                                        <label>
+                                                            <input type="checkbox" />
+                                                            3 BHK
+                                                        </label>
+                                                    </div>
+                                                    <div class="col m3">
+                                                        <label>
+                                                            <input type="checkbox" />
+                                                            4 BHK
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="input-group adv-search more" >
+                            <div class="input-group-btn">
+                                <div class="btn-group" role="group">
+                                    <div class="dropdown dropdown-lg">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> المزيد  <span class="caret"></span></button>
+                                        <div class="dropdown-menu dropdown-menu-right" role="menu" style="min-width: 750px" >
+                                            <form class="form-horizontal" role="form">
+                                                <div class="formLeft" style="width: 70%;float: right">
+                                                    <div class="row">
+                                                        <div class="col m12 12">
+                                                            <h6> دورات المياه </h6>
+                                                            <div class="row">
+                                                                <div class="col m2">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        1 +
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m2">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        2 +
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m2">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        3 +
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m2">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        4 +
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col l12 m12">
+                                                            <div class="row">
+                                                                <div class="col m6 l6">
+                                                                    <h6> مساحة العقار </h6>
+                                                                    <select class="browser-default">
+                                                                        <option value="" disabled selected>اختر </option>
+                                                                        <option value="1">Option 1</option>
+                                                                        <option value="2">Option 2</option>
+                                                                        <option value="3">Option 3</option>
+                                                                    </select>
+                                                                </div> <div class="col m6 l6">
+                                                                <h6> جديد / معاد بيعه </h6>
+                                                                <select class="browser-default">
+                                                                    <option value="" disabled selected>اختر </option>
+                                                                    <option value="1"> الكل </option>
+                                                                    <option value="2">جديد </option>
+                                                                    <option value="3">معاد بيعه </option>
+                                                                </select>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col m12 l12">
+                                                            <h6> Under Construction (Possession In)</h6>
+                                                            <div class="row">
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        1 Year
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        2 Years
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        3 Years
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        4 Years
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col m12 l12">
+                                                            <h6> Under Construction (Possession In)</h6>
+                                                            <div class="row">
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        1 Year
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        2 Years
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        3 Years
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col m3">
+                                                                    <label class="bathroom">
+                                                                        <input type="checkbox" />
+                                                                        4 Years
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="formRight" style="width: 30%;float: left">
+                                                    <div class="row">
+                                                        <div class="col m12 l12">
+                                                            <div class="checkBoxProperty"style="float: right">
+                                                                <h6> property type </h6>
+                                                                <p style="margin-top: 20px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice1" />
+                                                                    <label for="choice1">تجريبي </label>
+                                                                </p>
+                                                                <p style="margin-top: 5px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice2" />
+                                                                    <label for="choice2">تجريبي </label>
+                                                                </p>
+                                                                <p style="margin-top: 5px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice3" />
+                                                                    <label for="choice3">تجريبي </label>
+                                                                </p> <p style="margin-top: 5px;" >
+                                                                <input type="checkbox" class="filled-in" id="choice4" />
+                                                                <label for="choice4">تجريبي </label>
+                                                            </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col m12 l12">
+                                                            <div class="checkBoxProperty" style="float: right">
+                                                                <h6> property type </h6>
+                                                                <p style="margin-top: 20px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice5" />
+                                                                    <label for="choice5">تجريبي </label>
+                                                                </p>
+                                                                <p style="margin-top: 5px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice6" />
+                                                                    <label for="choice6">تجريبي </label>
+                                                                </p>
+                                                                <p style="margin-top: 5px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice7" />
+                                                                    <label for="choice7">تجريبي </label>
+                                                                </p> <p style="margin-top: 5px;" >
+                                                                <input type="checkbox" class="filled-in" id="choice8" />
+                                                                <label for="choice8">تجريبي </label>
+                                                            </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col m12 l12">
+                                                            <div class="checkBoxProperty" style="float: right">
+                                                                <h6> property type </h6>
+                                                                <p style="margin-top: 20px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice9" />
+                                                                    <label for="choice9"> </label>
+                                                                </p>
+                                                                <p style="margin-top: 5px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice10" />
+                                                                    <label for="choice10">تجريبي </label>
+                                                                </p>
+                                                                <p style="margin-top: 5px;" >
+                                                                    <input type="checkbox" class="filled-in" id="choice11" />
+                                                                    <label for="choice11">تجريبي </label>
+                                                                </p> <p style="margin-top: 5px;" >
+                                                                <input type="checkbox" class="filled-in" id="choice12" />
+                                                                <label for="choice12">تجريبي </label>
+                                                            </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 l8">
+                    <div class="buildingLeftPart">
+                        <div class="buildingCard">
+                            <div class="row">
+                                <div class="col m4 l4">
+                                    <div class='buldImg'>
+                                        <!-- image -->
+                                        <img src='../img/building.png' class="img-responsive" alt="" title="build" />
+                                        <!-- description div -->
+                                        <div class='description'>
+                                            <!-- description content -->
+                                            <h6 class='description_content'>نص تجريبي </h6>
+                                            <fieldset class="rating">
+                                                <input type="radio" id="star25" name="rating" value="5" />
+                                                <label class = "full" for="star25" title="5 start"></label>
+
+                                                <input type="radio" id="star24" name="rating" value="4" />
+                                                <label class = "full" for="star24" title="4 stars "></label>
+                                                <input type="radio" id="star23" name="rating" value="3" />
+                                                <label class = "full" for="star23" title="3 stars"></label>
+
+                                                <input type="radio" id="star22" name="rating" value="2" />
+                                                <label class = "full" for="star22" title="2 stars"></label>
+
+                                                <input type="radio" id="star21" name="rating" value="1" />
+                                                <label class = "full" for="star21" title="bad  1 star"></label>
+
+                                            </fieldset>
+                                            <a href="#" class="fav active"><i class="material-icons ">favorite_border</i> </a>
+                                            <!-- end description content -->
+                                        </div>
+                                        <!-- end description div -->
+                                    </div>
+                                </div>
+                                <div class="col m8 l8">
+                                    <div class="BuildRight">
+                                        <h5> نص تجريبي نص تجريبي نص تجريبي </h5>
+                                        <h5> هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</h5>
+                                        <div class="row">
+                                            <ul class="first ">
+                                                <li>
+                                                    <h5> 3.3 DR </h5>
+                                                </li>
+                                                <li>
+                                                    <h5>56513 </h5>
+                                                </li>
+                                                <li>
+                                                    <h5> جاهز للنقل   </h5>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="row">
+                                            <ul class="second ">
+                                                <li>
+                                                    <h6> 39,194  قدم مربع  </h6>
+                                                </li>
+                                                <li>
+                                                    <h6> المساحة نص تجريبي </h6>
+                                                </li>
+                                                <li>
+                                                    <h6> حالة البناء   </h6>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buildingsBtn">
+                                            <div class="row">
+                                                <div class="col m4  ">
+                                                    <a class="waves-effect waves-light btn" style="background-color: #818287">المزيد </a>
+                                                </div>
+                                                <div class="col m4 ">
+                                                    <a class="waves-effect waves-light orange btn">طلب الآن </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buildingCard">
+                            <div class="row">
+                                <div class="col m4 l4">
+                                    <div class='buldImg'>
+                                        <!-- image -->
+                                        <img src='../img/building.png' class="img-responsive" alt="" title="build" />
+                                        <!-- description div -->
+                                        <div class='description'>
+                                            <!-- description content -->
+                                            <h6 class='description_content'> نص تجريبي ( تجريبي ) </h6>
+                                            <fieldset class="rating">
+                                                <input type="radio" id="star19" name="rating" value="5" />
+                                                <label class = "full" for="star19" title="5 stars "></label>
+                                                <input type="radio" id="star18" name="rating" value="4" />
+                                                <label class = "full" for="star18" title="4 stars "></label>
+                                                <input type="radio" id="star17" name="rating" value="3" />
+                                                <label class = "full" for="star17" title="3 stars "></label>
+                                                <input type="radio" id="star16" name="rating" value="2" />
+                                                <label class = "full" for="star16" title=" 2 stars"></label>
+                                                <input type="radio" id="star15" name="rating" value="1" />
+                                                <label class = "full" for="star15" title="Bad 1 star"></label>
+                                            </fieldset>
+                                            <a href="#" class="fav "><i class="material-icons ">favorite_border</i> </a>
+                                            <!-- end description content -->
+                                        </div>
+                                        <!-- end description div -->
+                                    </div>
+                                </div>
+                                <div class="col m8 l8">
+                                    <div class="BuildRight">
+                                        <h5> نص تجريبي نص تجريبي نص تجريبي </h5>
+                                        <h5> هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</h5>
+                                        <div class="row">
+                                            <ul class="first ">
+                                                <li>
+                                                    <h5> 3.3 DR </h5>
+                                                </li>
+                                                <li>
+                                                    <h5>56513 </h5>
+                                                </li>
+                                                <li>
+                                                    <h5> جاهز للنقل   </h5>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="row">
+                                            <ul class="second ">
+                                                <li>
+                                                    <h6> 39,194  قدم مربع  </h6>
+                                                </li>
+                                                <li>
+                                                    <h6> المساحة نص تجريبي </h6>
+                                                </li>
+                                                <li>
+                                                    <h6> حالة البناء   </h6>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="buildingsBtn">
+                                            <div class="row">
+                                                <div class="col m4  ">
+                                                    <a class="waves-effect waves-light btn" style="background-color: #818287">المزيد </a>
+                                                </div>
+                                                <div class="col m4 ">
+                                                    <a class="waves-effect waves-light orange btn">طلب الآن </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        <div class="buildingCard">
+                        <div class="row">
+                            <div class="col m4 l4">
+                                <div class='buldImg'>
+                                    <!-- image -->
+                                    <img src='../img/building.png' class="img-responsive" alt="" title="build" />
+                                    <!-- description div -->
+                                    <div class='description'>
+                                        <!-- description content -->
+                                        <h6 class='description_content'>Square Yards  (AGENT)</h6>
+                                        <fieldset class="rating">
+                                            <input type="radio" id="star13" name="rating" value="5" />
+                                            <label class = "full" for="star13" title="5 stars"></label>
+
+                                            <input type="radio" id="star12half" name="rating" value="4 and a half" />
+                                            <label class="half" for="star12half" title="4.5 stars"></label>
+
+                                            <input type="radio" id="star12" name="rating" value="4" />
+                                            <label class = "full" for="star12" title="4 stars"></label>
+
+                                            <input type="radio" id="star11half" name="rating" value="3 and a half" />
+                                            <label class="half" for="star11half" title=" 3.5 stars"></label>
+
+                                            <input type="radio" id="star10" name="rating" value="3" />
+                                            <label class = "full" for="star10" title="3 stars"></label>
+
+                                            <input type="radio" id="star9half" name="rating" value="2 and a half" />
+                                            <label class="half" for="star9half" title="2.5 stars"></label>
+
+                                            <input type="radio" id="star9" name="rating" value="2" />
+                                            <label class = "full" for="star9" title=" 2 stars"></label>
+
+                                            <input type="radio" id="star8half" name="rating" value="1 and a half" />
+                                            <label class="half" for="star8half" title=" 1.5 stars"></label>
+
+                                            <input type="radio" id="star8" name="rating" value="1" />
+                                            <label class = "full" for="star8" title="Bad  1 star"></label>
+
+                                            <input type="radio" id="star7half" name="rating" value="half" />
+                                            <label class="half" for="star7half" title="So Bad 0.5 stars"></label>
+                                        </fieldset>
+                                        <a href="#" class="fav"><i class="material-icons ">favorite_border</i> </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col m8 l8">
+                                <div class="BuildRight">
+                                    <h5> 4 BHK Villa in Prestige Mayberry</h5>
+                                    <h5> Whitefield Hope Farm Junction, Bangalore</h5>
+                                    <div class="row">
+                                        <ul class="first ">
+                                            <li>
+                                                <h5> 3.3 DR </h5>
+                                            </li>
+                                            <li>
+                                                <h5>56513 </h5>
+                                            </li>
+                                            <li>
+                                                <h5> Ready to move  </h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <ul class="second ">
+                                            <li>
+                                                <h6> 39,194 / sq ft </h6>
+                                            </li>
+                                            <li>
+                                                <h6>Area in sq ft </h6>
+                                            </li>
+                                            <li>
+                                                <h6> Construction Status  </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="buildingsBtn">
+                                        <div class="row">
+                                            <div class="col m4  ">
+                                                <a class="waves-effect waves-light btn" style="background-color: #818287">Read More</a>
+                                            </div>
+                                            <div class="col m4 ">
+                                                <a class="waves-effect waves-light orange btn">Connect Now</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <div class="buildingCard">
+                        <div class="row">
+                            <div class="col m4 l4">
+                                <div class='buldImg'>
+                                    <!-- image -->
+                                    <img src='../img/building.png' class="img-responsive" alt="" title="build" />
+                                    <!-- description div -->
+                                    <div class='description'>
+                                        <!-- description content -->
+                                        <h6 class='description_content'>Square Yards  (AGENT)</h6>
+                                        <fieldset class="rating">
+                                            <input type="radio" id="star6" name="rating" value="5" />
+                                            <label class = "full" for="star6" title="5 start"></label>
+
+                                            <input type="radio" id="star5half" name="rating" value="4 and a half" />
+                                            <label class="half" for="star5half" title="4.5 stars "></label>
+
+                                            <input type="radio" id="star5" name="rating" value="4" />
+                                            <label class = "full" for="star5" title="4 stars "></label>
+
+                                            <input type="radio" id="star4half" name="rating" value="3 and a half" />
+                                            <label class="half" for="star4half" title=" 3.5 stars "></label>
+
+                                            <input type="radio" id="star4" name="rating" value="3" />
+                                            <label class = "full" for="star4" title="3 stars"></label>
+
+                                            <input type="radio" id="star3half" name="rating" value="2 and a half" />
+                                            <label class="half" for="star3half" title=" 2.5 stars"></label>
+
+                                            <input type="radio" id="star3" name="rating" value="2" />
+                                            <label class = "full" for="star3" title="2 stars"></label>
+
+                                            <input type="radio" id="star2half" name="rating" value="1 and a half" />
+                                            <label class="half" for="star2half" title="1.5 stars"></label>
+
+                                            <input type="radio" id="star2" name="rating" value="1" />
+                                            <label class = "full" for="star2" title="bad  1 star"></label>
+
+                                            <input type="radio" id="star1half" name="rating" value="half" />
+                                            <label class="half" for="star1half" title="So Bad  0.5 stars"></label>
+                                        </fieldset>
+                                        <a href="#" class="fav"><i class="material-icons ">favorite_border</i> </a>
+                                        <!-- end description content -->
+                                    </div>
+                                    <!-- end description div -->
+                                </div>
+                            </div>
+                            <div class="col m8 l8">
+                                <div class="BuildRight">
+                                    <h5> 4 BHK Villa in Prestige Mayberry</h5>
+                                    <h5> Whitefield Hope Farm Junction, Bangalore</h5>
+                                    <div class="row">
+                                        <ul class="first ">
+                                            <li>
+                                                <h5> 3.3 DR </h5>
+                                            </li>
+                                            <li>
+                                                <h5>56513 </h5>
+                                            </li>
+                                            <li>
+                                                <h5> Ready to move  </h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <ul class="second ">
+                                            <li>
+                                                <h6> 39,194 / sq ft </h6>
+                                            </li>
+                                            <li>
+                                                <h6>Area in sq ft </h6>
+                                            </li>
+                                            <li>
+                                                <h6> Construction Status  </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="buildingsBtn">
+                                        <div class="row">
+                                            <div class="col m4  ">
+                                                <a class="waves-effect waves-light btn" style="background-color: #818287">Read More</a>
+                                            </div>
+                                            <div class="col m4 ">
+                                                <a class="waves-effect waves-light orange btn">Connect Now</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <div class="buildingCard">
+                        <div class="row">
+                            <div class="col m4 l4">
+                                <div class='buldImg'>
+                                    <!-- image -->
+                                    <img src='../img/building.png' class="img-responsive" alt="" title="build" />
+                                    <!-- description div -->
+                                    <div class='description'>
+                                        <!-- description content -->
+                                        <h6 class='description_content'>Square Yards  (AGENT)</h6>
+                                        <fieldset class="rating">
+                                            <input type="radio" id="star30" name="rating" value="5" />
+                                            <label class = "full" for="star30" title="5 start"></label>
+
+                                            <input type="radio" id="star29half" name="rating" value="4 and a half" />
+                                            <label class="half" for="star29half" title="4.5 stars "></label>
+
+                                            <input type="radio" id="star29" name="rating" value="4" />
+                                            <label class = "full" for="star29" title="4 stars "></label>
+
+                                            <input type="radio" id="star28half" name="rating" value="3 and a half" />
+                                            <label class="half" for="star28half" title=" 3.5 stars "></label>
+
+                                            <input type="radio" id="star28" name="rating" value="3" />
+                                            <label class = "full" for="star28" title="3 stars"></label>
+
+                                            <input type="radio" id="star27half" name="rating" value="2 and a half" />
+                                            <label class="half" for="star27half" title=" 2.5 stars"></label>
+
+                                            <input type="radio" id="star27" name="rating" value="2" />
+                                            <label class = "full" for="star27" title="2 stars"></label>
+
+                                            <input type="radio" id="star26half" name="rating" value="1 and a half" />
+                                            <label class="half" for="star26half" title="1.5 stars"></label>
+
+                                            <input type="radio" id="star26"name="rating" value="1" />
+                                            <label class = "full" for="star26" title="bad  1 star"></label>
+
+                                            <input type="radio" id="star25half" name="rating" value="half" />
+                                            <label class="half" for="star25half" title="So Bad  0.5 stars"></label>
+                                        </fieldset>
+                                        <a href="#" class="fav active"><i class="material-icons ">favorite_border</i> </a>
+                                        <!-- end description content -->
+                                    </div>
+                                    <!-- end description div -->
+                                </div>
+                            </div>
+                            <div class="col m8 l8">
+                                <div class="BuildRight">
+                                    <h5> 4 BHK Villa in Prestige Mayberry</h5>
+                                    <h5> Whitefield Hope Farm Junction, Bangalore</h5>
+                                    <div class="row">
+                                        <ul class="first ">
+                                            <li>
+                                                <h5> 3.3 DR </h5>
+                                            </li>
+                                            <li>
+                                                <h5>56513 </h5>
+                                            </li>
+                                            <li>
+                                                <h5> Ready to move  </h5>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <ul class="second ">
+                                            <li>
+                                                <h6> 39,194 / sq ft </h6>
+                                            </li>
+                                            <li>
+                                                <h6>Area in sq ft </h6>
+                                            </li>
+                                            <li>
+                                                <h6> Construction Status  </h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="buildingsBtn">
+                                        <div class="row">
+                                            <div class="col m4  ">
+                                                <a class="waves-effect waves-light btn" style="background-color: #818287">Read More</a>
+                                            </div>
+                                            <div class="col m4 ">
+                                                <a class="waves-effect waves-light orange btn">Connect Now</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="buildingLeftPart">
+                        <div class="card wow slideInLeft" data-wow-duration="2s" data-wow-delay=".9s">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col l12 m12 s12">
+                                        <div class="media ">
+                                            <div class="media-body" style="float: right;width: 70%;text-align: right">
+                                                <h5 > نص تجريبي </h5>
+                                                <p style="width:70%;">نص تجريبي </p>
+                                                <a href="#" style="color:#ff8d0d;"><h6 style="font-size: 17px;text-align: right">مشاركة المتطلبات  </h6> </a>
+
+                                            </div>
+                                            <a href="#" style="float: left!important;text-align:left;padding-top: 20px;" >
+                                                <img class="media-object img-responsive" alt="img" src="../img/pyr.png" >
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card wow slideInLeft" data-wow-duration="2s" data-wow-delay=".9s">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col l12 m12 s12">
+                                        <div class="media ">
+                                            <div class="media-body" style="float: right;width: 70%;text-align: right">
+                                                <h5 > نص تجريبي </h5>
+                                                <p style="width:70%;">نص تجريبي </p>
+                                                <a href="#" style="color:#ff8d0d;"><h6 style="font-size: 17px;text-align: right">مشاركة المتطلبات  </h6> </a>
+
+                                            </div>
+                                            <a href="#" style="float: left!important;text-align:left;padding-top: 20px;" >
+                                                <img class="media-object img-responsive" alt="img" src="../img/pyr.png" >
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer-color">
+    <div class="row" style="padding: 0">
+        <div class="col l4 s4">
+            <div class="green" style="height: 20px"></div>
+        </div>
+        <div class="col l4 s4">
+            <div class="blue" style="height: 20px"></div>
+
+        </div>
+        <div class="col l4 s4">
+            <div class="orange" style="height: 20px"></div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12 " style="float: right">
+                <p class=" text-lighten-4">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة </p>
+                <p class=" text-lighten-4">فيسبوك  ·تويتر · فيسبوك  ·</p>
+                <p class=" text-lighten-4"> اتصال آمن </p>
+                <ul class="pay">
+                    <li>
+                        <a href="#"><img src="../img/visa.png" class="img-responsive" alt="visa" title="visa"></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/masterCard.png" class="img-responsive" alt="Master" title="Master">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> <img src="../img/American-Express.png" class="img-responsive" alt="visa" title="visa"> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <img src="../img/paypal.png" class="img-responsive" alt="visa" title="visa"> </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col l3 s12">
+                <ul class="ar-footer">
+                    <li><a class=" text-lighten-3" href="#">Upgrade to PRO </a></li>
+                    <li><a class=" text-lighten-3" href="#">Customer suit </a></li>
+                    <li><a class=" text-lighten-3" href="#">API</a></li>
+                    <li><a class=" text-lighten-3" href="#">Tags</a></li>
+                    <li><a class=" text-lighten-3" href="#">Help & Support </a></li>
+                </ul>
+            </div>
+            <div class="col l3  s12">
+                <ul>
+                    <li><a class=" text-lighten-3" href="#">عن الشركة </a></li>
+                    <li><a class=" text-lighten-3" href="#">مدونة</a></li>
+                    <li><a class=" text-lighten-3" href="#">وظائف </a></li>
+                    <li><a class=" text-lighten-3" href="#">شروط الخدمة </a></li>
+                    <li><a class=" text-lighten-3" href="#">سياسة الخصوصية  </a></li>
+                    <li><a class=" text-lighten-3" href="#">Return and Refund Policy </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <div class="row" style="margin-bottom: 0">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class="loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="col m12 s12">
+                        <div class="text-center center-block">
+                            <a href="#"><i class="fa fa-google-plus-square fa-3x social" style="color: #dd4c3b"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-3x social" style="color: #00aced"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-3x social" style="color: #3b5997"></i></a>
+                        </div>
+                    </div>
+                    <div class="col m12 s12">
+                        <h5 style="margin-top: 30px;"> أو  </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <a href="#modal2" class="waves-effect waves-light btn login" style="width: 50%">دخول </a>
+                        </div>
+                    </div><div class="row">
+                    <div class="col m12 s12">
+                        <a href="#modal3" class="waves-effect waves-light btn signup"style="width: 50%">تسجيل </a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="back" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row" >
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="الاسم ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="الايميل ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="كلمة المرور ">
+                                </div>
+                                <div class="forget" style="margin-bottom: 20px">
+                                    <a href="#modal4" style="color: #ff8d0d">  استعادة كلمة المرور </a>
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login">دخول </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backLogin" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="الاسم ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="الايميل ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="كلمة المرور ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login">تسجيل  </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backLogin2"style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> استعادة كلمة المرور  </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="  الايميل   ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#modal5" class="waves-effect waves-light btn login">استعادة   </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backRestore" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> Restore Password </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" أدخل الكود   ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#modal6" class="waves-effect waves-light btn login"> التاي  </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backRestore2" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> Restore Password </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" كلمة السر الجديدة    ">
+                                </div> <div class="form-group">
+                                <input type="text" class="form-control" placeholder= " تأكيد كلمة السر " >
+                            </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login"> استعادة    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script>
+
+    $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 300
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true // Choose whether you can drag to open on touch screens
+            }
+    );
+</script>
+<script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+
+</script>
+<script>
+    $("#back").click(function () {
+        $('#modal2').modal('close');
+        $('#modal1').modal('open');
+
+    })
+</script>
+<script>
+    $("#backLogin").click(function () {
+        $('#modal3').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+<script>
+    $("#backLogin2").click(function () {
+        $('#modal4').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+<script>
+    $("#backRestore").click(function () {
+        $('#modal5').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+
+<script>
+    $("#backRestore2").click(function () {
+        $('#modal6').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+
+
+</body>
+
+
+</html>

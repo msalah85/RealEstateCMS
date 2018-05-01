@@ -1,0 +1,103 @@
+﻿
+@using Business.Globalization
+@using Business.SessionImpl
+@using Business.Enums
+@using Business.Services.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+}
+
+@{
+    bool isRight = false;
+    GlobalizationManager _GlobalizationManager = SessionHandler.Instance.Get<GlobalizationManager>(SessionEnum.Language_Info);
+    if (_GlobalizationManager.IsUserLang_RTL)
+    {
+        isRight = true;
+    }
+}
+
+<div class="AddPropert " style="background-color: #fff; padding:20px;margin: 40px">
+    <div class="container">
+        <div class="title " style="text-align: left;margin-bottom: 50px;">
+            <h5>@_GlobalizationManager.GetTranslatedText("Add your properity", Enum_LangModule.MaskanWeb, "2")</h5>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m12">
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" placeholder="Description" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Balconies ">
+                            </div>
+                        </div>
+                        <div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Status">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Total Floors ">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="New / Resale ">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="No. Open Sides ">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Road facing main entry ">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="facing ">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Price Negotiable  ">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Overlooking ">
+                            </div>
+                        </div><div class="col m6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Ownership Type ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="box">
+                            <input type="file" name="file-5[]" id="file-5" class="inputfile inputfile-4" data-multiple-caption="{count} files selected" multiple />
+                            <label for="file-5"><i class="fa fa-plus" style="display: block;font-size: 30px;"></i> <span>@_GlobalizationManager.GetTranslatedText("Image", Enum_LangModule.MaskanWeb, "50")</span></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m6 ">
+                            <button class="waves-effect waves-light orange btn text-center" style="border-radius: 10px;margin-bottom: 20px"> @_GlobalizationManager.GetTranslatedText("Save", Enum_LangModule.MaskanWeb, "51")  </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+

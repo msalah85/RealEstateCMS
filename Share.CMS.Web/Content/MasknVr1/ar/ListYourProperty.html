@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>مسكن  </title>
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/style.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/ar_style.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <style>
+        .form-control:focus{
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body style="background: #fbfbfb">
+<div class="header">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right"><img src="../img/logo.png" class="responsive-img"></a>
+                <ul class="left">
+                    <li>  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    </li>
+                    <li><a href="#"> ع  | EN </a></li>
+                    <li><a href="#modal1"><i class="material-icons right">input</i>دخول </a></li>
+                    <li class="ListProperty"><a href="#"><i class="material-icons right">home</i> ممتلكاتك الخاصة</a></li>
+                    <li class="download">
+                        <a href="#" style="border-right: 1px solid #b6b6b6;">
+                            <i class="material-icons right">phone_android</i> تحميل التطبيق  </a>
+                    </li>
+                    <li>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="بحث ..  ">
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-button ' href='#' data-activates='dropdown1' style="border-left: 1px solid #b6b6b6;"><i class="material-icons left">arrow_drop_down</i> شراء   </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content' >
+                            <li><a href="#"style="text-align: right;color: #b5b5b5"> شراء </a></li>
+                            <li><a href="#"style="text-align: right;color: #b5b5b5">تأجير </a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul id="slide-out" class="side-nav">
+        <li><div class="userView">
+            <a href="#"><img class="circle" src="../img/user.png"></a>
+            <a href="#"><span class="name"> غسان هاني </span></a>
+        </div></li>
+        <li><a href=""> رحلتي </a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#"><i class="material-icons left">favorite_border</i> المفضلة  </a> </li>
+        <li><div class="divider"></div></li>
+        <li><a href="#"> خدمات الشركاء   </a> </li>
+        <li><div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons left">arrow_drop_down</i>أهم المدن </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                        <li><a href="../eng/city.html">الشيخ زايد </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li> <div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons left">arrow_drop_down</i>أفضل بناة </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                        <li><a href="../eng/Buildings.html">بناة 1  </a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li><div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons left">arrow_drop_down</i>أفضل الوسطاء  </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../eng/brokers.html">وسيط 1 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 2 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 3 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 4 </a></li>
+                        <li><a href="../eng/brokers.html">وسيط 5 </a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li><div class="divider"></div></li>
+
+        <li><div class="divider"></div></li>
+
+        <li><a class="waves-effect" href="#">Makaaniq </a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="#"><i class="material-icons left">phone_android</i> تحميل التطبيق </a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="#"> ممتلكاتك الخاصة </a></li>
+    </ul>
+</div>
+<div class="urProperty">
+    <div class="container">
+        <div class="First row">
+            <div class="col l6 m6 leftFirst ">
+                <h5 style="color: #000">ما هو النص التجريبي ?  </h5>
+                <p> هذا نص تجريبي يمكن أن يستبدل في نفس المساحة </p>
+            </div>
+            <div class="col l6 m6 text-center">
+                <img src="../img/urProperty.png" class="img-responsive">
+            </div>
+        </div>
+        <div class="row"style="margin-top: 100px;">
+            <div class="col l3 m3 s12">
+                <img src="../img/propertHouse.png" class="img-responsive img1" >
+                <img src="../img/startup.png" class="img-responsive img2" >
+            </div>
+            <div class="col l6 m5">
+               <div class="midContent">
+                   <h5> نص تجريبي </h5>
+                   <p> هذا نص تجريبي يمكن أن يستبدل في نفس المساحة  </p>
+                   <h5> نص تجريبي </h5>
+                   <p> هذا نص تجريبي يمكن أن يستبدل في نفس المساحة  </p>
+
+                   <h5> نص تجريبي </h5>
+                   <p> هذا نص تجريبي يمكن أن يستبدل في نفس المساحة  </p>
+                   <h5> نص تجريبي </h5>
+                   <p> هذا نص تجريبي يمكن أن يستبدل في نفس المساحة  </p>
+
+                   <div class="btnn">
+                       <a class="waves-effect waves-light orange btn" style="margin-bottom: 20px;">هذا نص تجريبي  </a>
+
+                   </div>
+
+               </div>
+            </div>
+            <div class="col l3 m3 ">
+                <img src="../img/parents.png" class="img-responsive img3" >
+                <img src="../img/time.png" class="img-responsive img4" >
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-lg-6 text-center" >
+                <div class="video-container responsive-video">
+                    <iframe width="853" height="300" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"  frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6" >
+                <h5> نص تجريبي  </h5>
+                <h6> نص تجريبي نص تجريبي نص تجريبي نص تجريبي </h6>
+                <a class="waves-effect waves-light orange btn" style="margin-top: 20px;border-radius: 10px;">هذا نص تجريبي  </a>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-lg-6 text-center" style="margin-top: 20px;" >
+                <img src="../img/mobilee.png" class="img-responsive" style="height: 490px;">
+            </div>
+
+            <div class="col-lg-6 " style="margin-top: 80px">
+                <h5> تحميل التطبيق  </h5>
+                <h6 style="line-height: 2"> هذا نص تجريبي <br>
+                    يمكن أن يستبدل في نفس المساحة ! </h6>
+                <a class="waves-effect waves-light orange btn" style="margin-top: 20px;border-radius: 10px;">تحميل التطبيق  </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="footer-color">
+    <div class="row" style="padding: 0">
+        <div class="col l4 s4">
+            <div class="green" style="height: 20px"></div>
+        </div>
+        <div class="col l4 s4">
+            <div class="blue" style="height: 20px"></div>
+
+        </div>
+        <div class="col l4 s4">
+            <div class="orange" style="height: 20px"></div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12 " style="float: right">
+                <p class=" text-lighten-4">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة </p>
+                <p class=" text-lighten-4">فيسبوك  ·تويتر · فيسبوك  ·</p>
+                <p class=" text-lighten-4"> اتصال آمن </p>
+                <ul class="pay">
+                    <li>
+                        <a href="#"><img src="../img/visa.png" class="img-responsive" alt="visa" title="visa"></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/masterCard.png" class="img-responsive" alt="Master" title="Master">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> <img src="../img/American-Express.png" class="img-responsive" alt="visa" title="visa"> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <img src="../img/paypal.png" class="img-responsive" alt="visa" title="visa"> </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col l3 s12">
+                <ul class="ar-footer">
+                    <li><a class=" text-lighten-3" href="#">Upgrade to PRO </a></li>
+                    <li><a class=" text-lighten-3" href="#">Customer suit </a></li>
+                    <li><a class=" text-lighten-3" href="#">API</a></li>
+                    <li><a class=" text-lighten-3" href="#">Tags</a></li>
+                    <li><a class=" text-lighten-3" href="#">Help & Support </a></li>
+                </ul>
+            </div>
+            <div class="col l3  s12">
+                <ul>
+                    <li><a class=" text-lighten-3" href="#">عن الشركة </a></li>
+                    <li><a class=" text-lighten-3" href="#">مدونة</a></li>
+                    <li><a class=" text-lighten-3" href="#">وظائف </a></li>
+                    <li><a class=" text-lighten-3" href="#">شروط الخدمة </a></li>
+                    <li><a class=" text-lighten-3" href="#">سياسة الخصوصية  </a></li>
+                    <li><a class=" text-lighten-3" href="#">Return and Refund Policy </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <div class="row" style="margin-bottom: 0">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class="loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="col m12 s12">
+                        <div class="text-center center-block">
+                            <a href="#"><i class="fa fa-google-plus-square fa-3x social" style="color: #dd4c3b"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-3x social" style="color: #00aced"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-3x social" style="color: #3b5997"></i></a>
+                        </div>
+                    </div>
+                    <div class="col m12 s12">
+                        <h5 style="margin-top: 30px;"> أو  </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <a href="#modal2" class="waves-effect waves-light btn login" style="width: 50%">دخول </a>
+                        </div>
+                    </div><div class="row">
+                    <div class="col m12 s12">
+                        <a href="#modal3" class="waves-effect waves-light btn signup"style="width: 50%">تسجيل </a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="back" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row" >
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="الاسم ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="الايميل ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="كلمة المرور ">
+                                </div>
+                                <div class="forget" style="margin-bottom: 20px">
+                                    <a href="#modal4" style="color: #ff8d0d">  استعادة كلمة المرور </a>
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login">دخول </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backLogin" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="الاسم ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="الايميل ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="كلمة المرور ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login">تسجيل  </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backLogin2"style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> استعادة كلمة المرور  </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="  الايميل   ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#modal5" class="waves-effect waves-light btn login">استعادة   </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backRestore" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> Restore Password </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" أدخل الكود   ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#modal6" class="waves-effect waves-light btn login"> التاي  </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backRestore2" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-left: 21px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> Restore Password </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" كلمة السر الجديدة    ">
+                                </div> <div class="form-group">
+                                <input type="text" class="form-control" placeholder= " تأكيد كلمة السر " >
+                            </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login"> استعادة    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script>
+
+    $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 300
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true // Choose whether you can drag to open on touch screens
+            }
+    );
+</script>
+<script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+
+</script>
+<script>
+    $("#back").click(function () {
+        $('#modal2').modal('close');
+        $('#modal1').modal('open');
+
+    })
+</script>
+<script>
+    $("#backLogin").click(function () {
+        $('#modal3').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+<script>
+    $("#backLogin2").click(function () {
+        $('#modal4').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+<script>
+    $("#backRestore").click(function () {
+        $('#modal5').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+
+<script>
+    $("#backRestore2").click(function () {
+        $('#modal6').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+
+</body>
+
+
+</html>

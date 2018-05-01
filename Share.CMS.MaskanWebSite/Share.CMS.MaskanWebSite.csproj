@@ -1,0 +1,1073 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{394B18A4-53C8-4296-9F38-3B393C3AA70A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Share.CMS.MaskanWebSite</RootNamespace>
+    <AssemblyName>Share.CMS.MaskanWebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Share.CMS.WebApi.0\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Core\Controllers\PropertyController.cs" />
+    <Compile Include="Areas\Core\CoreAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DownloadMobAppController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UsersServiceController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\HomeVM_UI.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\maskn.png" />
+    <Content Include="Content\MasknVr1\ar\addProperty.html" />
+    <Content Include="Content\MasknVr1\ar\AllBrokers.html" />
+    <Content Include="Content\MasknVr1\ar\AllBuilders.html" />
+    <Content Include="Content\MasknVr1\ar\AllCities.html" />
+    <Content Include="Content\MasknVr1\ar\brokers.html" />
+    <Content Include="Content\MasknVr1\ar\Buildings.html" />
+    <Content Include="Content\MasknVr1\ar\city.html" />
+    <Content Include="Content\MasknVr1\ar\ddd.html" />
+    <Content Include="Content\MasknVr1\ar\EditProfile.html" />
+    <Content Include="Content\MasknVr1\ar\index.html" />
+    <Content Include="Content\MasknVr1\ar\journy.html" />
+    <Content Include="Content\MasknVr1\ar\ListYourProperty.html" />
+    <Content Include="Content\MasknVr1\ar\partnerServices.html" />
+    <Content Include="Content\MasknVr1\ar\ss.html" />
+    <Content Include="Content\MasknVr1\ar\urPropert.html" />
+    <Content Include="Content\MasknVr1\css\animate.css" />
+    <Content Include="Content\MasknVr1\css\ar_style.css" />
+    <Content Include="Content\MasknVr1\css\bootstrap-rtl.css" />
+    <Content Include="Content\MasknVr1\css\bootstrap.css" />
+    <Content Include="Content\MasknVr1\css\examples.css" />
+    <Content Include="Content\MasknVr1\css\font-awesome.css" />
+    <Content Include="Content\MasknVr1\css\materialize.css" />
+    <Content Include="Content\MasknVr1\css\normalize.css" />
+    <Content Include="Content\MasknVr1\css\slider-pro.css" />
+    <Content Include="Content\MasknVr1\css\style.css" />
+    <Content Include="Content\MasknVr1\eng\addProperty.html" />
+    <Content Include="Content\MasknVr1\eng\AllBrokers.html" />
+    <Content Include="Content\MasknVr1\eng\AllBuilders.html" />
+    <Content Include="Content\MasknVr1\eng\AllCities.html" />
+    <Content Include="Content\MasknVr1\eng\brokers.html" />
+    <Content Include="Content\MasknVr1\eng\Builders.html" />
+    <Content Include="Content\MasknVr1\eng\Buildings.html" />
+    <Content Include="Content\MasknVr1\eng\city.html" />
+    <Content Include="Content\MasknVr1\eng\ddd.html" />
+    <Content Include="Content\MasknVr1\eng\EditProfile.html" />
+    <Content Include="Content\MasknVr1\eng\index.html" />
+    <Content Include="Content\MasknVr1\eng\journy.html" />
+    <Content Include="Content\MasknVr1\eng\ListYourProperty.html" />
+    <Content Include="Content\MasknVr1\eng\partnerServices.html" />
+    <Content Include="Content\MasknVr1\eng\ss.html" />
+    <Content Include="Content\MasknVr1\eng\urProperty.html" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\MasknVr1\img\American-Express.png" />
+    <Content Include="Content\MasknVr1\img\blank.gif" />
+    <Content Include="Content\MasknVr1\img\brokers.png" />
+    <Content Include="Content\MasknVr1\img\building.png" />
+    <Content Include="Content\MasknVr1\img\buildingsSlide.png" />
+    <Content Include="Content\MasknVr1\img\city.png" />
+    <Content Include="Content\MasknVr1\img\city1.png" />
+    <Content Include="Content\MasknVr1\img\city2.png" />
+    <Content Include="Content\MasknVr1\img\city3.png" />
+    <Content Include="Content\MasknVr1\img\closedhand.cur" />
+    <Content Include="Content\MasknVr1\img\deals.png" />
+    <Content Include="Content\MasknVr1\img\doc.png" />
+    <Content Include="Content\MasknVr1\img\download-app.png" />
+    <Content Include="Content\MasknVr1\img\download.png" />
+    <Content Include="Content\MasknVr1\img\first.jpg" />
+    <Content Include="Content\MasknVr1\img\happy.png" />
+    <Content Include="Content\MasknVr1\img\icon_lock.png" />
+    <Content Include="Content\MasknVr1\img\journey.png" />
+    <Content Include="Content\MasknVr1\img\legal.png" />
+    <Content Include="Content\MasknVr1\img\loginImg.png" />
+    <Content Include="Content\MasknVr1\img\loginShape.png" />
+    <Content Include="Content\MasknVr1\img\logo.png" />
+    <Content Include="Content\MasknVr1\img\masterCard.png" />
+    <Content Include="Content\MasknVr1\img\matches.png" />
+    <Content Include="Content\MasknVr1\img\mobilee.png" />
+    <Content Include="Content\MasknVr1\img\newsleft.png" />
+    <Content Include="Content\MasknVr1\img\new_img.png" />
+    <Content Include="Content\MasknVr1\img\openhand.cur" />
+    <Content Include="Content\MasknVr1\img\p1.png" />
+    <Content Include="Content\MasknVr1\img\p2.png" />
+    <Content Include="Content\MasknVr1\img\p3.png" />
+    <Content Include="Content\MasknVr1\img\p4.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\booking.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\homeloan.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\possisssion.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\registeration.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\search.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\shortlist.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\sitevisit.png" />
+    <Content Include="Content\MasknVr1\img\parents.png" />
+    <Content Include="Content\MasknVr1\img\paypal.png" />
+    <Content Include="Content\MasknVr1\img\pictures-icon.png" />
+    <Content Include="Content\MasknVr1\img\pin.png" />
+    <Content Include="Content\MasknVr1\img\propertHouse.png" />
+    <Content Include="Content\MasknVr1\img\pyr.png" />
+    <Content Include="Content\MasknVr1\img\rooms.png" />
+    <Content Include="Content\MasknVr1\img\s1.png" />
+    <Content Include="Content\MasknVr1\img\search.png" />
+    <Content Include="Content\MasknVr1\img\second.jpg" />
+    <Content Include="Content\MasknVr1\img\slide.png" />
+    <Content Include="Content\MasknVr1\img\startup.png" />
+    <Content Include="Content\MasknVr1\img\third.jpg" />
+    <Content Include="Content\MasknVr1\img\time.png" />
+    <Content Include="Content\MasknVr1\img\update.png" />
+    <Content Include="Content\MasknVr1\img\urProperty.png" />
+    <Content Include="Content\MasknVr1\img\user-default.png" />
+    <Content Include="Content\MasknVr1\img\user.png" />
+    <Content Include="Content\MasknVr1\img\userAbout.png" />
+    <Content Include="Content\MasknVr1\img\visa.png" />
+    <Content Include="Content\MasknVr1\img\visit.png" />
+    <Content Include="Content\MasknVr1\js\bootstrap.js" />
+    <Content Include="Content\MasknVr1\js\custom-file-input.js" />
+    <Content Include="Content\MasknVr1\js\filter.js" />
+    <Content Include="Content\MasknVr1\js\jquery-1.11.0.min.js" />
+    <Content Include="Content\MasknVr1\js\jquery.sliderPro.js" />
+    <Content Include="Content\MasknVr1\js\materialize.js" />
+    <Content Include="Content\MasknVr1\js\materialize.min.js" />
+    <Content Include="Content\MasknVr1\js\wow.js" />
+    <Content Include="Content\sys\assets\avatars\avatar.png" />
+    <Content Include="Content\sys\assets\avatars\avatar1.png" />
+    <Content Include="Content\sys\assets\avatars\avatar2.png" />
+    <Content Include="Content\sys\assets\avatars\avatar3.png" />
+    <Content Include="Content\sys\assets\avatars\avatar4.png" />
+    <Content Include="Content\sys\assets\avatars\avatar5.png" />
+    <Content Include="Content\sys\assets\avatars\profile-pic.jpg" />
+    <Content Include="Content\sys\assets\avatars\user.jpg" />
+    <Content Include="Content\sys\assets\css\ace-fonts.css" />
+    <Content Include="Content\sys\assets\css\ace-fonts.min.css" />
+    <Content Include="Content\sys\assets\css\ace-ie.css" />
+    <Content Include="Content\sys\assets\css\ace-ie.min.css" />
+    <Content Include="Content\sys\assets\css\ace-part2.css" />
+    <Content Include="Content\sys\assets\css\ace-part2.min.css" />
+    <Content Include="Content\sys\assets\css\ace-rtl.css" />
+    <Content Include="Content\sys\assets\css\ace-rtl.min.css" />
+    <Content Include="Content\sys\assets\css\ace-skins.css" />
+    <Content Include="Content\sys\assets\css\ace-skins.min.css" />
+    <Content Include="Content\sys\assets\css\ace.css" />
+    <Content Include="Content\sys\assets\css\ace.min.css" />
+    <Content Include="Content\sys\assets\css\ace.onpage-help.css" />
+    <Content Include="Content\sys\assets\css\ace.onpage-help.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datepicker3.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datetimepicker.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-duallistbox.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-duallistbox.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-editable.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-editable.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-multiselect.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-multiselect.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-timepicker.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-timepicker.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap.css" />
+    <Content Include="Content\sys\assets\css\bootstrap.min.css" />
+    <Content Include="Content\sys\assets\css\chosen-sprite%402x.png" />
+    <Content Include="Content\sys\assets\css\chosen-sprite.png" />
+    <Content Include="Content\sys\assets\css\chosen.css" />
+    <Content Include="Content\sys\assets\css\chosen.min.css" />
+    <Content Include="Content\sys\assets\css\colorbox.css" />
+    <Content Include="Content\sys\assets\css\colorbox.min.css" />
+    <Content Include="Content\sys\assets\css\colorpicker.css" />
+    <Content Include="Content\sys\assets\css\colorpicker.min.css" />
+    <Content Include="Content\sys\assets\css\custom.css" />
+    <Content Include="Content\sys\assets\css\custom.min.css" />
+    <Content Include="Content\sys\assets\css\daterangepicker.css" />
+    <Content Include="Content\sys\assets\css\daterangepicker.min.css" />
+    <Content Include="Content\sys\assets\css\dropzone.css" />
+    <Content Include="Content\sys\assets\css\dropzone.min.css" />
+    <Content Include="Content\sys\assets\css\font-awesome.css" />
+    <Content Include="Content\sys\assets\css\font-awesome.min.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.min.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.print.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.print.min.css" />
+    <Content Include="Content\sys\assets\css\images\border.png" />
+    <Content Include="Content\sys\assets\css\images\border1.png" />
+    <Content Include="Content\sys\assets\css\images\border2.png" />
+    <Content Include="Content\sys\assets\css\images\controls.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderBottomCenter.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderBottomLeft.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderBottomRight.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderMiddleLeft.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderMiddleRight.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderTopCenter.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderTopLeft.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderTopRight.png" />
+    <Content Include="Content\sys\assets\css\images\loading.gif" />
+    <Content Include="Content\sys\assets\css\images\loading_background.png" />
+    <Content Include="Content\sys\assets\css\images\meteorshower.jpg" />
+    <Content Include="Content\sys\assets\css\images\meteorshower2.jpg" />
+    <Content Include="Content\sys\assets\css\images\overlay.png" />
+    <Content Include="Content\sys\assets\css\images\pattern.jpg" />
+    <Content Include="Content\sys\assets\css\images\pattern.png" />
+    <Content Include="Content\sys\assets\css\images\spritemap%402x.png" />
+    <Content Include="Content\sys\assets\css\images\spritemap.png" />
+    <Content Include="Content\sys\assets\css\img\alpha.png" />
+    <Content Include="Content\sys\assets\css\img\hue.png" />
+    <Content Include="Content\sys\assets\css\img\saturation.png" />
+    <Content Include="Content\sys\assets\css\jquery-ui.css" />
+    <Content Include="Content\sys\assets\css\jquery-ui.custom.css" />
+    <Content Include="Content\sys\assets\css\jquery-ui.custom.min.css" />
+    <Content Include="Content\sys\assets\css\jquery-ui.min.css" />
+    <Content Include="Content\sys\assets\css\jquery.gritter.css" />
+    <Content Include="Content\sys\assets\css\jquery.gritter.min.css" />
+    <Content Include="Content\sys\assets\css\pace.css" />
+    <Content Include="Content\sys\assets\css\pace.min.css" />
+    <Content Include="Content\sys\assets\css\prettify.css" />
+    <Content Include="Content\sys\assets\css\prettify.min.css" />
+    <Content Include="Content\sys\assets\css\select2.css" />
+    <Content Include="Content\sys\assets\css\select2.min.css" />
+    <Content Include="Content\sys\assets\css\ui.jqgrid.css" />
+    <Content Include="Content\sys\assets\css\ui.jqgrid.min.css" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\sys\assets\images\back_disabled.png" />
+    <Content Include="Content\sys\assets\images\back_enabled.png" />
+    <Content Include="Content\sys\assets\images\back_enabled_hover.png" />
+    <Content Include="Content\sys\assets\images\email1.png" />
+    <Content Include="Content\sys\assets\images\email2.png" />
+    <Content Include="Content\sys\assets\images\email3.png" />
+    <Content Include="Content\sys\assets\images\email4.png" />
+    <Content Include="Content\sys\assets\images\forward_disabled.png" />
+    <Content Include="Content\sys\assets\images\forward_enabled.png" />
+    <Content Include="Content\sys\assets\images\forward_enabled_hover.png" />
+    <Content Include="Content\sys\assets\images\gallery\image-1.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-2.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-3.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-4.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-5.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-6.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-1.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-2.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-3.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-4.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-5.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-6.jpg" />
+    <Content Include="Content\sys\assets\images\gritter-light.png" />
+    <Content Include="Content\sys\assets\images\ie-spacer.gif" />
+    <Content Include="Content\sys\assets\images\share-web-design.gif" />
+    <Content Include="Content\sys\assets\images\sort_asc.png" />
+    <Content Include="Content\sys\assets\images\sort_asc_disabled.png" />
+    <Content Include="Content\sys\assets\images\sort_both.png" />
+    <Content Include="Content\sys\assets\images\sort_desc.png" />
+    <Content Include="Content\sys\assets\images\sort_desc_disabled.png" />
+    <Content Include="Content\sys\assets\images\spritemap%402x.png" />
+    <Content Include="Content\sys\assets\images\spritemap.png" />
+    <Content Include="Content\sys\assets\img\clear.png" />
+    <Content Include="Content\sys\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\sys\assets\img\glyphicons-halflings.png" />
+    <Content Include="Content\sys\assets\img\loading.gif" />
+    <Content Include="Content\sys\assets\js\ace-elements.js" />
+    <Content Include="Content\sys\assets\js\ace-elements.min.js" />
+    <Content Include="Content\sys\assets\js\ace-extra.js" />
+    <Content Include="Content\sys\assets\js\ace-extra.min.js" />
+    <Content Include="Content\sys\assets\js\ace-require.js" />
+    <Content Include="Content\sys\assets\js\ace-require.min.js" />
+    <Content Include="Content\sys\assets\js\ace.js" />
+    <Content Include="Content\sys\assets\js\ace.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.ajax-content.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.ajax-content.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-container.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-container.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-padding.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-padding.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.onpage-help.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.onpage-help.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.searchbox-autocomplete.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.searchbox-autocomplete.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-rtl.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-rtl.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-skin.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-skin.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-1.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-1.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-2.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-2.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.submenu-hover.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.submenu-hover.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.touch-drag.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.touch-drag.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-box.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-box.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-on-reload.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-on-reload.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.aside.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.aside.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.colorpicker.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.colorpicker.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.fileinput.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.fileinput.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.onpage-help.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.onpage-help.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.scroller.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.scroller.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.spinner.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.spinner.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.treeview.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.treeview.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.typeahead.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.typeahead.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wizard.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wizard.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wysiwyg.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wysiwyg.min.js" />
+    <Content Include="Content\sys\assets\js\additional-methods.js" />
+    <Content Include="Content\sys\assets\js\additional-methods.min.js" />
+    <Content Include="Content\sys\assets\js\autosize.js" />
+    <Content Include="Content\sys\assets\js\autosize.min.js" />
+    <Content Include="Content\sys\assets\js\bootbox.js" />
+    <Content Include="Content\sys\assets\js\bootbox.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-colorpicker.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-multiselect.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-multiselect.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-tag.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-tag.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-wysiwyg.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap.js" />
+    <Content Include="Content\sys\assets\js\bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\chosen.jquery.js" />
+    <Content Include="Content\sys\assets\js\chosen.jquery.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.bootstrap.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.colVis.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.colVis.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.flash.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.flash.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.foundation.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.foundation.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.html5.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.html5.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.jqueryui.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.jqueryui.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.print.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.print.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\dataTables.buttons.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\dataTables.buttons.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\License.txt" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\swf\flashExport.swf" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\js\dataTables.select.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\js\dataTables.select.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\License.txt" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.bootstrap.js" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datetimepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-timepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\daterangepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\moment.js" />
+    <Content Include="Content\sys\assets\js\date-time\moment.min.js" />
+    <Content Include="Content\sys\assets\js\dropzone.js" />
+    <Content Include="Content\sys\assets\js\dropzone.min.js" />
+    <Content Include="Content\sys\assets\js\excanvas.js" />
+    <Content Include="Content\sys\assets\js\excanvas.min.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.min.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.pie.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.resize.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.spinner.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.tree.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.wizard.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="Content\sys\assets\js\fullcalendar.js" />
+    <Content Include="Content\sys\assets\js\fullcalendar.min.js" />
+    <Content Include="Content\sys\assets\js\holder.js" />
+    <Content Include="Content\sys\assets\js\holder.min.js" />
+    <Content Include="Content\sys\assets\js\html5shiv-printshiv.js" />
+    <Content Include="Content\sys\assets\js\html5shiv-printshiv.min.js" />
+    <Content Include="Content\sys\assets\js\html5shiv.js" />
+    <Content Include="Content\sys\assets\js\html5shiv.min.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.custom.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.custom.min.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.bootstrap-duallistbox.js" />
+    <Content Include="Content\sys\assets\js\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.colorbox.js" />
+    <Content Include="Content\sys\assets\js\jquery.colorbox.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.easypiechart.js" />
+    <Content Include="Content\sys\assets\js\jquery.easypiechart.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.gritter.js" />
+    <Content Include="Content\sys\assets\js\jquery.gritter.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.hotkeys.js" />
+    <Content Include="Content\sys\assets\js\jquery.hotkeys.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.inputlimiter.1.3.1.js" />
+    <Content Include="Content\sys\assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.js" />
+    <Content Include="Content\sys\assets\js\jquery.knob.js" />
+    <Content Include="Content\sys\assets\js\jquery.knob.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.maskedinput.js" />
+    <Content Include="Content\sys\assets\js\jquery.maskedinput.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.mobile.custom.js" />
+    <Content Include="Content\sys\assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.mousewheel.js" />
+    <Content Include="Content\sys\assets\js\jquery.mousewheel.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.nestable.js" />
+    <Content Include="Content\sys\assets\js\jquery.nestable.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.raty.js" />
+    <Content Include="Content\sys\assets\js\jquery.raty.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.slimscroll.js" />
+    <Content Include="Content\sys\assets\js\jquery.slimscroll.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.sparkline.js" />
+    <Content Include="Content\sys\assets\js\jquery.sparkline.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.ui.touch-punch.js" />
+    <Content Include="Content\sys\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.validate.js" />
+    <Content Include="Content\sys\assets\js\jquery.validate.min.js" />
+    <Content Include="Content\sys\assets\js\jquery1x.js" />
+    <Content Include="Content\sys\assets\js\jquery1x.min.js" />
+    <Content Include="Content\sys\assets\js\markdown\bootstrap-markdown.js" />
+    <Content Include="Content\sys\assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="Content\sys\assets\js\markdown\markdown.js" />
+    <Content Include="Content\sys\assets\js\markdown\markdown.min.js" />
+    <Content Include="Content\sys\assets\js\markdown\to-markdown.js" />
+    <Content Include="Content\sys\assets\js\markdown\to-markdown.min.js" />
+    <Content Include="Content\sys\assets\js\pace.js" />
+    <Content Include="Content\sys\assets\js\pace.min.js" />
+    <Content Include="Content\sys\assets\js\pace1.js" />
+    <Content Include="Content\sys\assets\js\pace1.min.js" />
+    <Content Include="Content\sys\assets\js\prettify.js" />
+    <Content Include="Content\sys\assets\js\prettify.min.js" />
+    <Content Include="Content\sys\assets\js\require.js" />
+    <Content Include="Content\sys\assets\js\require.min.js" />
+    <Content Include="Content\sys\assets\js\respond.js" />
+    <Content Include="Content\sys\assets\js\respond.min.js" />
+    <Content Include="Content\sys\assets\js\select2.js" />
+    <Content Include="Content\sys\assets\js\select2.min.js" />
+    <Content Include="Content\sys\assets\js\spin.js" />
+    <Content Include="Content\sys\assets\js\spin.min.js" />
+    <Content Include="Content\sys\assets\js\typeahead.jquery.js" />
+    <Content Include="Content\sys\assets\js\typeahead.jquery.min.js" />
+    <Content Include="Content\sys\assets\js\x-editable\ace-editable.js" />
+    <Content Include="Content\sys\assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="Content\sys\assets\js\x-editable\bootstrap-editable.js" />
+    <Content Include="Content\sys\assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\Core\AccountManager.js" />
+    <Content Include="Scripts\app\services\Common.js" />
+    <Content Include="Scripts\app\services\Common.min.js" />
+    <Content Include="Scripts\app\services\DataService.js" />
+    <Content Include="Scripts\app\services\DataService.min.js" />
+    <Content Include="Scripts\app\utiltities\jquery.xml2json.js" />
+    <Content Include="Scripts\app\utiltities\jquery.xml2json.min.js" />
+    <Content Include="Scripts\app\utiltities\lz-string.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\MasknVr1\fonts\FontAwesome.otf" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\MasknVr1\fonts\GOTHAM-BOLD.TTF" />
+    <Content Include="Content\MasknVr1\fonts\Gotham-Book.otf" />
+    <Content Include="Content\MasknVr1\fonts\GOTHAM-LIGHT.TTF" />
+    <Content Include="Content\MasknVr1\fonts\Gotham-Thin.otf" />
+    <Content Include="Content\MasknVr1\fonts\JF-Flat-regular.eot" />
+    <Content Include="Content\MasknVr1\fonts\JF-Flat-regular.ttf" />
+    <Content Include="Content\MasknVr1\fonts\JF-Flat-regular.woff" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\sys\assets\fonts\FontAwesome.otf" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\sys\assets\fonts\OpenSans-300.woff" />
+    <Content Include="Content\sys\assets\fonts\OpenSans-400.woff" />
+    <Content Include="Content\sys\assets\fonts\readme" />
+    <Content Include="Content\sys\assets\js\ace-elements.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace-extra.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace-require.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.ajax-content.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-container.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-padding.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.onpage-help.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.searchbox-autocomplete.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-rtl.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-skin.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-1.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-2.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.submenu-hover.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.touch-drag.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-box.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-on-reload.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.aside.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.colorpicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.fileinput.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.onpage-help.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.scroller.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.spinner.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.treeview.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.typeahead.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.wizard.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.wysiwyg.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\readme" />
+    <Content Include="Content\sys\assets\js\ace\scripts.json" />
+    <Content Include="Content\sys\assets\js\additional-methods.min.js.map" />
+    <Content Include="Content\sys\assets\js\autosize.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootbox.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-colorpicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-multiselect.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-tag.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-wysiwyg.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap.min.js.map" />
+    <Content Include="Content\sys\assets\js\chosen.jquery.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.bootstrap.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.colVis.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.flash.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.foundation.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.html5.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.jqueryui.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.print.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\dataTables.buttons.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\js\dataTables.select.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.bootstrap.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datetimepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-timepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\daterangepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\moment.min.js.map" />
+    <Content Include="Content\sys\assets\js\dropzone.min.js.map" />
+    <Content Include="Content\sys\assets\js\excanvas.min.js.map" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.min.js.map" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.pie.min.js.map" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.resize.min.js.map" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.spinner.min.js.map" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.tree.min.js.map" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.wizard.min.js.map" />
+    <Content Include="Content\sys\assets\js\fullcalendar.min.js.map" />
+    <Content Include="Content\sys\assets\js\holder.min.js.map" />
+    <Content Include="Content\sys\assets\js\html5shiv-printshiv.min.js.map" />
+    <Content Include="Content\sys\assets\js\html5shiv.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery-ui.custom.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery-ui.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.bootstrap-duallistbox.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.colorbox.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.easypiechart.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.gritter.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.hotkeys.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.inputlimiter.1.3.1.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.knob.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.maskedinput.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.mobile.custom.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.mousewheel.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.nestable.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.raty.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.slimscroll.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.sparkline.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.ui.touch-punch.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.validate.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery1x.min.js.map" />
+    <Content Include="Content\sys\assets\js\markdown\bootstrap-markdown.min.js.map" />
+    <Content Include="Content\sys\assets\js\markdown\markdown.min.js.map" />
+    <Content Include="Content\sys\assets\js\markdown\to-markdown.min.js.map" />
+    <Content Include="Content\sys\assets\js\pace.min.js.map" />
+    <Content Include="Content\sys\assets\js\pace1.min.js.map" />
+    <Content Include="Content\sys\assets\js\prettify.min.js.map" />
+    <Content Include="Content\sys\assets\js\require.min.js.map" />
+    <Content Include="Content\sys\assets\js\respond.min.js.map" />
+    <Content Include="Content\sys\assets\js\select2.min.js.map" />
+    <Content Include="Content\sys\assets\js\spin.min.js.map" />
+    <Content Include="Content\sys\assets\js\typeahead.jquery.min.js.map" />
+    <Content Include="Content\sys\assets\js\x-editable\ace-editable.min.js.map" />
+    <Content Include="Content\sys\assets\js\x-editable\bootstrap-editable.min.js.map" />
+    <Content Include="Languages\Default\ar\Maskan.jsn" />
+    <Content Include="Areas\Core\Views\web.config" />
+    <Content Include="Areas\Core\Views\Property\Index.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\select2\css\select2-optional.css" />
+    <Content Include="Scripts\select2\css\select2.css" />
+    <Content Include="Scripts\select2\css\select2.min.css" />
+    <Content Include="Scripts\select2\js\i18n\ar.js" />
+    <Content Include="Scripts\select2\js\i18n\az.js" />
+    <Content Include="Scripts\select2\js\i18n\bg.js" />
+    <Content Include="Scripts\select2\js\i18n\ca.js" />
+    <Content Include="Scripts\select2\js\i18n\cs.js" />
+    <Content Include="Scripts\select2\js\i18n\da.js" />
+    <Content Include="Scripts\select2\js\i18n\de.js" />
+    <Content Include="Scripts\select2\js\i18n\el.js" />
+    <Content Include="Scripts\select2\js\i18n\en.js" />
+    <Content Include="Scripts\select2\js\i18n\es.js" />
+    <Content Include="Scripts\select2\js\i18n\et.js" />
+    <Content Include="Scripts\select2\js\i18n\eu.js" />
+    <Content Include="Scripts\select2\js\i18n\fa.js" />
+    <Content Include="Scripts\select2\js\i18n\fi.js" />
+    <Content Include="Scripts\select2\js\i18n\fr.js" />
+    <Content Include="Scripts\select2\js\i18n\gl.js" />
+    <Content Include="Scripts\select2\js\i18n\he.js" />
+    <Content Include="Scripts\select2\js\i18n\hi.js" />
+    <Content Include="Scripts\select2\js\i18n\hr.js" />
+    <Content Include="Scripts\select2\js\i18n\hu.js" />
+    <Content Include="Scripts\select2\js\i18n\id.js" />
+    <Content Include="Scripts\select2\js\i18n\is.js" />
+    <Content Include="Scripts\select2\js\i18n\it.js" />
+    <Content Include="Scripts\select2\js\i18n\ja.js" />
+    <Content Include="Scripts\select2\js\i18n\km.js" />
+    <Content Include="Scripts\select2\js\i18n\ko.js" />
+    <Content Include="Scripts\select2\js\i18n\lt.js" />
+    <Content Include="Scripts\select2\js\i18n\lv.js" />
+    <Content Include="Scripts\select2\js\i18n\mk.js" />
+    <Content Include="Scripts\select2\js\i18n\ms.js" />
+    <Content Include="Scripts\select2\js\i18n\nb.js" />
+    <Content Include="Scripts\select2\js\i18n\nl.js" />
+    <Content Include="Scripts\select2\js\i18n\pl.js" />
+    <Content Include="Scripts\select2\js\i18n\pt-BR.js" />
+    <Content Include="Scripts\select2\js\i18n\pt.js" />
+    <Content Include="Scripts\select2\js\i18n\ro.js" />
+    <Content Include="Scripts\select2\js\i18n\ru.js" />
+    <Content Include="Scripts\select2\js\i18n\sk.js" />
+    <Content Include="Scripts\select2\js\i18n\sr-Cyrl.js" />
+    <Content Include="Scripts\select2\js\i18n\sr.js" />
+    <Content Include="Scripts\select2\js\i18n\sv.js" />
+    <Content Include="Scripts\select2\js\i18n\th.js" />
+    <Content Include="Scripts\select2\js\i18n\tr.js" />
+    <Content Include="Scripts\select2\js\i18n\uk.js" />
+    <Content Include="Scripts\select2\js\i18n\vi.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-CN.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-TW.js" />
+    <Content Include="Scripts\select2\js\select2-optinal.js" />
+    <Content Include="Scripts\select2\js\select2.full.js" />
+    <Content Include="Scripts\select2\js\select2.full.min.js" />
+    <Content Include="Scripts\select2\js\select2.js" />
+    <Content Include="Scripts\select2\js\select2.min.js" />
+    <Content Include="Scripts\site\Common.js" />
+    <Content Include="Scripts\site\Common.min.js" />
+    <Content Include="Scripts\site\controllers\homeMasterController.js" />
+    <Content Include="Scripts\site\controllers\homeMasterController.min.js" />
+    <Content Include="Scripts\site\controllers\newsDetailsController.js" />
+    <Content Include="Scripts\site\controllers\newsDetailsController.min.js" />
+    <Content Include="Scripts\site\controllers\pageDetailsController.js" />
+    <Content Include="Scripts\site\controllers\pageDetailsController.min.js" />
+    <Content Include="Scripts\site\controllers\propertiesController.js" />
+    <Content Include="Scripts\site\controllers\propertyDetailsController.js" />
+    <Content Include="Scripts\site\DataService.js" />
+    <Content Include="Scripts\site\DataService.min.js" />
+    <Content Include="Scripts\site\homeController.js" />
+    <Content Include="Scripts\site\homeController.min.js" />
+    <Content Include="Scripts\site\jquery.xml2json.js" />
+    <Content Include="Scripts\site\jquery.xml2json.min.js" />
+    <Content Include="Scripts\site\lz-string.min.js" />
+    <Content Include="Scripts\site\service.utilities.js" />
+    <Content Include="Scripts\site\service.utilities.min.js" />
+    <Content Include="Scripts\site\site.services.min.js" />
+    <Content Include="Scripts\sys\admin\ContactPersonsManager.js" />
+    <Content Include="Scripts\sys\admin\newsAddManager.js" />
+    <Content Include="Scripts\sys\admin\newsManager - Copy %282%29.min.js" />
+    <Content Include="Scripts\sys\admin\newsManager - Copy.min - Copy.js" />
+    <Content Include="Scripts\sys\admin\newsManager - Copy.min.js" />
+    <Content Include="Scripts\sys\admin\newsManager.js" />
+    <Content Include="Scripts\sys\admin\newsManager.min.js" />
+    <Content Include="Scripts\sys\admin\pagesAddManager.js" />
+    <Content Include="Scripts\sys\admin\pagesManager.js" />
+    <Content Include="Scripts\sys\admin\PropertiesManager.js" />
+    <Content Include="Scripts\sys\admin\PropertyAddEdit.js" />
+    <Content Include="Scripts\sys\admin\UrlRecordsManager.js" />
+    <Content Include="Scripts\sys\citiesManager.min.js" />
+    <Content Include="Scripts\sys\clientsManager.js" />
+    <Content Include="Scripts\sys\clientsManager.min.js" />
+    <Content Include="Scripts\sys\Common.js" />
+    <Content Include="Scripts\sys\Common.min.js" />
+    <Content Include="Scripts\sys\commonMasterDetails.js" />
+    <Content Include="Scripts\sys\commonMasterDetails.min.js" />
+    <Content Include="Scripts\sys\DataService.js" />
+    <Content Include="Scripts\sys\DataService.min.js" />
+    <Content Include="Scripts\sys\DefaultGridManager.js" />
+    <Content Include="Scripts\sys\DefaultGridManager.min.js" />
+    <Content Include="Scripts\sys\DefaultGridVariables.js" />
+    <Content Include="Scripts\sys\DefaultGridVariables.min.js" />
+    <Content Include="Scripts\sys\DefaultMasterDetailsManager.js" />
+    <Content Include="Scripts\sys\DefaultMasterDetailsManager.min.js" />
+    <Content Include="Scripts\sys\defaultPage.js" />
+    <Content Include="Scripts\sys\defaultPage.min.js" />
+    <Content Include="Scripts\sys\featuresManager.js" />
+    <Content Include="Scripts\sys\featuresManager.min.js" />
+    <Content Include="Scripts\sys\imagesManager.js" />
+    <Content Include="Scripts\sys\imagesManager.min.js" />
+    <Content Include="Scripts\sys\jquery-dateFormat.js" />
+    <Content Include="Scripts\sys\jquery-dateFormat.min.js" />
+    <Content Include="Scripts\sys\jquery.xml2json.js" />
+    <Content Include="Scripts\sys\jquery.xml2json.min.js" />
+    <Content Include="Scripts\sys\mastetUtil.js" />
+    <Content Include="Scripts\sys\mastetUtil.min.js" />
+    <Content Include="Scripts\sys\moment.js" />
+    <Content Include="Scripts\sys\moment.min.js" />
+    <Content Include="Scripts\sys\numeral.min.js" />
+    <Content Include="Scripts\sys\regionsManager.js" />
+    <Content Include="Scripts\sys\sendSMS.js" />
+    <Content Include="Scripts\sys\sendSMS.min.js" />
+    <Content Include="Scripts\sys\settingsManager.js" />
+    <Content Include="Scripts\sys\settingsManager.min.js" />
+    <Content Include="Scripts\sys\usersManager.js" />
+    <Content Include="Scripts\sys\usersManager.min.js" />
+    <Content Include="Scripts\sys\utilities.js" />
+    <Content Include="Scripts\sys\utilities.min.js" />
+    <Content Include="Scripts\util\jquery.xml2json.js" />
+    <Content Include="Scripts\util\jquery.xml2json.min.js" />
+    <Content Include="Scripts\util\lz-string.min.js" />
+    <Content Include="Scripts\util\validationForm.js" />
+    <Content Include="Scripts\util\xml2json.js" />
+    <Content Include="Scripts\util\xml2json.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\sys\citiesManager.min.js.map" />
+    <Content Include="Scripts\sys\clientsManager.min.js.map" />
+    <Content Include="Scripts\sys\Common.min.js.map" />
+    <Content Include="Scripts\sys\commonMasterDetails.min.js.map" />
+    <Content Include="Scripts\sys\DefaultGridManager.min.js.map" />
+    <Content Include="Scripts\sys\DefaultGridVariables.min.js.map" />
+    <Content Include="Scripts\sys\DefaultMasterDetailsManager.min.js.map" />
+    <Content Include="Scripts\sys\jquery-dateFormat.min.js.map" />
+    <Content Include="Scripts\sys\moment.min.js.map" />
+    <Content Include="Scripts\sys\sendSMS.min.js.map" />
+    <Content Include="Scripts\sys\utilities.min.js.map" />
+    <Content Include="Views\DownloadMobApp\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Core\Models\" />
+    <Folder Include="Areas\Core\Views\Shared\" />
+    <Folder Include="Languages\Default\en\" />
+    <Folder Include="Views\UsersService\" />
+    <Folder Include="Views\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{06a7bfdf-9392-48ef-9929-d28ebdcbbb74}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34625</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:34625/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

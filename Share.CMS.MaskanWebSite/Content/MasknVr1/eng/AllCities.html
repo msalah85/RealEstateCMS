@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Maskn </title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/style.css" media="screen,projection"/>
+</head>
+<body style="background-color: #fbfbfb">
+<div class="header">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img src="../img/logo.png" class="responsive-img"></a>
+                <ul class="right">
+                    <li>  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    </li>
+                    <li><a href="#modal1">ع | EN </a></li>
+                    <li><a href="#modal1"><i class="material-icons left">input</i>Login</a></li>
+                    <li class="ListProperty"><a href="#"><i class="material-icons left">home</i>List your property</a></li>
+                    <li class="download"><a href="#" style="border-left: 1px solid #b6b6b6"><i class="material-icons left">phone_android</i> Download app </a></li>
+                    <li>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search ... " style="padding-left: 5px;padding-right: 45px;">
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-button buy ' href='#' data-activates='dropdown1' style="border-right: 1px solid #b6b6b6"><i class="material-icons right">arrow_drop_down</i>Buy </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#">one</a></li>
+                            <li><a href="#">two</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul id="slide-out" class="side-nav">
+        <li><div class="userView">
+            <a href="#"><img class="circle" src="../img/user.png"></a>
+            <a href="#"><span class="name"> Ghassan Hani</span></a>
+        </div></li>
+        <li><a href=""> My Journey </a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#"><i class="material-icons right">favorite_border</i> My Favourites </a> </li>
+        <li><div class="divider"></div></li>
+        <li><a href="#"> Partner Services  </a> </li>
+        <li><div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons right">arrow_drop_down</i>Top Cities</a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#!">First</a></li>
+                        <li><a href="#!">Second</a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="divider"></div>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons right">arrow_drop_down</i>Top Builders </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#!">First</a></li>
+                        <li><a href="#!">Second</a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li><div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons right">arrow_drop_down</i>Top Brokers </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#">First</a></li>
+                        <li><a href="#">Second</a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li><div class="divider"></div></li>
+
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header"><i class="material-icons right">arrow_drop_down</i>Top Builders  </a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="#">First</a></li>
+                        <li><a href="#">Second</a></li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="#"><i class="material-icons right">phone_android</i> Download App </a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="#">List Your Property </a></li>
+    </ul>
+</div>
+
+<div class="content cities text-center">
+    <div class="container">
+        <div class="title "style="text-align: left">
+            <h5>List of residential cities </h5>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city1.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city2.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city3.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city1.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city2.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city3.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city1.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city2.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class='buldImg'>
+                    <!-- image -->
+                    <img src='../img/city3.png' class="img-responsive" alt="" title="build" />
+                    <!-- description div -->
+                    <div class='descriptionCity'>
+                        <!-- description content -->
+                        <h6 class='description_content'> city Name </h6>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="text-center">
+            <div class="col m4 push-m1 ">
+                <a class="waves-effect waves-light orange btn" style="border-radius: 10px;margin-bottom: 20px;">More </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-color">
+    <div class="row" style="padding: 0">
+        <div class="col l4 s4">
+            <div class="green" style="height: 20px"></div>
+        </div>
+        <div class="col l4 s4">
+            <div class="blue" style="height: 20px"></div>
+
+        </div>
+        <div class="col l4 s4">
+            <div class="orange" style="height: 20px"></div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <p class=" text-lighten-4">Made in Ghassan Hani · Copyright 2017 · All rights reserved.</p>
+                <p class=" text-lighten-4">Facebook · Twitter · Dribbble ·</p>
+                <p class=" text-lighten-4">Secure connection</p>
+                <ul class="pay">
+                    <li>
+                        <a href="#"><img src="../img/visa.png" class="img-responsive" alt="visa" title="visa"></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/masterCard.png" class="img-responsive" alt="Master" title="Master">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> <img src="../img/American-Express.png" class="img-responsive" alt="visa" title="visa"> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <img src="../img/paypal.png" class="img-responsive" alt="visa" title="visa"> </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <ul>
+                    <li><a class=" text-lighten-3" href="#">Upgrade to PRO </a></li>
+                    <li><a class=" text-lighten-3" href="#">Customer suit </a></li>
+                    <li><a class=" text-lighten-3" href="#">API</a></li>
+                    <li><a class=" text-lighten-3" href="#">Tags</a></li>
+                    <li><a class=" text-lighten-3" href="#">Help & Support </a></li>
+                </ul>
+            </div>
+            <div class="col l3  s12">
+                <ul>
+                    <li><a class=" text-lighten-3" href="#">About Us</a></li>
+                    <li><a class=" text-lighten-3" href="#">Blog</a></li>
+                    <li><a class=" text-lighten-3" href="#">Jobs</a></li>
+                    <li><a class=" text-lighten-3" href="#">Term of Service</a></li>
+                    <li><a class=" text-lighten-3" href="#">Privacy Policy </a></li>
+                    <li><a class=" text-lighten-3" href="#">Return and Refund Policy </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class="loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="col m12 s12">
+                        <div class="text-center center-block">
+                            <a href="#"><i class="fa fa-google-plus-square fa-3x social" style="color: #dd4c3b"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-3x social" style="color: #00aced"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-3x social" style="color: #3b5997"></i></a>
+                        </div>
+                    </div>
+                    <div class="col m12 s12">
+                        <h5 style="margin-top: 30px;"> OR </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <a href="#modal2" class="waves-effect waves-light btn login" style="width: 50%">Login  </a>
+                        </div>
+                    </div><div class="row">
+                    <div class="col m12 s12">
+                        <a href="#modal3" class="waves-effect waves-light btn signup"style="width: 50%">Signup </a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="back" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-right: 31px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name  ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="E-mail  ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Password  ">
+                                </div>
+                                <div class="forget" style="margin-bottom: 20px">
+                                    <a href="#modal4" style="color: #ff8d0d"> forget password</a>
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login">Login </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backLogin" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-right: 31px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="responsive-img shapeLogin" src="../img/loginShape.png">
+                        <h5> Let the joy begin </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name  ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="E-mail  ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Password  ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login">Signup  </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backLogin2" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-right: 31px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> Restore Password </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" Email   ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#modal5" class="waves-effect waves-light btn login">Recovery  </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backRestore" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-right: 31px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> Restore Password </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" Code Number  ">
+                                </div>
+                                <div class="col m12 s12">
+                                    <a href="#modal6" class="waves-effect waves-light btn login"> Next   </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <i class="material-icons" id="backRestore2" style="font-size: 30px;cursor: pointer;color: #ff8d0d;margin-right: 31px;margin-bottom: 20px;">keyboard_return </i>
+        <div class="row">
+            <div class="loginRight col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <img class="logo responsive-img" src="../img/logo.png" >
+                    </div>
+                    <div class="col m12 s12">
+                        <img src="../img/loginImg.png" class="imgLogin responsive-img">
+                    </div>
+                    <div class="col m12 s12">
+                        <p class="login">هذا نص تجريبي يمكن أن يستبدل مكانه </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" loginLeft col m6 s6">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <h5> Restore Password </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col m12 s12">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" New Password   ">
+                                </div> <div class="form-group">
+                                <input type="text" class="form-control" placeholder=" Re-Password  ">
+                            </div>
+                                <div class="col m12 s12">
+                                    <a href="#" class="waves-effect waves-light btn login"> Recovery   </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script src="../js/wow.js"></script>
+<script>
+    new WOW().init();
+
+</script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script>
+
+    $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 300
+                edge: 'right', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true // Choose whether you can drag to open on touch screens
+            }
+    );
+</script>
+<script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+
+</script>
+
+<script>
+    $("input").on("click", function(){
+        if ( $(this).attr("type") === "radio" ) {
+            $(this).parent().siblings().removeClass("isSelected");
+        }
+        $(this).parent().toggleClass("isSelected");
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+
+</script>
+<script>
+    $("#back").click(function () {
+        $('#modal2').modal('close');
+        $('#modal1').modal('open');
+
+    })
+</script>
+<script>
+    $("#backLogin").click(function () {
+        $('#modal3').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+<script>
+    $("#backLogin2").click(function () {
+        $('#modal4').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+<script>
+    $("#backRestore").click(function () {
+        $('#modal5').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+
+<script>
+    $("#backRestore2").click(function () {
+        $('#modal6').modal('close');
+        $('#modal2').modal('open');
+
+    })
+</script>
+</body>
+
+
+</html>

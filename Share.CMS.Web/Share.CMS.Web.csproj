@@ -1,0 +1,1748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F3638A2-D58F-4A05-B51B-8DCD2CBC75D0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Share.CMS.Web</RootNamespace>
+    <AssemblyName>Share.CMS.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\MasknVr1\img\user-default.png" />
+    <Content Include="download-mobileapp.aspx" />
+    <Content Include="Page.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\MasknVr1\ar\addProperty.html" />
+    <Content Include="Content\MasknVr1\ar\AllBrokers.html" />
+    <Content Include="Content\MasknVr1\ar\AllBuilders.html" />
+    <Content Include="Content\MasknVr1\ar\AllCities.html" />
+    <Content Include="Content\MasknVr1\ar\brokers.html" />
+    <Content Include="Content\MasknVr1\ar\Buildings.html" />
+    <Content Include="Content\MasknVr1\ar\city.html" />
+    <Content Include="Content\MasknVr1\ar\ddd.html" />
+    <Content Include="Content\MasknVr1\ar\EditProfile.html" />
+    <Content Include="Content\MasknVr1\ar\index.html" />
+    <Content Include="Content\MasknVr1\ar\journy.html" />
+    <Content Include="Content\MasknVr1\ar\ListYourProperty.html" />
+    <Content Include="Content\MasknVr1\ar\partnerServices.html" />
+    <Content Include="Content\MasknVr1\ar\ss.html" />
+    <Content Include="Content\MasknVr1\ar\urPropert.html" />
+    <Content Include="Content\MasknVr1\css\animate.css" />
+    <Content Include="Content\MasknVr1\css\ar_style.css" />
+    <Content Include="Content\MasknVr1\css\bootstrap-rtl.css" />
+    <Content Include="Content\MasknVr1\css\bootstrap.css" />
+    <Content Include="Content\MasknVr1\css\examples.css" />
+    <Content Include="Content\MasknVr1\css\font-awesome.css" />
+    <Content Include="Content\MasknVr1\css\materialize.css" />
+    <Content Include="Content\MasknVr1\css\normalize.css" />
+    <Content Include="Content\MasknVr1\css\slider-pro.css" />
+    <Content Include="Content\MasknVr1\css\style.css" />
+    <Content Include="Content\MasknVr1\eng\addProperty.html" />
+    <Content Include="Content\MasknVr1\eng\AllBrokers.html" />
+    <Content Include="Content\MasknVr1\eng\AllBuilders.html" />
+    <Content Include="Content\MasknVr1\eng\AllCities.html" />
+    <Content Include="Content\MasknVr1\eng\brokers.html" />
+    <Content Include="Content\MasknVr1\eng\Builders.html" />
+    <Content Include="Content\MasknVr1\eng\Buildings.html" />
+    <Content Include="Content\MasknVr1\eng\city.html" />
+    <Content Include="Content\MasknVr1\eng\ddd.html" />
+    <Content Include="Content\MasknVr1\eng\EditProfile.html" />
+    <Content Include="Content\MasknVr1\eng\index.html" />
+    <Content Include="Content\MasknVr1\eng\journy.html" />
+    <Content Include="Content\MasknVr1\eng\ListYourProperty.html" />
+    <Content Include="Content\MasknVr1\eng\partnerServices.html" />
+    <Content Include="Content\MasknVr1\eng\ss.html" />
+    <Content Include="Content\MasknVr1\eng\urProperty.html" />
+    <Content Include="Content\MasknVr1\img\American-Express.png" />
+    <Content Include="Content\MasknVr1\img\blank.gif" />
+    <Content Include="Content\MasknVr1\img\brokers.png" />
+    <Content Include="Content\MasknVr1\img\building.png" />
+    <Content Include="Content\MasknVr1\img\buildingsSlide.png" />
+    <Content Include="Content\MasknVr1\img\city.png" />
+    <Content Include="Content\MasknVr1\img\city1.png" />
+    <Content Include="Content\MasknVr1\img\city2.png" />
+    <Content Include="Content\MasknVr1\img\city3.png" />
+    <Content Include="Content\MasknVr1\img\closedhand.cur" />
+    <Content Include="Content\MasknVr1\img\deals.png" />
+    <Content Include="Content\MasknVr1\img\doc.png" />
+    <Content Include="Content\MasknVr1\img\download.png" />
+    <Content Include="Content\MasknVr1\img\first.jpg" />
+    <Content Include="Content\MasknVr1\img\happy.png" />
+    <Content Include="Content\MasknVr1\img\icon_lock.png" />
+    <Content Include="Content\MasknVr1\img\journey.png" />
+    <Content Include="Content\MasknVr1\img\legal.png" />
+    <Content Include="Content\MasknVr1\img\loginImg.png" />
+    <Content Include="Content\MasknVr1\img\loginShape.png" />
+    <Content Include="Content\MasknVr1\img\logo.png" />
+    <Content Include="Content\MasknVr1\img\masterCard.png" />
+    <Content Include="Content\MasknVr1\img\matches.png" />
+    <Content Include="Content\MasknVr1\img\mobilee.png" />
+    <Content Include="Content\MasknVr1\img\newsleft.png" />
+    <Content Include="Content\MasknVr1\img\new_img.png" />
+    <Content Include="Content\MasknVr1\img\openhand.cur" />
+    <Content Include="Content\MasknVr1\img\p1.png" />
+    <Content Include="Content\MasknVr1\img\p2.png" />
+    <Content Include="Content\MasknVr1\img\p3.png" />
+    <Content Include="Content\MasknVr1\img\p4.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\booking.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\homeloan.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\possisssion.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\registeration.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\search.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\shortlist.png" />
+    <Content Include="Content\MasknVr1\img\pagesIcon\sitevisit.png" />
+    <Content Include="Content\MasknVr1\img\parents.png" />
+    <Content Include="Content\MasknVr1\img\paypal.png" />
+    <Content Include="Content\MasknVr1\img\pictures-icon.png" />
+    <Content Include="Content\MasknVr1\img\pin.png" />
+    <Content Include="Content\MasknVr1\img\propertHouse.png" />
+    <Content Include="Content\MasknVr1\img\pyr.png" />
+    <Content Include="Content\MasknVr1\img\rooms.png" />
+    <Content Include="Content\MasknVr1\img\s1.png" />
+    <Content Include="Content\MasknVr1\img\search.png" />
+    <Content Include="Content\MasknVr1\img\second.jpg" />
+    <Content Include="Content\MasknVr1\img\slide.png" />
+    <Content Include="Content\MasknVr1\img\startup.png" />
+    <Content Include="Content\MasknVr1\img\third.jpg" />
+    <Content Include="Content\MasknVr1\img\time.png" />
+    <Content Include="Content\MasknVr1\img\update.png" />
+    <Content Include="Content\MasknVr1\img\urProperty.png" />
+    <Content Include="Content\MasknVr1\img\user.png" />
+    <Content Include="Content\MasknVr1\img\userAbout.png" />
+    <Content Include="Content\MasknVr1\img\visa.png" />
+    <Content Include="Content\MasknVr1\img\visit.png" />
+    <Content Include="Content\MasknVr1\js\bootstrap.js" />
+    <Content Include="Content\MasknVr1\js\custom-file-input.js" />
+    <Content Include="Content\MasknVr1\js\filter.js" />
+    <Content Include="Content\MasknVr1\js\jquery-1.11.0.min.js" />
+    <Content Include="Content\MasknVr1\js\jquery.sliderPro.js" />
+    <Content Include="Content\MasknVr1\js\materialize.js" />
+    <Content Include="Content\MasknVr1\js\materialize.min.js" />
+    <Content Include="Content\MasknVr1\js\wow.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\sys\assets\avatars\avatar.png" />
+    <Content Include="Content\sys\assets\avatars\avatar1.png" />
+    <Content Include="Content\sys\assets\avatars\avatar2.png" />
+    <Content Include="Content\sys\assets\avatars\avatar3.png" />
+    <Content Include="Content\sys\assets\avatars\avatar4.png" />
+    <Content Include="Content\sys\assets\avatars\avatar5.png" />
+    <Content Include="Content\sys\assets\avatars\profile-pic.jpg" />
+    <Content Include="Content\sys\assets\avatars\user.jpg" />
+    <Content Include="Content\sys\assets\css\ace-fonts.css" />
+    <Content Include="Content\sys\assets\css\ace-fonts.min.css" />
+    <Content Include="Content\sys\assets\css\ace-ie.css" />
+    <Content Include="Content\sys\assets\css\ace-ie.min.css" />
+    <Content Include="Content\sys\assets\css\ace-part2.css" />
+    <Content Include="Content\sys\assets\css\ace-part2.min.css" />
+    <Content Include="Content\sys\assets\css\ace-rtl.css" />
+    <Content Include="Content\sys\assets\css\ace-rtl.min.css" />
+    <Content Include="Content\sys\assets\css\ace-skins.css" />
+    <Content Include="Content\sys\assets\css\ace-skins.min.css" />
+    <Content Include="Content\sys\assets\css\ace.css" />
+    <Content Include="Content\sys\assets\css\ace.min.css" />
+    <Content Include="Content\sys\assets\css\ace.onpage-help.css" />
+    <Content Include="Content\sys\assets\css\ace.onpage-help.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datepicker3.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datetimepicker.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-duallistbox.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-duallistbox.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-editable.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-editable.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-multiselect.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-multiselect.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-timepicker.css" />
+    <Content Include="Content\sys\assets\css\bootstrap-timepicker.min.css" />
+    <Content Include="Content\sys\assets\css\bootstrap.css" />
+    <Content Include="Content\sys\assets\css\bootstrap.min.css" />
+    <Content Include="Content\sys\assets\css\chosen-sprite%402x.png" />
+    <Content Include="Content\sys\assets\css\chosen-sprite.png" />
+    <Content Include="Content\sys\assets\css\chosen.css" />
+    <Content Include="Content\sys\assets\css\chosen.min.css" />
+    <Content Include="Content\sys\assets\css\colorbox.css" />
+    <Content Include="Content\sys\assets\css\colorbox.min.css" />
+    <Content Include="Content\sys\assets\css\colorpicker.css" />
+    <Content Include="Content\sys\assets\css\colorpicker.min.css" />
+    <Content Include="Content\sys\assets\css\custom.css" />
+    <Content Include="Content\sys\assets\css\custom.min.css" />
+    <Content Include="Content\sys\assets\css\daterangepicker.css" />
+    <Content Include="Content\sys\assets\css\daterangepicker.min.css" />
+    <Content Include="Content\sys\assets\css\dropzone.css" />
+    <Content Include="Content\sys\assets\css\dropzone.min.css" />
+    <Content Include="Content\sys\assets\css\font-awesome.css" />
+    <Content Include="Content\sys\assets\css\font-awesome.min.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.min.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.print.css" />
+    <Content Include="Content\sys\assets\css\fullcalendar.print.min.css" />
+    <Content Include="Content\sys\assets\css\images\border.png" />
+    <Content Include="Content\sys\assets\css\images\border1.png" />
+    <Content Include="Content\sys\assets\css\images\border2.png" />
+    <Content Include="Content\sys\assets\css\images\controls.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderBottomCenter.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderBottomLeft.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderBottomRight.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderMiddleLeft.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderMiddleRight.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderTopCenter.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderTopLeft.png" />
+    <Content Include="Content\sys\assets\css\images\ie6\borderTopRight.png" />
+    <Content Include="Content\sys\assets\css\images\loading.gif" />
+    <Content Include="Content\sys\assets\css\images\loading_background.png" />
+    <Content Include="Content\sys\assets\css\images\meteorshower.jpg" />
+    <Content Include="Content\sys\assets\css\images\meteorshower2.jpg" />
+    <Content Include="Content\sys\assets\css\images\overlay.png" />
+    <Content Include="Content\sys\assets\css\images\pattern.jpg" />
+    <Content Include="Content\sys\assets\css\images\pattern.png" />
+    <Content Include="Content\sys\assets\css\images\spritemap%402x.png" />
+    <Content Include="Content\sys\assets\css\images\spritemap.png" />
+    <Content Include="Content\sys\assets\css\img\alpha.png" />
+    <Content Include="Content\sys\assets\css\img\hue.png" />
+    <Content Include="Content\sys\assets\css\img\saturation.png" />
+    <Content Include="Content\sys\assets\css\jquery-ui.css" />
+    <Content Include="Content\sys\assets\css\jquery-ui.custom.css" />
+    <Content Include="Content\sys\assets\css\jquery-ui.custom.min.css" />
+    <Content Include="Content\sys\assets\css\jquery-ui.min.css" />
+    <Content Include="Content\sys\assets\css\jquery.gritter.css" />
+    <Content Include="Content\sys\assets\css\jquery.gritter.min.css" />
+    <Content Include="Content\sys\assets\css\pace.css" />
+    <Content Include="Content\sys\assets\css\pace.min.css" />
+    <Content Include="Content\sys\assets\css\prettify.css" />
+    <Content Include="Content\sys\assets\css\prettify.min.css" />
+    <Content Include="Content\sys\assets\css\select2.css" />
+    <Content Include="Content\sys\assets\css\select2.min.css" />
+    <Content Include="Content\sys\assets\css\ui.jqgrid.css" />
+    <Content Include="Content\sys\assets\css\ui.jqgrid.min.css" />
+    <Content Include="Content\sys\assets\images\back_disabled.png" />
+    <Content Include="Content\sys\assets\images\back_enabled.png" />
+    <Content Include="Content\sys\assets\images\back_enabled_hover.png" />
+    <Content Include="Content\sys\assets\images\email1.png" />
+    <Content Include="Content\sys\assets\images\email2.png" />
+    <Content Include="Content\sys\assets\images\email3.png" />
+    <Content Include="Content\sys\assets\images\email4.png" />
+    <Content Include="Content\sys\assets\images\forward_disabled.png" />
+    <Content Include="Content\sys\assets\images\forward_enabled.png" />
+    <Content Include="Content\sys\assets\images\forward_enabled_hover.png" />
+    <Content Include="Content\sys\assets\images\gallery\image-1.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-2.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-3.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-4.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-5.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\image-6.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-1.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-2.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-3.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-4.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-5.jpg" />
+    <Content Include="Content\sys\assets\images\gallery\thumb-6.jpg" />
+    <Content Include="Content\sys\assets\images\share-web-design.gif" />
+    <Content Include="Content\sys\assets\images\sort_asc.png" />
+    <Content Include="Content\sys\assets\images\sort_asc_disabled.png" />
+    <Content Include="Content\sys\assets\images\sort_both.png" />
+    <Content Include="Content\sys\assets\images\sort_desc.png" />
+    <Content Include="Content\sys\assets\images\sort_desc_disabled.png" />
+    <Content Include="Content\sys\assets\images\spritemap%402x.png" />
+    <Content Include="Content\sys\assets\images\spritemap.png" />
+    <Content Include="Content\sys\assets\img\clear.png" />
+    <Content Include="Content\sys\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\sys\assets\img\glyphicons-halflings.png" />
+    <Content Include="Content\sys\assets\img\loading.gif" />
+    <Content Include="Content\sys\assets\js\ace-elements.js" />
+    <Content Include="Content\sys\assets\js\ace-elements.min.js" />
+    <Content Include="Content\sys\assets\js\ace-extra.js" />
+    <Content Include="Content\sys\assets\js\ace-extra.min.js" />
+    <Content Include="Content\sys\assets\js\ace-require.js" />
+    <Content Include="Content\sys\assets\js\ace-require.min.js" />
+    <Content Include="Content\sys\assets\js\ace.js" />
+    <Content Include="Content\sys\assets\js\ace.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.ajax-content.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.ajax-content.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-container.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-container.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-padding.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-padding.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.onpage-help.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.onpage-help.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.searchbox-autocomplete.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.searchbox-autocomplete.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-rtl.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-rtl.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-skin.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-skin.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-1.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-1.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-2.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-2.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.submenu-hover.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.submenu-hover.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.touch-drag.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.touch-drag.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-box.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-box.min.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-on-reload.js" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-on-reload.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.aside.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.aside.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.colorpicker.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.colorpicker.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.fileinput.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.fileinput.min.js">
+      <DependentUpon>elements.fileinput.js</DependentUpon>
+    </Content>
+    <Content Include="Content\sys\assets\js\ace\elements.onpage-help.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.onpage-help.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.scroller.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.scroller.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.spinner.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.spinner.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.treeview.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.treeview.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.typeahead.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.typeahead.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wizard.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wizard.min.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wysiwyg.js" />
+    <Content Include="Content\sys\assets\js\ace\elements.wysiwyg.min.js" />
+    <Content Include="Content\sys\assets\js\additional-methods.js" />
+    <Content Include="Content\sys\assets\js\additional-methods.min.js" />
+    <Content Include="Content\sys\assets\js\autosize.js" />
+    <Content Include="Content\sys\assets\js\autosize.min.js" />
+    <Content Include="Content\sys\assets\js\bootbox.js" />
+    <Content Include="Content\sys\assets\js\bootbox.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-colorpicker.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-multiselect.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-multiselect.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-tag.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-tag.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-wysiwyg.js" />
+    <Content Include="Content\sys\assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="Content\sys\assets\js\bootstrap.js" />
+    <Content Include="Content\sys\assets\js\bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\chosen.jquery.js" />
+    <Content Include="Content\sys\assets\js\chosen.jquery.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.bootstrap.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.colVis.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.colVis.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.flash.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.flash.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.foundation.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.foundation.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.html5.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.html5.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.jqueryui.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.jqueryui.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.print.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.print.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\dataTables.buttons.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\dataTables.buttons.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\License.txt" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\swf\flashExport.swf" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\js\dataTables.select.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\js\dataTables.select.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\License.txt" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.bootstrap.js" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.bootstrap.min.js" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datetimepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-timepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\daterangepicker.js" />
+    <Content Include="Content\sys\assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="Content\sys\assets\js\date-time\moment.js" />
+    <Content Include="Content\sys\assets\js\date-time\moment.min.js" />
+    <Content Include="Content\sys\assets\js\dropzone.js" />
+    <Content Include="Content\sys\assets\js\dropzone.min.js" />
+    <Content Include="Content\sys\assets\js\excanvas.js" />
+    <Content Include="Content\sys\assets\js\excanvas.min.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.min.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.pie.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.resize.js" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.spinner.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.tree.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.wizard.js" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="Content\sys\assets\js\fullcalendar.js" />
+    <Content Include="Content\sys\assets\js\fullcalendar.min.js" />
+    <Content Include="Content\sys\assets\js\holder.js" />
+    <Content Include="Content\sys\assets\js\holder.min.js" />
+    <Content Include="Content\sys\assets\js\html5shiv-printshiv.js" />
+    <Content Include="Content\sys\assets\js\html5shiv-printshiv.min.js" />
+    <Content Include="Content\sys\assets\js\html5shiv.js" />
+    <Content Include="Content\sys\assets\js\html5shiv.min.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.custom.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.custom.min.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.js" />
+    <Content Include="Content\sys\assets\js\jquery-ui.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.bootstrap-duallistbox.js" />
+    <Content Include="Content\sys\assets\js\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.colorbox.js" />
+    <Content Include="Content\sys\assets\js\jquery.colorbox.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.easypiechart.js" />
+    <Content Include="Content\sys\assets\js\jquery.easypiechart.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.gritter.js" />
+    <Content Include="Content\sys\assets\js\jquery.gritter.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.hotkeys.js" />
+    <Content Include="Content\sys\assets\js\jquery.hotkeys.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.inputlimiter.1.3.1.js" />
+    <Content Include="Content\sys\assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.js" />
+    <Content Include="Content\sys\assets\js\jquery.knob.js" />
+    <Content Include="Content\sys\assets\js\jquery.knob.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.maskedinput.js" />
+    <Content Include="Content\sys\assets\js\jquery.maskedinput.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.mobile.custom.js" />
+    <Content Include="Content\sys\assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.mousewheel.js" />
+    <Content Include="Content\sys\assets\js\jquery.mousewheel.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.nestable.js" />
+    <Content Include="Content\sys\assets\js\jquery.nestable.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.raty.js" />
+    <Content Include="Content\sys\assets\js\jquery.raty.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.slimscroll.js" />
+    <Content Include="Content\sys\assets\js\jquery.slimscroll.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.sparkline.js" />
+    <Content Include="Content\sys\assets\js\jquery.sparkline.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.ui.touch-punch.js" />
+    <Content Include="Content\sys\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\sys\assets\js\jquery.validate.js" />
+    <Content Include="Content\sys\assets\js\jquery.validate.min.js" />
+    <Content Include="Content\sys\assets\js\jquery1x.js" />
+    <Content Include="Content\sys\assets\js\jquery1x.min.js" />
+    <Content Include="Content\sys\assets\js\markdown\bootstrap-markdown.js" />
+    <Content Include="Content\sys\assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="Content\sys\assets\js\markdown\markdown.js" />
+    <Content Include="Content\sys\assets\js\markdown\markdown.min.js" />
+    <Content Include="Content\sys\assets\js\markdown\to-markdown.js" />
+    <Content Include="Content\sys\assets\js\markdown\to-markdown.min.js" />
+    <Content Include="Content\sys\assets\js\pace.js" />
+    <Content Include="Content\sys\assets\js\pace.min.js" />
+    <Content Include="Content\sys\assets\js\pace1.js" />
+    <Content Include="Content\sys\assets\js\pace1.min.js" />
+    <Content Include="Content\sys\assets\js\prettify.js" />
+    <Content Include="Content\sys\assets\js\prettify.min.js" />
+    <Content Include="Content\sys\assets\js\require.js" />
+    <Content Include="Content\sys\assets\js\require.min.js" />
+    <Content Include="Content\sys\assets\js\respond.js" />
+    <Content Include="Content\sys\assets\js\respond.min.js" />
+    <Content Include="Content\sys\assets\js\select2.js" />
+    <Content Include="Content\sys\assets\js\select2.min.js" />
+    <Content Include="Content\sys\assets\js\spin.js" />
+    <Content Include="Content\sys\assets\js\spin.min.js" />
+    <Content Include="Content\sys\assets\js\typeahead.jquery.js" />
+    <Content Include="Content\sys\assets\js\typeahead.jquery.min.js" />
+    <Content Include="Content\sys\assets\js\x-editable\ace-editable.js" />
+    <Content Include="Content\sys\assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="Content\sys\assets\js\x-editable\bootstrap-editable.js" />
+    <Content Include="Content\sys\assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\sys\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\sys\assets\fonts\FontAwesome.otf" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\sys\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\sys\assets\fonts\OpenSans-300.woff" />
+    <Content Include="Content\sys\assets\fonts\OpenSans-400.woff" />
+    <Content Include="Content\sys\assets\fonts\readme" />
+    <Content Include="Content\sys\assets\js\ace-elements.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace-extra.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace-require.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.ajax-content.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-container.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.auto-padding.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.onpage-help.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.searchbox-autocomplete.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-rtl.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings-skin.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.settings.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-1.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar-scroll-2.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.sidebar.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.submenu-hover.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.touch-drag.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-box.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\ace.widget-on-reload.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.aside.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.colorpicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.fileinput.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.onpage-help.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.scroller.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.spinner.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.treeview.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.typeahead.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.wizard.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\elements.wysiwyg.min.js.map" />
+    <Content Include="Content\sys\assets\js\ace\readme" />
+    <Content Include="Content\sys\assets\js\ace\scripts.json" />
+    <Content Include="Content\sys\assets\js\additional-methods.min.js.map" />
+    <Content Include="Content\sys\assets\js\autosize.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootbox.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-colorpicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-multiselect.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-tag.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap-wysiwyg.min.js.map" />
+    <Content Include="Content\sys\assets\js\bootstrap.min.js.map" />
+    <Content Include="Content\sys\assets\js\chosen.jquery.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.bootstrap.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.colVis.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.flash.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.foundation.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.html5.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.jqueryui.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\buttons.print.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Buttons\js\dataTables.buttons.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\extensions\Select\js\dataTables.select.min.js.map" />
+    <Content Include="Content\sys\assets\js\dataTables\jquery.dataTables.bootstrap.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-datetimepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\bootstrap-timepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\daterangepicker.min.js.map" />
+    <Content Include="Content\sys\assets\js\date-time\moment.min.js.map" />
+    <Content Include="Content\sys\assets\js\dropzone.min.js.map" />
+    <Content Include="Content\sys\assets\js\excanvas.min.js.map" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.min.js.map" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.pie.min.js.map" />
+    <Content Include="Content\sys\assets\js\flot\jquery.flot.resize.min.js.map" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.spinner.min.js.map" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.tree.min.js.map" />
+    <Content Include="Content\sys\assets\js\fuelux\fuelux.wizard.min.js.map" />
+    <Content Include="Content\sys\assets\js\fullcalendar.min.js.map" />
+    <Content Include="Content\sys\assets\js\holder.min.js.map" />
+    <Content Include="Content\sys\assets\js\html5shiv-printshiv.min.js.map" />
+    <Content Include="Content\sys\assets\js\html5shiv.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery-ui.custom.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery-ui.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.bootstrap-duallistbox.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.colorbox.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.easypiechart.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.gritter.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.hotkeys.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.inputlimiter.1.3.1.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.knob.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.maskedinput.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.mobile.custom.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.mousewheel.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.nestable.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.raty.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.slimscroll.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.sparkline.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.ui.touch-punch.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery.validate.min.js.map" />
+    <Content Include="Content\sys\assets\js\jquery1x.min.js.map" />
+    <Content Include="Content\sys\assets\js\markdown\bootstrap-markdown.min.js.map" />
+    <Content Include="Content\sys\assets\js\markdown\markdown.min.js.map" />
+    <Content Include="Content\sys\assets\js\markdown\to-markdown.min.js.map" />
+    <Content Include="Content\sys\assets\js\pace.min.js.map" />
+    <Content Include="Content\sys\assets\js\pace1.min.js.map" />
+    <Content Include="Content\sys\assets\js\prettify.min.js.map" />
+    <Content Include="Content\sys\assets\js\require.min.js.map" />
+    <Content Include="Content\sys\assets\js\respond.min.js.map" />
+    <Content Include="Content\sys\assets\js\select2.min.js.map" />
+    <Content Include="Content\sys\assets\js\spin.min.js.map" />
+    <Content Include="Content\sys\assets\js\typeahead.jquery.min.js.map" />
+    <Content Include="Content\sys\assets\js\x-editable\ace-editable.min.js.map" />
+    <Content Include="Content\sys\assets\js\x-editable\bootstrap-editable.min.js.map" />
+    <Content Include="NewsDetails.aspx" />
+    <Content Include="PropertyDetails.aspx" />
+    <Content Include="Public\default.jpg" />
+    <Content Include="Public\images\006f067c-8375-410f-9903-017cbf50937d.jpg" />
+    <Content Include="Public\images\00933bbd-3b93-4e3f-b3e7-314305222606.jpg" />
+    <Content Include="Public\images\0137984a-f588-4609-ad6f-f9940ba8808f.jpg" />
+    <Content Include="Public\images\0218f872-4d61-472a-9f7d-2f11651050d9.jpg" />
+    <Content Include="Public\images\03d38dc9-5331-4974-bc5f-a41890f34555.jpg" />
+    <Content Include="Public\images\03f2643a-f81b-4390-b158-b17c5d40b82d.jpg" />
+    <Content Include="Public\images\046ef28e-1196-4cf2-a68a-7ac34791802e.jpg" />
+    <Content Include="Public\images\04a8d745-15e8-43c7-b3f6-551819d35dd7.jpg" />
+    <Content Include="Public\images\08ecad3f-b670-4a5f-a420-4f868d890073.jpg" />
+    <Content Include="Public\images\09315e46-6f74-4198-a799-158f16a43263.jpg" />
+    <Content Include="Public\images\09e6dc17-7176-460c-8009-a7590801726a.jpg" />
+    <Content Include="Public\images\0a719304-298a-4ea0-be47-a19cb62f1421.jpg" />
+    <Content Include="Public\images\0bc2a4e6-d48d-4fbd-a39f-c79b5276f136.jpg" />
+    <Content Include="Public\images\0c249dd2-c4e8-461a-9c53-69780a5ca503.jpg" />
+    <Content Include="Public\images\0d3ceced-9abb-43ca-bef0-d84e2866b314.jpg" />
+    <Content Include="Public\images\0da40d4d-dcb1-4212-b2e7-fe3eb6191316.jpg" />
+    <Content Include="Public\images\0e7888a4-3a07-4eb1-94a1-4bf684e5edf9.jpg" />
+    <Content Include="Public\images\0f4515ef-51f3-4519-9bd2-85b9ac0b07d5.jpg" />
+    <Content Include="Public\images\0fe92a1f-c35f-4330-8796-3ec0f904bd49.jpg" />
+    <Content Include="Public\images\0ff242ae-18d0-43c7-8008-ee36c07840ca.jpg" />
+    <Content Include="Public\images\11dbaf66-962d-4ca5-9324-a015c03c9a9c.jpg" />
+    <Content Include="Public\images\13d2fdc3-a738-4f08-a6ce-298eba332605.jpg" />
+    <Content Include="Public\images\14e683a4-98a8-4b0b-8ef1-ede3c1eee926.jpg" />
+    <Content Include="Public\images\19d48d4a-04aa-4beb-bb6f-3d34de698c8c.jpg" />
+    <Content Include="Public\images\1a122fb8-4f99-4564-9bdd-724b00f6cc0b.jpg" />
+    <Content Include="Public\images\1b0fe4a6-d833-4e3c-82ab-f17b1597200d.jpg" />
+    <Content Include="Public\images\1e87f0c2-58fe-4633-8018-501ebcf36183.jpg" />
+    <Content Include="Public\images\219455ab-40fc-46fc-9304-8269d4d999bc.jpg" />
+    <Content Include="Public\images\21e87a0d-9b05-4c18-9ea1-cc6439c2e2a9.jpg" />
+    <Content Include="Public\images\247bda2b-b381-437b-ad23-f106f3eaa58f.jpg" />
+    <Content Include="Public\images\273f82f7-f41d-487b-825d-14a946ff263b.jpg" />
+    <Content Include="Public\images\284ee752-d4ae-4c79-8fe4-6fd9d04ceecd.jpg" />
+    <Content Include="Public\images\29ad0aaf-ee28-44ad-864b-2e55aed7be2a.jpg" />
+    <Content Include="Public\images\2c94d2fb-688c-4aac-a123-f9cfe053fa9d.jpg" />
+    <Content Include="Public\images\2d373416-d458-475b-a0c2-3e4664c85f62.jpg" />
+    <Content Include="Public\images\2d52a1a5-21c1-4150-a640-e50d7a284d8b.jpg" />
+    <Content Include="Public\images\2f275fe4-9306-4a7d-ade5-01701d4cbedb.jpg" />
+    <Content Include="Public\images\2f78521e-9d3c-4ff9-8655-74fc498da609.jpg" />
+    <Content Include="Public\images\313a4dee-c3c9-43c9-aac8-b8f7f35575df.jpg" />
+    <Content Include="Public\images\3191f643-dae5-49dc-900e-9175b2304ff7.jpg" />
+    <Content Include="Public\images\32f475a1-bcb5-4a3c-a0cb-98cc194d4bba.jpg" />
+    <Content Include="Public\images\33bf48a1-c366-455e-b88e-63d3470500d8.jpg" />
+    <Content Include="Public\images\33e3c212-5687-473b-96a1-c6daf488713a.jpg" />
+    <Content Include="Public\images\343ebf27-a652-46b4-a342-b1097749b734.jpg" />
+    <Content Include="Public\images\36cf0896-fafc-4672-87f6-6c562890c28e.jpg" />
+    <Content Include="Public\images\3775b94c-4996-4558-afba-61a8bacd5045.jpg" />
+    <Content Include="Public\images\37baa9f1-1ae3-4169-903a-91b048eb9940.jpg" />
+    <Content Include="Public\images\37e33a62-8016-4218-be59-a10fcaff7966.jpg" />
+    <Content Include="Public\images\39ad086e-1145-4f2b-92bd-b7855dbe4583.jpg" />
+    <Content Include="Public\images\3a5d5b08-0263-4382-ad60-d23b9dd1fcaf.jpg" />
+    <Content Include="Public\images\3aacfa42-932d-415d-9c64-3aaeaade1ccf.jpg" />
+    <Content Include="Public\images\3ba16848-c1ba-4c56-be86-d9a250bde47a.jpg" />
+    <Content Include="Public\images\3dce6e14-aec9-40a6-b9e5-7d9b04cc501a.jpg" />
+    <Content Include="Public\images\3e1cbe39-09f7-409c-9dc2-d8a7f4406f1d.jpg" />
+    <Content Include="Public\images\3f177a73-095f-47d9-b01e-92760095f817.jpg" />
+    <Content Include="Public\images\4190ba58-ac96-48a9-a045-b9fd57f90d8a.jpg" />
+    <Content Include="Public\images\41f7f1b5-bd54-47ad-bc1d-b290d66a3cbe.jpg" />
+    <Content Include="Public\images\436a95ff-314a-476f-99ba-4fd889a764ff.jpg" />
+    <Content Include="Public\images\455f18bc-886b-4c5d-8221-2853d7afab85.jpg" />
+    <Content Include="Public\images\46f8567f-29a9-462e-af94-f1b20571ccfe.jpg" />
+    <Content Include="Public\images\4718a9fc-7954-4839-bdd6-510fa71d559e.jpg" />
+    <Content Include="Public\images\47aa6647-5317-4d02-abfa-10a0fa3c082a.jpg" />
+    <Content Include="Public\images\499dacc0-209d-45e1-b9e0-e1e1839ef1f8.jpg" />
+    <Content Include="Public\images\4a41ecfe-14e4-4320-b78b-cc1ed55d9b7f.jpg" />
+    <Content Include="Public\images\4c1d2a50-d66b-4abd-bd3d-fd6396fb219a.jpg" />
+    <Content Include="Public\images\4c89a2fa-8eed-4b3b-a91b-189abf39d7bd.jpg" />
+    <Content Include="Public\images\4dda6644-7a83-4b2e-a884-8b48eb74c3d4.jpg" />
+    <Content Include="Public\images\4e326c9e-1f0c-48ef-86bf-2727577c8892.jpg" />
+    <Content Include="Public\images\5316c4cb-ce34-4e95-8ff7-c9344fc2dbae.jpg" />
+    <Content Include="Public\images\5322f4e8-4222-44de-828d-dd8506431dfc.jpg" />
+    <Content Include="Public\images\5367d845-05d0-4274-9526-9f43e50a44bc.jpg" />
+    <Content Include="Public\images\547f91ea-591e-43f0-bf18-b3500e12bf46.jpg" />
+    <Content Include="Public\images\56772532-f183-451a-af5c-3530d5322672.jpg" />
+    <Content Include="Public\images\56c434f6-2ce3-4701-862d-8511b8ea707a.jpg" />
+    <Content Include="Public\images\5806b36b-d919-471d-a7a8-4aaddfc3945e.jpg" />
+    <Content Include="Public\images\58451299-bc3e-43ff-b754-5c96af07c1e4.jpg" />
+    <Content Include="Public\images\58d1d8d7-d565-42c6-ae54-76355ef53b23.jpg" />
+    <Content Include="Public\images\5a0d8b54-9428-4ece-9a8c-f4ca3756753c.jpg" />
+    <Content Include="Public\images\5efc5aed-804a-4e33-844e-495005dec8b5.jpg" />
+    <Content Include="Public\images\5f7c6306-ed86-4857-9bf1-790e5fbd4648.jpg" />
+    <Content Include="Public\images\6068c74d-6b01-43b0-a991-31e3cca865d4.jpg" />
+    <Content Include="Public\images\61bd3d66-c3b5-4a9b-b923-a34e3cbe8a3b.jpg" />
+    <Content Include="Public\images\62345470-0b95-47e1-a465-f1932b0549b9.jpg" />
+    <Content Include="Public\images\63af7867-2fc3-444e-917c-307ad4a2cbce.jpg" />
+    <Content Include="Public\images\63d46a81-6f41-4a05-9b5f-9206bba40915.jpg" />
+    <Content Include="Public\images\64409544-7f25-49ec-8504-54b4ea459c7b.jpg" />
+    <Content Include="Public\images\64564cc5-7740-462d-9411-22d35b2cad8c.jpg" />
+    <Content Include="Public\images\649e2c28-7640-47c0-beef-21855b40a35c.jpg" />
+    <Content Include="Public\images\64f60b18-66a6-41fc-b66b-e1067899d0d0.jpg" />
+    <Content Include="Public\images\682c3d73-5570-4883-adc4-8f2bb2790264.jpg" />
+    <Content Include="Public\images\683ab6ca-ff1a-4b92-81fd-20c7ee1a3ce7.jpg" />
+    <Content Include="Public\images\693a0e03-9394-4722-a16f-d9c416ba7fda.jpg" />
+    <Content Include="Public\images\69585acc-0ce8-41e9-8ae9-719394c38997.jpg" />
+    <Content Include="Public\images\69f2e52c-f712-473b-92b8-59536d22c343.jpg" />
+    <Content Include="Public\images\6a1cb759-f169-4f86-b8b6-02c1a9ad0c15.jpg" />
+    <Content Include="Public\images\6b409b5c-422a-4d27-8623-dcfd5b59f26d.jpg" />
+    <Content Include="Public\images\6e1cc3f3-3ff2-4c21-acbe-9693de2b213a.jpg" />
+    <Content Include="Public\images\6e6ba030-4992-4bc6-bd37-d5bbff852836.jpg" />
+    <Content Include="Public\images\6eeeac66-f974-4151-aeb2-b2141081ce9b.jpg" />
+    <Content Include="Public\images\6f81e786-6a61-4412-b3fa-a5e497a45d88.jpg" />
+    <Content Include="Public\images\72f1fe9b-0d95-4053-bfc9-1842ebd5eefc.jpg" />
+    <Content Include="Public\images\74721afc-79db-4602-b3eb-a2a8bb99d163.jpg" />
+    <Content Include="Public\images\75271c52-1d83-4371-88f6-b3dd427437ad.jpg" />
+    <Content Include="Public\images\754a3506-b9fa-4181-9a76-911a9b98f180.jpg" />
+    <Content Include="Public\images\75b085e7-45e4-4997-8031-c3a4e692dac2.jpg" />
+    <Content Include="Public\images\75c5d73a-2319-452d-9565-e4ad1bbfdaf5.jpg" />
+    <Content Include="Public\images\765bcab4-cfd2-45f5-8d87-b482eacd8b75.jpg" />
+    <Content Include="Public\images\777cd8bd-0944-4a2d-91e8-7bb0c7ef4949.jpg" />
+    <Content Include="Public\images\77a42f75-9148-4866-8525-7482acdb0125.jpg" />
+    <Content Include="Public\images\77ebb887-e8db-4607-991e-32312e176408.jpg" />
+    <Content Include="Public\images\78bf653b-3b6f-4b40-aee8-131f04cca513.jpg" />
+    <Content Include="Public\images\79a1825a-a87d-4fad-b5da-4282058ef9f0.jpg" />
+    <Content Include="Public\images\79f7853f-2f8e-4b9d-a5e7-20d208c4c7fb.jpg" />
+    <Content Include="Public\images\7bc6c6c1-f65b-493d-b36b-87e4b8a70791.jpg" />
+    <Content Include="Public\images\7bd6f612-ec16-4e92-9a06-051a1a34d03b.jpg" />
+    <Content Include="Public\images\7cf54711-c9b3-40b4-b6fa-948bb44059f3.jpg" />
+    <Content Include="Public\images\7d5a328f-3897-4efd-9b82-cee1d3d22c02.jpg" />
+    <Content Include="Public\images\7d795fc0-d3be-4032-b50a-8cd51d9affc1.jpg" />
+    <Content Include="Public\images\7e14f602-d6d9-45b5-9170-f158285b1d0c.jpg" />
+    <Content Include="Public\images\7e56ee3b-c808-46f9-9ab7-01697bd45ab9.jpg" />
+    <Content Include="Public\images\7e9cc300-1994-44c8-8534-ce23df2d8aaf.jpg" />
+    <Content Include="Public\images\7f36c256-685f-4bb8-bfd9-378a929297b8.jpg" />
+    <Content Include="Public\images\80c3e8ff-e374-48da-ba73-0594a8d9285e.jpg" />
+    <Content Include="Public\images\81eafb8c-86d0-4470-b7e2-0f110f8dbffc.jpg" />
+    <Content Include="Public\images\824e24d4-54de-4015-99d5-2c3e3deabe4b.jpg" />
+    <Content Include="Public\images\826ec0bb-c009-49b6-916e-1ab886aa3b30.jpg" />
+    <Content Include="Public\images\832173ce-43fa-4dc9-96b8-2c8ffcf17a88.jpg" />
+    <Content Include="Public\images\837efd3c-0330-4ef8-8bd6-bd5e3dbb1d8d.jpg" />
+    <Content Include="Public\images\8385200f-83e1-4514-95d8-f94f91e4261a.jpg" />
+    <Content Include="Public\images\845c6a5d-b6c8-48ab-92ea-9b43f8f1df9f.jpg" />
+    <Content Include="Public\images\8537c87c-7b1e-45ee-aee1-eef53ecef1d6.jpg" />
+    <Content Include="Public\images\855952d1-02b9-498f-beb4-e90048d91ff1.jpg" />
+    <Content Include="Public\images\855f70ad-a42e-4fce-97f5-8fbc81eaef0d.jpg" />
+    <Content Include="Public\images\8590d345-3fd5-48fb-b3b5-179eeeb5d3d1.jpg" />
+    <Content Include="Public\images\85cf5daa-cd58-42a3-9a9c-1d1f2a6f94ee.jpg" />
+    <Content Include="Public\images\88bf7f8d-4e21-49e6-9c1e-8cb9a2c95a6b.jpg" />
+    <Content Include="Public\images\88fc7ca2-7143-4505-ab50-ebea46fe5c39.jpg" />
+    <Content Include="Public\images\89798eaf-3b13-433a-9804-f9c483f0eb24.jpg" />
+    <Content Include="Public\images\8a27d07b-a47e-4346-bd59-66e045a06421.jpg" />
+    <Content Include="Public\images\8a2fa0d1-6843-4b69-84d4-9093558c5776.jpg" />
+    <Content Include="Public\images\8bff4c28-abb3-4fae-8c2f-922a781e03d9.jpg" />
+    <Content Include="Public\images\8c947ac8-a6ea-4959-aabf-062b4bfd9261.jpg" />
+    <Content Include="Public\images\8d3fee13-c300-4314-8d39-cc8032d2a554.jpg" />
+    <Content Include="Public\images\8d5c08b4-3437-4d34-8a0a-f1d547d240f2.jpg" />
+    <Content Include="Public\images\8d8b9190-f10c-4910-ae1b-abfbdf04768d.jpg" />
+    <Content Include="Public\images\8e734806-495a-4c19-a9cf-698eddad442d.jpg" />
+    <Content Include="Public\images\8ea7ac0d-caf6-4f07-a442-59a6c175ae54.jpg" />
+    <Content Include="Public\images\8f2de589-a50f-4c57-9a22-915997a5489d.jpg" />
+    <Content Include="Public\images\914588f3-04a7-4836-9bfc-afa9da56fddd.jpg" />
+    <Content Include="Public\images\930a54c2-3a8d-4c2a-ac90-38e95d06381e.jpg" />
+    <Content Include="Public\images\973b9de9-0667-4956-8bfb-d8adbac4707b.jpg" />
+    <Content Include="Public\images\981256e6-b4c9-4bb7-8a1f-eb384d1924d6.jpg" />
+    <Content Include="Public\images\98422006-41b1-4189-a166-511dc2eef3e1.jpg" />
+    <Content Include="Public\images\98cae770-ecaa-4bca-8e25-1e0bc863cfae.jpg" />
+    <Content Include="Public\images\9a6d9c30-a14f-4fb8-882d-4b2f64ec7945.jpg" />
+    <Content Include="Public\images\9b1f5b7b-5a30-45e7-86c2-138256a3700a.jpg" />
+    <Content Include="Public\images\9c1d9719-e959-4c3c-9a07-6383dbec7cbd.jpg" />
+    <Content Include="Public\images\9c38adfd-5bab-4a30-9504-7c0e6dbb4a84.jpg" />
+    <Content Include="Public\images\9faecd41-ebff-4df2-becc-b98b4af40606.jpg" />
+    <Content Include="Public\images\a2b3201d-4537-467d-b445-2f4d38627a84.jpg" />
+    <Content Include="Public\images\a2e22e10-bda1-48f4-99c2-8155330280bd.jpg" />
+    <Content Include="Public\images\a3d0016d-67f1-4c65-be5b-cc5ae7b2599e.jpg" />
+    <Content Include="Public\images\a51dfcfb-867d-4998-b146-d483dadf5d97.jpg" />
+    <Content Include="Public\images\a6597c02-3500-4eee-a192-7d1011a263d0.jpg" />
+    <Content Include="Public\images\a767b30f-0293-4ac8-b234-cde783cdad76.jpg" />
+    <Content Include="Public\images\a7c92290-66c9-4c72-8fec-d3a9f6b31b8e.jpg" />
+    <Content Include="Public\images\a7f41550-bb78-4e19-b06a-165ddd19b6c6.jpg" />
+    <Content Include="Public\images\a8cf0d91-089f-45e3-9d24-2440a3e81a5d.jpg" />
+    <Content Include="Public\images\a94852ef-249f-41de-9b26-d93e8bd84abf.jpg" />
+    <Content Include="Public\images\aa04b55e-4bef-462d-8718-da12aa2912e9.jpg" />
+    <Content Include="Public\images\ab520ed8-5b60-435f-bef7-130d6c1939a0.jpg" />
+    <Content Include="Public\images\abd5f6c4-df8f-427c-a0c5-5548fa9d6b50.jpg" />
+    <Content Include="Public\images\aef0be3e-5583-4cf3-b41d-46cb0a1b0ead.jpg" />
+    <Content Include="Public\images\af8d5521-1e5e-4e90-8248-ebb6e7800252.jpg" />
+    <Content Include="Public\images\b0c20f4b-ed61-4e0c-a104-1ca9b3fbc1c0.jpg" />
+    <Content Include="Public\images\b16782da-1d15-4942-b8b9-083d0c8e9872.jpg" />
+    <Content Include="Public\images\b190f71c-c788-4419-9a52-9fa8a090dd8d.jpg" />
+    <Content Include="Public\images\b1bf83b4-ada8-4b5e-bc36-5d729fc9fe1e.jpg" />
+    <Content Include="Public\images\b209c557-7b57-4e61-ba9b-e1706763be70.jpg" />
+    <Content Include="Public\images\b26c498e-213a-4ce8-95f6-ab490ab8f630.jpg" />
+    <Content Include="Public\images\b27ce6ec-5562-4bae-9582-4c8a4d1e6f97.jpg" />
+    <Content Include="Public\images\b2e18c93-d216-4a75-a94d-da7eecc0e043.jpg" />
+    <Content Include="Public\images\b5187899-a837-4b9f-ba7a-a8cd42c8ca13.jpg" />
+    <Content Include="Public\images\b53c007a-0296-400b-9e62-224a36478dbb.jpg" />
+    <Content Include="Public\images\b5bfffeb-a1da-47f8-9512-ef2ae3cec556.jpg" />
+    <Content Include="Public\images\b5dd79b2-bb12-4d7e-9f92-320d22a1bccc.jpg" />
+    <Content Include="Public\images\b70b052c-1cb2-4e0e-abc5-0aa6f2e66243.jpg" />
+    <Content Include="Public\images\b740d94e-91c7-4d49-8380-1cc07256e438.jpg" />
+    <Content Include="Public\images\b7707553-1d54-485b-987d-a25e82b9bbba.jpg" />
+    <Content Include="Public\images\b8a171ea-94b7-4a13-99bc-912d68ecb917.jpg" />
+    <Content Include="Public\images\b8eff32b-4aa8-4607-b9d8-6b3740fc5799.jpg" />
+    <Content Include="Public\images\ba1cca1e-8769-4c6f-8551-b50561772afb.jpg" />
+    <Content Include="Public\images\bc577eee-fce3-4c94-ab17-ebe43de6f378.jpg" />
+    <Content Include="Public\images\bc9488cb-7725-4267-a7e3-92f74489d2bb.jpg" />
+    <Content Include="Public\images\bd8d122c-e9ef-4c25-92c2-1994e3d46e3b.jpg" />
+    <Content Include="Public\images\bd932f64-77c3-492e-ad06-18f2bda81e05.jpg" />
+    <Content Include="Public\images\bdb799fc-1a0a-45de-b9ec-d1e02ac97735.jpg" />
+    <Content Include="Public\images\be64b7b4-cafd-4630-bc41-7dc5a669c98b.jpg" />
+    <Content Include="Public\images\beccd299-8dd0-433f-9e86-28a666f351ed.jpg" />
+    <Content Include="Public\images\bf4f2ba4-6ab1-4f8b-8070-899c7d6a8c92.jpg" />
+    <Content Include="Public\images\c0041efb-0e6e-476d-97c3-1a086e2cb663.jpg" />
+    <Content Include="Public\images\c0cd938b-a621-4e5c-932b-7f39c64daa4e.jpg" />
+    <Content Include="Public\images\c163f28a-b968-4117-8de9-38b94b844df1.jpg" />
+    <Content Include="Public\images\c4d3c864-d186-4e19-aeab-fd39b331ed16.jpg" />
+    <Content Include="Public\images\c4e97f49-d53c-4b0b-84e6-e34218c95b51.jpg" />
+    <Content Include="Public\images\c535a41f-b7b7-4fb4-a33b-feb5e732a6c0.jpg" />
+    <Content Include="Public\images\c53f45aa-dcb9-46c4-964e-a916884027cd.jpg" />
+    <Content Include="Public\images\c697ae5b-d17d-4afd-98d0-27f40c5af4a1.jpg" />
+    <Content Include="Public\images\c808c036-7db9-4f41-9404-5c85662e3b26.jpg" />
+    <Content Include="Public\images\c90ed845-680a-43e7-bfde-520064cb5071.jpg" />
+    <Content Include="Public\images\caff6b20-bfda-4e98-84b4-d892f0f00f62.jpg" />
+    <Content Include="Public\images\cbcd0ffe-8643-4b45-9a9d-65b651154b13.jpg" />
+    <Content Include="Public\images\ccb5b00d-1e0a-4bbc-b6a6-3a286734ab5f.jpg" />
+    <Content Include="Public\images\cfc03b69-e815-48f5-8a02-a3d6c349e7a5.jpg" />
+    <Content Include="Public\images\d057e970-0f28-49b5-8acf-8a2f9cce63c3.jpg" />
+    <Content Include="Public\images\d0741767-e619-4820-8b88-43fa1c085b07.jpg" />
+    <Content Include="Public\images\d1512fdb-a5bf-4a51-844a-7ad135a6285c.jpg" />
+    <Content Include="Public\images\d4b83161-43dd-4c5c-9f90-cd0f342a6b2d.jpg" />
+    <Content Include="Public\images\d50e3bfb-e0fc-4ec9-acfd-3493cf8ebfc5.jpg" />
+    <Content Include="Public\images\d53da8cc-2ff1-41d5-b4f6-1c864501796a.jpg" />
+    <Content Include="Public\images\d58636a7-6dae-426a-8778-5f2795e7ea39.jpg" />
+    <Content Include="Public\images\d759a8db-cc10-461a-a5f4-59d6303338e7.jpg" />
+    <Content Include="Public\images\d75a86dc-dbe0-4380-9019-06db71e2b5f7.jpg" />
+    <Content Include="Public\images\d833f4e0-093f-489f-8da4-bfd382195e43.jpg" />
+    <Content Include="Public\images\de6f93d7-95f2-42a1-9d7f-d6c10942436a.jpg" />
+    <Content Include="Public\images\dedeaa06-8c05-4c86-b767-93aa26e754e1.jpg" />
+    <Content Include="Public\images\df7f886d-7c33-4a03-90f5-bde28e6d5c9c.jpg" />
+    <Content Include="Public\images\e2f80dd7-dd23-4503-80f9-0297b32871ef.jpg" />
+    <Content Include="Public\images\e51f5f22-dd0a-42f1-8319-5482f3afc9ef.jpg" />
+    <Content Include="Public\images\e9db2960-2a8c-4798-9a76-72f32bd1f7d5.jpg" />
+    <Content Include="Public\images\ea2ec424-e20a-4e9c-b6bd-cc3f1e59b248.jpg" />
+    <Content Include="Public\images\ec16e800-692a-40bb-8d25-1c285b334f0e.jpg" />
+    <Content Include="Public\images\efd2ca2c-1286-42c8-9e32-f92f90b4f816.jpg" />
+    <Content Include="Public\images\f030c21c-41a4-4e8b-93fa-a56139444cd7.jpg" />
+    <Content Include="Public\images\f22870bb-201b-420c-b525-f42fca92b0d0.jpg" />
+    <Content Include="Public\images\f44e8166-ad30-4335-92de-1bfca800028c.jpg" />
+    <Content Include="Public\images\f4d573ed-cc8e-434e-80c4-3408df40f2d4.jpg" />
+    <Content Include="Public\images\f58c3cc0-9f20-4ae5-a407-063f89af0d7f.jpg" />
+    <Content Include="Public\images\f5a025b5-9b05-44d6-8182-880557fec82a.jpg" />
+    <Content Include="Public\images\f608d891-7205-4c37-80a2-0ef5813da6c5.jpg" />
+    <Content Include="Public\images\f6e539c8-6175-4d7e-b307-6e67f2493f39.jpg" />
+    <Content Include="Public\images\fa73edec-0bea-4163-8045-5f97ea999f18.jpg" />
+    <Content Include="Public\images\fca14fe0-c844-4e4d-8bcd-26b0b4c3c644.jpg" />
+    <Content Include="Public\images\fcea691c-ec4c-4e43-a610-ad357362e2fe.jpg" />
+    <Content Include="Public\images\ff4b893f-d619-4dfc-bb4c-b26dd2d6f7f2.jpg" />
+    <Content Include="Public\images\ff516553-3da8-40a5-84fd-368ea48574a0.jpg" />
+    <Content Include="Public\images\ff6b954d-d0b6-400e-975c-6ac444c4986f.jpg" />
+    <Content Include="Public\images\ffa554be-ea69-4ed7-abe5-d62266807d2b.jpg" />
+    <Content Include="Public\images\news\741932ac-c3ca-4928-88c4-14c94891bdda.jpg" />
+    <Content Include="Public\images\news\8df42269-deef-4597-8eea-31deb5faf2ae.jpg" />
+    <Content Include="Public\images\news\a1986dfc-a151-4114-acd8-d5048c9dca54.jpg" />
+    <Content Include="Public\images\news\ba2e61a0-9e5d-46e0-8946-3330681fe954.jpg" />
+    <Content Include="Public\images\news\_thumb\741932ac-c3ca-4928-88c4-14c94891bdda.jpg" />
+    <Content Include="Public\images\news\_thumb\8df42269-deef-4597-8eea-31deb5faf2ae.jpg" />
+    <Content Include="Public\images\news\_thumb\a1986dfc-a151-4114-acd8-d5048c9dca54.jpg" />
+    <Content Include="Public\images\news\_thumb\ba2e61a0-9e5d-46e0-8946-3330681fe954.jpg" />
+    <Content Include="Public\images\_thumb\006f067c-8375-410f-9903-017cbf50937d.jpg" />
+    <Content Include="Public\images\_thumb\00933bbd-3b93-4e3f-b3e7-314305222606.jpg" />
+    <Content Include="Public\images\_thumb\0137984a-f588-4609-ad6f-f9940ba8808f.jpg" />
+    <Content Include="Public\images\_thumb\0218f872-4d61-472a-9f7d-2f11651050d9.jpg" />
+    <Content Include="Public\images\_thumb\03d38dc9-5331-4974-bc5f-a41890f34555.jpg" />
+    <Content Include="Public\images\_thumb\03f2643a-f81b-4390-b158-b17c5d40b82d.jpg" />
+    <Content Include="Public\images\_thumb\046ef28e-1196-4cf2-a68a-7ac34791802e.jpg" />
+    <Content Include="Public\images\_thumb\04a8d745-15e8-43c7-b3f6-551819d35dd7.jpg" />
+    <Content Include="Public\images\_thumb\08ecad3f-b670-4a5f-a420-4f868d890073.jpg" />
+    <Content Include="Public\images\_thumb\09315e46-6f74-4198-a799-158f16a43263.jpg" />
+    <Content Include="Public\images\_thumb\09e6dc17-7176-460c-8009-a7590801726a.jpg" />
+    <Content Include="Public\images\_thumb\0a719304-298a-4ea0-be47-a19cb62f1421.jpg" />
+    <Content Include="Public\images\_thumb\0bc2a4e6-d48d-4fbd-a39f-c79b5276f136.jpg" />
+    <Content Include="Public\images\_thumb\0c249dd2-c4e8-461a-9c53-69780a5ca503.jpg" />
+    <Content Include="Public\images\_thumb\0d3ceced-9abb-43ca-bef0-d84e2866b314.jpg" />
+    <Content Include="Public\images\_thumb\0da40d4d-dcb1-4212-b2e7-fe3eb6191316.jpg" />
+    <Content Include="Public\images\_thumb\0e7888a4-3a07-4eb1-94a1-4bf684e5edf9.jpg" />
+    <Content Include="Public\images\_thumb\0f4515ef-51f3-4519-9bd2-85b9ac0b07d5.jpg" />
+    <Content Include="Public\images\_thumb\0fe92a1f-c35f-4330-8796-3ec0f904bd49.jpg" />
+    <Content Include="Public\images\_thumb\0ff242ae-18d0-43c7-8008-ee36c07840ca.jpg" />
+    <Content Include="Public\images\_thumb\11dbaf66-962d-4ca5-9324-a015c03c9a9c.jpg" />
+    <Content Include="Public\images\_thumb\13d2fdc3-a738-4f08-a6ce-298eba332605.jpg" />
+    <Content Include="Public\images\_thumb\14e683a4-98a8-4b0b-8ef1-ede3c1eee926.jpg" />
+    <Content Include="Public\images\_thumb\19d48d4a-04aa-4beb-bb6f-3d34de698c8c.jpg" />
+    <Content Include="Public\images\_thumb\1a122fb8-4f99-4564-9bdd-724b00f6cc0b.jpg" />
+    <Content Include="Public\images\_thumb\1b0fe4a6-d833-4e3c-82ab-f17b1597200d.jpg" />
+    <Content Include="Public\images\_thumb\1e87f0c2-58fe-4633-8018-501ebcf36183.jpg" />
+    <Content Include="Public\images\_thumb\219455ab-40fc-46fc-9304-8269d4d999bc.jpg" />
+    <Content Include="Public\images\_thumb\21e87a0d-9b05-4c18-9ea1-cc6439c2e2a9.jpg" />
+    <Content Include="Public\images\_thumb\247bda2b-b381-437b-ad23-f106f3eaa58f.jpg" />
+    <Content Include="Public\images\_thumb\273f82f7-f41d-487b-825d-14a946ff263b.jpg" />
+    <Content Include="Public\images\_thumb\284ee752-d4ae-4c79-8fe4-6fd9d04ceecd.jpg" />
+    <Content Include="Public\images\_thumb\29ad0aaf-ee28-44ad-864b-2e55aed7be2a.jpg" />
+    <Content Include="Public\images\_thumb\2c94d2fb-688c-4aac-a123-f9cfe053fa9d.jpg" />
+    <Content Include="Public\images\_thumb\2d373416-d458-475b-a0c2-3e4664c85f62.jpg" />
+    <Content Include="Public\images\_thumb\2d52a1a5-21c1-4150-a640-e50d7a284d8b.jpg" />
+    <Content Include="Public\images\_thumb\2f275fe4-9306-4a7d-ade5-01701d4cbedb.jpg" />
+    <Content Include="Public\images\_thumb\2f78521e-9d3c-4ff9-8655-74fc498da609.jpg" />
+    <Content Include="Public\images\_thumb\313a4dee-c3c9-43c9-aac8-b8f7f35575df.jpg" />
+    <Content Include="Public\images\_thumb\3191f643-dae5-49dc-900e-9175b2304ff7.jpg" />
+    <Content Include="Public\images\_thumb\32f475a1-bcb5-4a3c-a0cb-98cc194d4bba.jpg" />
+    <Content Include="Public\images\_thumb\33bf48a1-c366-455e-b88e-63d3470500d8.jpg" />
+    <Content Include="Public\images\_thumb\33e3c212-5687-473b-96a1-c6daf488713a.jpg" />
+    <Content Include="Public\images\_thumb\343ebf27-a652-46b4-a342-b1097749b734.jpg" />
+    <Content Include="Public\images\_thumb\36cf0896-fafc-4672-87f6-6c562890c28e.jpg" />
+    <Content Include="Public\images\_thumb\3775b94c-4996-4558-afba-61a8bacd5045.jpg" />
+    <Content Include="Public\images\_thumb\37baa9f1-1ae3-4169-903a-91b048eb9940.jpg" />
+    <Content Include="Public\images\_thumb\37e33a62-8016-4218-be59-a10fcaff7966.jpg" />
+    <Content Include="Public\images\_thumb\39ad086e-1145-4f2b-92bd-b7855dbe4583.jpg" />
+    <Content Include="Public\images\_thumb\3a5d5b08-0263-4382-ad60-d23b9dd1fcaf.jpg" />
+    <Content Include="Public\images\_thumb\3aacfa42-932d-415d-9c64-3aaeaade1ccf.jpg" />
+    <Content Include="Public\images\_thumb\3ba16848-c1ba-4c56-be86-d9a250bde47a.jpg" />
+    <Content Include="Public\images\_thumb\3dce6e14-aec9-40a6-b9e5-7d9b04cc501a.jpg" />
+    <Content Include="Public\images\_thumb\3e1cbe39-09f7-409c-9dc2-d8a7f4406f1d.jpg" />
+    <Content Include="Public\images\_thumb\3f177a73-095f-47d9-b01e-92760095f817.jpg" />
+    <Content Include="Public\images\_thumb\4190ba58-ac96-48a9-a045-b9fd57f90d8a.jpg" />
+    <Content Include="Public\images\_thumb\41f7f1b5-bd54-47ad-bc1d-b290d66a3cbe.jpg" />
+    <Content Include="Public\images\_thumb\436a95ff-314a-476f-99ba-4fd889a764ff.jpg" />
+    <Content Include="Public\images\_thumb\455f18bc-886b-4c5d-8221-2853d7afab85.jpg" />
+    <Content Include="Public\images\_thumb\46f8567f-29a9-462e-af94-f1b20571ccfe.jpg" />
+    <Content Include="Public\images\_thumb\4718a9fc-7954-4839-bdd6-510fa71d559e.jpg" />
+    <Content Include="Public\images\_thumb\47aa6647-5317-4d02-abfa-10a0fa3c082a.jpg" />
+    <Content Include="Public\images\_thumb\499dacc0-209d-45e1-b9e0-e1e1839ef1f8.jpg" />
+    <Content Include="Public\images\_thumb\4a41ecfe-14e4-4320-b78b-cc1ed55d9b7f.jpg" />
+    <Content Include="Public\images\_thumb\4c1d2a50-d66b-4abd-bd3d-fd6396fb219a.jpg" />
+    <Content Include="Public\images\_thumb\4c89a2fa-8eed-4b3b-a91b-189abf39d7bd.jpg" />
+    <Content Include="Public\images\_thumb\4dda6644-7a83-4b2e-a884-8b48eb74c3d4.jpg" />
+    <Content Include="Public\images\_thumb\4e326c9e-1f0c-48ef-86bf-2727577c8892.jpg" />
+    <Content Include="Public\images\_thumb\5316c4cb-ce34-4e95-8ff7-c9344fc2dbae.jpg" />
+    <Content Include="Public\images\_thumb\5322f4e8-4222-44de-828d-dd8506431dfc.jpg" />
+    <Content Include="Public\images\_thumb\5367d845-05d0-4274-9526-9f43e50a44bc.jpg" />
+    <Content Include="Public\images\_thumb\547f91ea-591e-43f0-bf18-b3500e12bf46.jpg" />
+    <Content Include="Public\images\_thumb\56772532-f183-451a-af5c-3530d5322672.jpg" />
+    <Content Include="Public\images\_thumb\56c434f6-2ce3-4701-862d-8511b8ea707a.jpg" />
+    <Content Include="Public\images\_thumb\5806b36b-d919-471d-a7a8-4aaddfc3945e.jpg" />
+    <Content Include="Public\images\_thumb\58451299-bc3e-43ff-b754-5c96af07c1e4.jpg" />
+    <Content Include="Public\images\_thumb\58d1d8d7-d565-42c6-ae54-76355ef53b23.jpg" />
+    <Content Include="Public\images\_thumb\5a0d8b54-9428-4ece-9a8c-f4ca3756753c.jpg" />
+    <Content Include="Public\images\_thumb\5efc5aed-804a-4e33-844e-495005dec8b5.jpg" />
+    <Content Include="Public\images\_thumb\5f7c6306-ed86-4857-9bf1-790e5fbd4648.jpg" />
+    <Content Include="Public\images\_thumb\6068c74d-6b01-43b0-a991-31e3cca865d4.jpg" />
+    <Content Include="Public\images\_thumb\61bd3d66-c3b5-4a9b-b923-a34e3cbe8a3b.jpg" />
+    <Content Include="Public\images\_thumb\62345470-0b95-47e1-a465-f1932b0549b9.jpg" />
+    <Content Include="Public\images\_thumb\63af7867-2fc3-444e-917c-307ad4a2cbce.jpg" />
+    <Content Include="Public\images\_thumb\63d46a81-6f41-4a05-9b5f-9206bba40915.jpg" />
+    <Content Include="Public\images\_thumb\64409544-7f25-49ec-8504-54b4ea459c7b.jpg" />
+    <Content Include="Public\images\_thumb\64564cc5-7740-462d-9411-22d35b2cad8c.jpg" />
+    <Content Include="Public\images\_thumb\649e2c28-7640-47c0-beef-21855b40a35c.jpg" />
+    <Content Include="Public\images\_thumb\64f60b18-66a6-41fc-b66b-e1067899d0d0.jpg" />
+    <Content Include="Public\images\_thumb\682c3d73-5570-4883-adc4-8f2bb2790264.jpg" />
+    <Content Include="Public\images\_thumb\683ab6ca-ff1a-4b92-81fd-20c7ee1a3ce7.jpg" />
+    <Content Include="Public\images\_thumb\693a0e03-9394-4722-a16f-d9c416ba7fda.jpg" />
+    <Content Include="Public\images\_thumb\69585acc-0ce8-41e9-8ae9-719394c38997.jpg" />
+    <Content Include="Public\images\_thumb\69f2e52c-f712-473b-92b8-59536d22c343.jpg" />
+    <Content Include="Public\images\_thumb\6a1cb759-f169-4f86-b8b6-02c1a9ad0c15.jpg" />
+    <Content Include="Public\images\_thumb\6b409b5c-422a-4d27-8623-dcfd5b59f26d.jpg" />
+    <Content Include="Public\images\_thumb\6e1cc3f3-3ff2-4c21-acbe-9693de2b213a.jpg" />
+    <Content Include="Public\images\_thumb\6e6ba030-4992-4bc6-bd37-d5bbff852836.jpg" />
+    <Content Include="Public\images\_thumb\6eeeac66-f974-4151-aeb2-b2141081ce9b.jpg" />
+    <Content Include="Public\images\_thumb\6f81e786-6a61-4412-b3fa-a5e497a45d88.jpg" />
+    <Content Include="Public\images\_thumb\72f1fe9b-0d95-4053-bfc9-1842ebd5eefc.jpg" />
+    <Content Include="Public\images\_thumb\74721afc-79db-4602-b3eb-a2a8bb99d163.jpg" />
+    <Content Include="Public\images\_thumb\75271c52-1d83-4371-88f6-b3dd427437ad.jpg" />
+    <Content Include="Public\images\_thumb\754a3506-b9fa-4181-9a76-911a9b98f180.jpg" />
+    <Content Include="Public\images\_thumb\75b085e7-45e4-4997-8031-c3a4e692dac2.jpg" />
+    <Content Include="Public\images\_thumb\75c5d73a-2319-452d-9565-e4ad1bbfdaf5.jpg" />
+    <Content Include="Public\images\_thumb\765bcab4-cfd2-45f5-8d87-b482eacd8b75.jpg" />
+    <Content Include="Public\images\_thumb\777cd8bd-0944-4a2d-91e8-7bb0c7ef4949.jpg" />
+    <Content Include="Public\images\_thumb\77a42f75-9148-4866-8525-7482acdb0125.jpg" />
+    <Content Include="Public\images\_thumb\77ebb887-e8db-4607-991e-32312e176408.jpg" />
+    <Content Include="Public\images\_thumb\78bf653b-3b6f-4b40-aee8-131f04cca513.jpg" />
+    <Content Include="Public\images\_thumb\79a1825a-a87d-4fad-b5da-4282058ef9f0.jpg" />
+    <Content Include="Public\images\_thumb\79f7853f-2f8e-4b9d-a5e7-20d208c4c7fb.jpg" />
+    <Content Include="Public\images\_thumb\7bc6c6c1-f65b-493d-b36b-87e4b8a70791.jpg" />
+    <Content Include="Public\images\_thumb\7bd6f612-ec16-4e92-9a06-051a1a34d03b.jpg" />
+    <Content Include="Public\images\_thumb\7cf54711-c9b3-40b4-b6fa-948bb44059f3.jpg" />
+    <Content Include="Public\images\_thumb\7d5a328f-3897-4efd-9b82-cee1d3d22c02.jpg" />
+    <Content Include="Public\images\_thumb\7d795fc0-d3be-4032-b50a-8cd51d9affc1.jpg" />
+    <Content Include="Public\images\_thumb\7e14f602-d6d9-45b5-9170-f158285b1d0c.jpg" />
+    <Content Include="Public\images\_thumb\7e56ee3b-c808-46f9-9ab7-01697bd45ab9.jpg" />
+    <Content Include="Public\images\_thumb\7e9cc300-1994-44c8-8534-ce23df2d8aaf.jpg" />
+    <Content Include="Public\images\_thumb\7f36c256-685f-4bb8-bfd9-378a929297b8.jpg" />
+    <Content Include="Public\images\_thumb\80c3e8ff-e374-48da-ba73-0594a8d9285e.jpg" />
+    <Content Include="Public\images\_thumb\81eafb8c-86d0-4470-b7e2-0f110f8dbffc.jpg" />
+    <Content Include="Public\images\_thumb\824e24d4-54de-4015-99d5-2c3e3deabe4b.jpg" />
+    <Content Include="Public\images\_thumb\826ec0bb-c009-49b6-916e-1ab886aa3b30.jpg" />
+    <Content Include="Public\images\_thumb\832173ce-43fa-4dc9-96b8-2c8ffcf17a88.jpg" />
+    <Content Include="Public\images\_thumb\837efd3c-0330-4ef8-8bd6-bd5e3dbb1d8d.jpg" />
+    <Content Include="Public\images\_thumb\8385200f-83e1-4514-95d8-f94f91e4261a.jpg" />
+    <Content Include="Public\images\_thumb\845c6a5d-b6c8-48ab-92ea-9b43f8f1df9f.jpg" />
+    <Content Include="Public\images\_thumb\8537c87c-7b1e-45ee-aee1-eef53ecef1d6.jpg" />
+    <Content Include="Public\images\_thumb\855952d1-02b9-498f-beb4-e90048d91ff1.jpg" />
+    <Content Include="Public\images\_thumb\855f70ad-a42e-4fce-97f5-8fbc81eaef0d.jpg" />
+    <Content Include="Public\images\_thumb\8590d345-3fd5-48fb-b3b5-179eeeb5d3d1.jpg" />
+    <Content Include="Public\images\_thumb\85cf5daa-cd58-42a3-9a9c-1d1f2a6f94ee.jpg" />
+    <Content Include="Public\images\_thumb\88bf7f8d-4e21-49e6-9c1e-8cb9a2c95a6b.jpg" />
+    <Content Include="Public\images\_thumb\88fc7ca2-7143-4505-ab50-ebea46fe5c39.jpg" />
+    <Content Include="Public\images\_thumb\89798eaf-3b13-433a-9804-f9c483f0eb24.jpg" />
+    <Content Include="Public\images\_thumb\8a27d07b-a47e-4346-bd59-66e045a06421.jpg" />
+    <Content Include="Public\images\_thumb\8a2fa0d1-6843-4b69-84d4-9093558c5776.jpg" />
+    <Content Include="Public\images\_thumb\8bff4c28-abb3-4fae-8c2f-922a781e03d9.jpg" />
+    <Content Include="Public\images\_thumb\8c947ac8-a6ea-4959-aabf-062b4bfd9261.jpg" />
+    <Content Include="Public\images\_thumb\8d3fee13-c300-4314-8d39-cc8032d2a554.jpg" />
+    <Content Include="Public\images\_thumb\8d5c08b4-3437-4d34-8a0a-f1d547d240f2.jpg" />
+    <Content Include="Public\images\_thumb\8d8b9190-f10c-4910-ae1b-abfbdf04768d.jpg" />
+    <Content Include="Public\images\_thumb\8e734806-495a-4c19-a9cf-698eddad442d.jpg" />
+    <Content Include="Public\images\_thumb\8ea7ac0d-caf6-4f07-a442-59a6c175ae54.jpg" />
+    <Content Include="Public\images\_thumb\8f2de589-a50f-4c57-9a22-915997a5489d.jpg" />
+    <Content Include="Public\images\_thumb\914588f3-04a7-4836-9bfc-afa9da56fddd.jpg" />
+    <Content Include="Public\images\_thumb\930a54c2-3a8d-4c2a-ac90-38e95d06381e.jpg" />
+    <Content Include="Public\images\_thumb\973b9de9-0667-4956-8bfb-d8adbac4707b.jpg" />
+    <Content Include="Public\images\_thumb\981256e6-b4c9-4bb7-8a1f-eb384d1924d6.jpg" />
+    <Content Include="Public\images\_thumb\98422006-41b1-4189-a166-511dc2eef3e1.jpg" />
+    <Content Include="Public\images\_thumb\98cae770-ecaa-4bca-8e25-1e0bc863cfae.jpg" />
+    <Content Include="Public\images\_thumb\9a6d9c30-a14f-4fb8-882d-4b2f64ec7945.jpg" />
+    <Content Include="Public\images\_thumb\9b1f5b7b-5a30-45e7-86c2-138256a3700a.jpg" />
+    <Content Include="Public\images\_thumb\9c1d9719-e959-4c3c-9a07-6383dbec7cbd.jpg" />
+    <Content Include="Public\images\_thumb\9c38adfd-5bab-4a30-9504-7c0e6dbb4a84.jpg" />
+    <Content Include="Public\images\_thumb\9faecd41-ebff-4df2-becc-b98b4af40606.jpg" />
+    <Content Include="Public\images\_thumb\a2b3201d-4537-467d-b445-2f4d38627a84.jpg" />
+    <Content Include="Public\images\_thumb\a2e22e10-bda1-48f4-99c2-8155330280bd.jpg" />
+    <Content Include="Public\images\_thumb\a3d0016d-67f1-4c65-be5b-cc5ae7b2599e.jpg" />
+    <Content Include="Public\images\_thumb\a51dfcfb-867d-4998-b146-d483dadf5d97.jpg" />
+    <Content Include="Public\images\_thumb\a6597c02-3500-4eee-a192-7d1011a263d0.jpg" />
+    <Content Include="Public\images\_thumb\a767b30f-0293-4ac8-b234-cde783cdad76.jpg" />
+    <Content Include="Public\images\_thumb\a7c92290-66c9-4c72-8fec-d3a9f6b31b8e.jpg" />
+    <Content Include="Public\images\_thumb\a7f41550-bb78-4e19-b06a-165ddd19b6c6.jpg" />
+    <Content Include="Public\images\_thumb\a8cf0d91-089f-45e3-9d24-2440a3e81a5d.jpg" />
+    <Content Include="Public\images\_thumb\a94852ef-249f-41de-9b26-d93e8bd84abf.jpg" />
+    <Content Include="Public\images\_thumb\aa04b55e-4bef-462d-8718-da12aa2912e9.jpg" />
+    <Content Include="Public\images\_thumb\ab520ed8-5b60-435f-bef7-130d6c1939a0.jpg" />
+    <Content Include="Public\images\_thumb\abd5f6c4-df8f-427c-a0c5-5548fa9d6b50.jpg" />
+    <Content Include="Public\images\_thumb\aef0be3e-5583-4cf3-b41d-46cb0a1b0ead.jpg" />
+    <Content Include="Public\images\_thumb\af8d5521-1e5e-4e90-8248-ebb6e7800252.jpg" />
+    <Content Include="Public\images\_thumb\b0c20f4b-ed61-4e0c-a104-1ca9b3fbc1c0.jpg" />
+    <Content Include="Public\images\_thumb\b16782da-1d15-4942-b8b9-083d0c8e9872.jpg" />
+    <Content Include="Public\images\_thumb\b190f71c-c788-4419-9a52-9fa8a090dd8d.jpg" />
+    <Content Include="Public\images\_thumb\b1bf83b4-ada8-4b5e-bc36-5d729fc9fe1e.jpg" />
+    <Content Include="Public\images\_thumb\b209c557-7b57-4e61-ba9b-e1706763be70.jpg" />
+    <Content Include="Public\images\_thumb\b26c498e-213a-4ce8-95f6-ab490ab8f630.jpg" />
+    <Content Include="Public\images\_thumb\b27ce6ec-5562-4bae-9582-4c8a4d1e6f97.jpg" />
+    <Content Include="Public\images\_thumb\b2e18c93-d216-4a75-a94d-da7eecc0e043.jpg" />
+    <Content Include="Public\images\_thumb\b5187899-a837-4b9f-ba7a-a8cd42c8ca13.jpg" />
+    <Content Include="Public\images\_thumb\b53c007a-0296-400b-9e62-224a36478dbb.jpg" />
+    <Content Include="Public\images\_thumb\b5bfffeb-a1da-47f8-9512-ef2ae3cec556.jpg" />
+    <Content Include="Public\images\_thumb\b5dd79b2-bb12-4d7e-9f92-320d22a1bccc.jpg" />
+    <Content Include="Public\images\_thumb\b70b052c-1cb2-4e0e-abc5-0aa6f2e66243.jpg" />
+    <Content Include="Public\images\_thumb\b740d94e-91c7-4d49-8380-1cc07256e438.jpg" />
+    <Content Include="Public\images\_thumb\b7707553-1d54-485b-987d-a25e82b9bbba.jpg" />
+    <Content Include="Public\images\_thumb\b8a171ea-94b7-4a13-99bc-912d68ecb917.jpg" />
+    <Content Include="Public\images\_thumb\b8eff32b-4aa8-4607-b9d8-6b3740fc5799.jpg" />
+    <Content Include="Public\images\_thumb\ba1cca1e-8769-4c6f-8551-b50561772afb.jpg" />
+    <Content Include="Public\images\_thumb\bc577eee-fce3-4c94-ab17-ebe43de6f378.jpg" />
+    <Content Include="Public\images\_thumb\bc9488cb-7725-4267-a7e3-92f74489d2bb.jpg" />
+    <Content Include="Public\images\_thumb\bd8d122c-e9ef-4c25-92c2-1994e3d46e3b.jpg" />
+    <Content Include="Public\images\_thumb\bd932f64-77c3-492e-ad06-18f2bda81e05.jpg" />
+    <Content Include="Public\images\_thumb\bdb799fc-1a0a-45de-b9ec-d1e02ac97735.jpg" />
+    <Content Include="Public\images\_thumb\be64b7b4-cafd-4630-bc41-7dc5a669c98b.jpg" />
+    <Content Include="Public\images\_thumb\beccd299-8dd0-433f-9e86-28a666f351ed.jpg" />
+    <Content Include="Public\images\_thumb\bf4f2ba4-6ab1-4f8b-8070-899c7d6a8c92.jpg" />
+    <Content Include="Public\images\_thumb\c0041efb-0e6e-476d-97c3-1a086e2cb663.jpg" />
+    <Content Include="Public\images\_thumb\c0cd938b-a621-4e5c-932b-7f39c64daa4e.jpg" />
+    <Content Include="Public\images\_thumb\c163f28a-b968-4117-8de9-38b94b844df1.jpg" />
+    <Content Include="Public\images\_thumb\c4d3c864-d186-4e19-aeab-fd39b331ed16.jpg" />
+    <Content Include="Public\images\_thumb\c4e97f49-d53c-4b0b-84e6-e34218c95b51.jpg" />
+    <Content Include="Public\images\_thumb\c535a41f-b7b7-4fb4-a33b-feb5e732a6c0.jpg" />
+    <Content Include="Public\images\_thumb\c53f45aa-dcb9-46c4-964e-a916884027cd.jpg" />
+    <Content Include="Public\images\_thumb\c697ae5b-d17d-4afd-98d0-27f40c5af4a1.jpg" />
+    <Content Include="Public\images\_thumb\c808c036-7db9-4f41-9404-5c85662e3b26.jpg" />
+    <Content Include="Public\images\_thumb\c90ed845-680a-43e7-bfde-520064cb5071.jpg" />
+    <Content Include="Public\images\_thumb\caff6b20-bfda-4e98-84b4-d892f0f00f62.jpg" />
+    <Content Include="Public\images\_thumb\cbcd0ffe-8643-4b45-9a9d-65b651154b13.jpg" />
+    <Content Include="Public\images\_thumb\ccb5b00d-1e0a-4bbc-b6a6-3a286734ab5f.jpg" />
+    <Content Include="Public\images\_thumb\cfc03b69-e815-48f5-8a02-a3d6c349e7a5.jpg" />
+    <Content Include="Public\images\_thumb\d057e970-0f28-49b5-8acf-8a2f9cce63c3.jpg" />
+    <Content Include="Public\images\_thumb\d0741767-e619-4820-8b88-43fa1c085b07.jpg" />
+    <Content Include="Public\images\_thumb\d1512fdb-a5bf-4a51-844a-7ad135a6285c.jpg" />
+    <Content Include="Public\images\_thumb\d4b83161-43dd-4c5c-9f90-cd0f342a6b2d.jpg" />
+    <Content Include="Public\images\_thumb\d50e3bfb-e0fc-4ec9-acfd-3493cf8ebfc5.jpg" />
+    <Content Include="Public\images\_thumb\d53da8cc-2ff1-41d5-b4f6-1c864501796a.jpg" />
+    <Content Include="Public\images\_thumb\d58636a7-6dae-426a-8778-5f2795e7ea39.jpg" />
+    <Content Include="Public\images\_thumb\d759a8db-cc10-461a-a5f4-59d6303338e7.jpg" />
+    <Content Include="Public\images\_thumb\d75a86dc-dbe0-4380-9019-06db71e2b5f7.jpg" />
+    <Content Include="Public\images\_thumb\d833f4e0-093f-489f-8da4-bfd382195e43.jpg" />
+    <Content Include="Public\images\_thumb\de6f93d7-95f2-42a1-9d7f-d6c10942436a.jpg" />
+    <Content Include="Public\images\_thumb\dedeaa06-8c05-4c86-b767-93aa26e754e1.jpg" />
+    <Content Include="Public\images\_thumb\df7f886d-7c33-4a03-90f5-bde28e6d5c9c.jpg" />
+    <Content Include="Public\images\_thumb\e2f80dd7-dd23-4503-80f9-0297b32871ef.jpg" />
+    <Content Include="Public\images\_thumb\e51f5f22-dd0a-42f1-8319-5482f3afc9ef.jpg" />
+    <Content Include="Public\images\_thumb\e9db2960-2a8c-4798-9a76-72f32bd1f7d5.jpg" />
+    <Content Include="Public\images\_thumb\ea2ec424-e20a-4e9c-b6bd-cc3f1e59b248.jpg" />
+    <Content Include="Public\images\_thumb\ec16e800-692a-40bb-8d25-1c285b334f0e.jpg" />
+    <Content Include="Public\images\_thumb\efd2ca2c-1286-42c8-9e32-f92f90b4f816.jpg" />
+    <Content Include="Public\images\_thumb\f030c21c-41a4-4e8b-93fa-a56139444cd7.jpg" />
+    <Content Include="Public\images\_thumb\f22870bb-201b-420c-b525-f42fca92b0d0.jpg" />
+    <Content Include="Public\images\_thumb\f44e8166-ad30-4335-92de-1bfca800028c.jpg" />
+    <Content Include="Public\images\_thumb\f4d573ed-cc8e-434e-80c4-3408df40f2d4.jpg" />
+    <Content Include="Public\images\_thumb\f58c3cc0-9f20-4ae5-a407-063f89af0d7f.jpg" />
+    <Content Include="Public\images\_thumb\f5a025b5-9b05-44d6-8182-880557fec82a.jpg" />
+    <Content Include="Public\images\_thumb\f608d891-7205-4c37-80a2-0ef5813da6c5.jpg" />
+    <Content Include="Public\images\_thumb\f6e539c8-6175-4d7e-b307-6e67f2493f39.jpg" />
+    <Content Include="Public\images\_thumb\fa73edec-0bea-4163-8045-5f97ea999f18.jpg" />
+    <Content Include="Public\images\_thumb\fca14fe0-c844-4e4d-8bcd-26b0b4c3c644.jpg" />
+    <Content Include="Public\images\_thumb\fcea691c-ec4c-4e43-a610-ad357362e2fe.jpg" />
+    <Content Include="Public\images\_thumb\ff4b893f-d619-4dfc-bb4c-b26dd2d6f7f2.jpg" />
+    <Content Include="Public\images\_thumb\ff516553-3da8-40a5-84fd-368ea48574a0.jpg" />
+    <Content Include="Public\images\_thumb\ff6b954d-d0b6-400e-975c-6ac444c4986f.jpg" />
+    <Content Include="Public\images\_thumb\ffa554be-ea69-4ed7-abe5-d62266807d2b.jpg" />
+    <Content Include="Scripts\site\controllers\propertyDetailsController.js" />
+    <Content Include="Scripts\site\controllers\propertiesController.js" />
+    <Content Include="Scripts\sys\DataService.min.js">
+      <DependentUpon>DataService.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\sys\imagesManager.min.js">
+      <DependentUpon>imagesManager.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\sys\mastetUtil.js" />
+    <Content Include="Scripts\sys\mastetUtil.min.js" />
+    <Content Include="Scripts\sys\usersManager.js" />
+    <Content Include="Scripts\sys\usersManager.min.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="Scripts\app\services\Common.js" />
+    <Content Include="Scripts\app\services\Common.min.js">
+      <DependentUpon>Common.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\services\DataService.js" />
+    <Content Include="Scripts\app\services\DataService.min.js">
+      <DependentUpon>DataService.js</DependentUpon>
+    </Content>
+    <None Include="bundleconfig.json" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\MasknVr1\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\MasknVr1\fonts\FontAwesome.otf" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\MasknVr1\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\MasknVr1\fonts\GOTHAM-BOLD.TTF" />
+    <Content Include="Content\MasknVr1\fonts\Gotham-Book.otf" />
+    <Content Include="Content\MasknVr1\fonts\GOTHAM-LIGHT.TTF" />
+    <Content Include="Content\MasknVr1\fonts\Gotham-Thin.otf" />
+    <Content Include="Content\MasknVr1\fonts\JF-Flat-regular.eot" />
+    <Content Include="Content\MasknVr1\fonts\JF-Flat-regular.ttf" />
+    <Content Include="Content\MasknVr1\fonts\JF-Flat-regular.woff" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\select2\css\select2-optional.css" />
+    <Content Include="Scripts\select2\css\select2.css" />
+    <Content Include="Scripts\select2\css\select2.min.css" />
+    <Content Include="Scripts\select2\js\i18n\ar.js" />
+    <Content Include="Scripts\select2\js\i18n\az.js" />
+    <Content Include="Scripts\select2\js\i18n\bg.js" />
+    <Content Include="Scripts\select2\js\i18n\ca.js" />
+    <Content Include="Scripts\select2\js\i18n\cs.js" />
+    <Content Include="Scripts\select2\js\i18n\da.js" />
+    <Content Include="Scripts\select2\js\i18n\de.js" />
+    <Content Include="Scripts\select2\js\i18n\el.js" />
+    <Content Include="Scripts\select2\js\i18n\en.js" />
+    <Content Include="Scripts\select2\js\i18n\es.js" />
+    <Content Include="Scripts\select2\js\i18n\et.js" />
+    <Content Include="Scripts\select2\js\i18n\eu.js" />
+    <Content Include="Scripts\select2\js\i18n\fa.js" />
+    <Content Include="Scripts\select2\js\i18n\fi.js" />
+    <Content Include="Scripts\select2\js\i18n\fr.js" />
+    <Content Include="Scripts\select2\js\i18n\gl.js" />
+    <Content Include="Scripts\select2\js\i18n\he.js" />
+    <Content Include="Scripts\select2\js\i18n\hi.js" />
+    <Content Include="Scripts\select2\js\i18n\hr.js" />
+    <Content Include="Scripts\select2\js\i18n\hu.js" />
+    <Content Include="Scripts\select2\js\i18n\id.js" />
+    <Content Include="Scripts\select2\js\i18n\is.js" />
+    <Content Include="Scripts\select2\js\i18n\it.js" />
+    <Content Include="Scripts\select2\js\i18n\ja.js" />
+    <Content Include="Scripts\select2\js\i18n\km.js" />
+    <Content Include="Scripts\select2\js\i18n\ko.js" />
+    <Content Include="Scripts\select2\js\i18n\lt.js" />
+    <Content Include="Scripts\select2\js\i18n\lv.js" />
+    <Content Include="Scripts\select2\js\i18n\mk.js" />
+    <Content Include="Scripts\select2\js\i18n\ms.js" />
+    <Content Include="Scripts\select2\js\i18n\nb.js" />
+    <Content Include="Scripts\select2\js\i18n\nl.js" />
+    <Content Include="Scripts\select2\js\i18n\pl.js" />
+    <Content Include="Scripts\select2\js\i18n\pt-BR.js" />
+    <Content Include="Scripts\select2\js\i18n\pt.js" />
+    <Content Include="Scripts\select2\js\i18n\ro.js" />
+    <Content Include="Scripts\select2\js\i18n\ru.js" />
+    <Content Include="Scripts\select2\js\i18n\sk.js" />
+    <Content Include="Scripts\select2\js\i18n\sr-Cyrl.js" />
+    <Content Include="Scripts\select2\js\i18n\sr.js" />
+    <Content Include="Scripts\select2\js\i18n\sv.js" />
+    <Content Include="Scripts\select2\js\i18n\th.js" />
+    <Content Include="Scripts\select2\js\i18n\tr.js" />
+    <Content Include="Scripts\select2\js\i18n\uk.js" />
+    <Content Include="Scripts\select2\js\i18n\vi.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-CN.js" />
+    <Content Include="Scripts\select2\js\i18n\zh-TW.js" />
+    <Content Include="Scripts\select2\js\select2-optinal.js" />
+    <Content Include="Scripts\select2\js\select2.full.js" />
+    <Content Include="Scripts\select2\js\select2.full.min.js" />
+    <Content Include="Scripts\select2\js\select2.js" />
+    <Content Include="Scripts\select2\js\select2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\site\Common.js" />
+    <Content Include="Scripts\site\Common.min.js">
+      <DependentUpon>Common.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\site\controllers\pageDetailsController.js" />
+    <Content Include="Scripts\site\controllers\newsDetailsController.js" />
+    <Content Include="Scripts\site\controllers\homeMasterController.js" />
+    <Content Include="Scripts\site\controllers\homeMasterController.min.js">
+      <DependentUpon>homeMasterController.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\site\controllers\newsDetailsController.min.js">
+      <DependentUpon>newsDetailsController.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\site\controllers\pageDetailsController.min.js">
+      <DependentUpon>pageDetailsController.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\site\homeController.js" />
+    <Content Include="Scripts\site\homeController.min.js">
+      <DependentUpon>homeController.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\site\service.utilities.js" />
+    <Content Include="Scripts\site\DataService.js" />
+    <Content Include="Scripts\site\DataService.min.js">
+      <DependentUpon>DataService.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\site\jquery.xml2json.js" />
+    <Content Include="Scripts\site\jquery.xml2json.min.js">
+      <DependentUpon>jquery.xml2json.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\site\lz-string.min.js" />
+    <Content Include="Scripts\site\service.utilities.min.js">
+      <DependentUpon>service.utilities.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\sys\admin\pagesAddManager.js" />
+    <Content Include="Scripts\sys\admin\newsAddManager.js" />
+    <Content Include="Scripts\sys\admin\newsManager - Copy %282%29.min.js">
+      <DependentUpon>pagesManager.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\sys\admin\newsManager - Copy.min - Copy.js">
+      <DependentUpon>pagesAddManager.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\sys\admin\pagesManager.js" />
+    <Content Include="Scripts\sys\admin\newsManager - Copy.min.js">
+      <DependentUpon>newsAddManager.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\sys\admin\newsManager.js" />
+    <Content Include="Scripts\sys\admin\newsManager.min.js">
+      <DependentUpon>newsManager.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\sys\admin\PropertiesManager.js" />
+    <Content Include="Scripts\sys\admin\PropertyAddEdit.js" />
+    <Content Include="Scripts\sys\admin\UrlRecordsManager.js" />
+    <Content Include="Scripts\sys\admin\ContactPersonsManager.js" />
+    <Content Include="Scripts\sys\featuresManager.js" />
+    <Content Include="Scripts\sys\imagesManager.js" />
+    <Content Include="Scripts\sys\regionsManager.js" />
+    <Content Include="Scripts\sys\citiesManager.min.js" />
+    <Content Include="Scripts\sys\clientsManager.js" />
+    <Content Include="Scripts\sys\clientsManager.min.js" />
+    <Content Include="Scripts\sys\Common.js" />
+    <Content Include="Scripts\sys\Common.min.js" />
+    <Content Include="Scripts\sys\commonMasterDetails.js" />
+    <Content Include="Scripts\sys\commonMasterDetails.min.js" />
+    <Content Include="Scripts\sys\DataService.js" />
+    <Content Include="Scripts\sys\DefaultGridManager.js" />
+    <Content Include="Scripts\sys\DefaultGridManager.min.js" />
+    <Content Include="Scripts\sys\DefaultGridVariables.js" />
+    <Content Include="Scripts\sys\DefaultGridVariables.min.js" />
+    <Content Include="Scripts\sys\DefaultMasterDetailsManager.js" />
+    <Content Include="Scripts\sys\DefaultMasterDetailsManager.min.js" />
+    <Content Include="Scripts\sys\defaultPage.js" />
+    <Content Include="Scripts\sys\defaultPage.min.js" />
+    <Content Include="Scripts\sys\jquery-dateFormat.js" />
+    <Content Include="Scripts\sys\jquery-dateFormat.min.js" />
+    <Content Include="Scripts\sys\jquery.xml2json.js" />
+    <Content Include="Scripts\sys\jquery.xml2json.min.js" />
+    <Content Include="Scripts\sys\moment.js" />
+    <Content Include="Scripts\sys\moment.min.js" />
+    <Content Include="Scripts\sys\numeral.min.js" />
+    <Content Include="Scripts\sys\sendSMS.js" />
+    <Content Include="Scripts\sys\sendSMS.min.js" />
+    <Content Include="Scripts\sys\settingsManager.js" />
+    <Content Include="Scripts\sys\settingsManager.min.js" />
+    <Content Include="Scripts\sys\utilities.js" />
+    <Content Include="Scripts\sys\utilities.min.js" />
+    <Content Include="Scripts\app\utiltities\jquery.xml2json.js" />
+    <Content Include="Scripts\app\utiltities\jquery.xml2json.min.js">
+      <DependentUpon>jquery.xml2json.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\utiltities\lz-string.min.js" />
+    <Content Include="Scripts\util\jquery.xml2json.js" />
+    <Content Include="Scripts\util\jquery.xml2json.min.js" />
+    <Content Include="Scripts\util\lz-string.min.js" />
+    <Content Include="Scripts\util\validationForm.js" />
+    <Content Include="Scripts\util\xml2json.js" />
+    <Content Include="Scripts\util\xml2json.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="sys\Images.aspx" />
+    <Content Include="sys\News.aspx" />
+    <Content Include="sys\PagesAddEdit.aspx" />
+    <Content Include="sys\NewsAddEdit.aspx" />
+    <Content Include="sys\Pages.aspx" />
+    <Content Include="sys\Properties.aspx" />
+    <Content Include="sys\UrlRecord.aspx" />
+    <Content Include="sys\ContactPersons.aspx" />
+    <Content Include="sys\Features.aspx" />
+    <Content Include="sys\Regions.aspx" />
+    <Content Include="sys\Clients.aspx" />
+    <Content Include="sys\Default.aspx" />
+    <Content Include="sys\home.aspx" />
+    <Content Include="sys\Settings.aspx" />
+    <Content Include="sys\UserControls\PageSettings.ascx" />
+    <Content Include="sys\Users.aspx" />
+    <Content Include="sys\PropertyAddEdit.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="sys\master.master" />
+    <Content Include="Scripts\sys\citiesManager.min.js.map" />
+    <Content Include="Scripts\sys\clientsManager.min.js.map" />
+    <Content Include="Scripts\sys\Common.min.js.map" />
+    <Content Include="Scripts\sys\commonMasterDetails.min.js.map" />
+    <Content Include="Scripts\sys\DefaultGridManager.min.js.map" />
+    <Content Include="Scripts\sys\DefaultGridVariables.min.js.map" />
+    <Content Include="Scripts\sys\DefaultMasterDetailsManager.min.js.map" />
+    <Content Include="Scripts\sys\jquery-dateFormat.min.js.map" />
+    <Content Include="Scripts\sys\moment.min.js.map" />
+    <Content Include="Scripts\sys\sendSMS.min.js.map" />
+    <Content Include="Scripts\sys\utilities.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Api\DataAccess.cs" />
+    <Compile Include="Api\dataController.cs" />
+    <Compile Include="Api\UploadController.cs" />
+    <Compile Include="download-mobileapp.aspx.cs">
+      <DependentUpon>download-mobileapp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="download-mobileapp.aspx.designer.cs">
+      <DependentUpon>download-mobileapp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SaveDataObj.cs" />
+    <Compile Include="NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyDetails.aspx.cs">
+      <DependentUpon>PropertyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PropertyDetails.aspx.designer.cs">
+      <DependentUpon>PropertyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Content Include="Api\SMSController.cs" />
+    <Content Include="Utilities\FeatchMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Compile Include="App_GlobalResources\sys.lang.ar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys.lang.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\sys.lang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sys.lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Session\CookiesManager.cs" />
+    <Compile Include="Session\SessionManager.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="sys\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\Images.aspx.cs">
+      <DependentUpon>Images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\Images.aspx.designer.cs">
+      <DependentUpon>Images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\master.master.cs">
+      <DependentUpon>master.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\PagesAddEdit.aspx.cs">
+      <DependentUpon>PagesAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\PagesAddEdit.aspx.designer.cs">
+      <DependentUpon>PagesAddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\NewsAddEdit.aspx.cs">
+      <DependentUpon>NewsAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\NewsAddEdit.aspx.designer.cs">
+      <DependentUpon>NewsAddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\Pages.aspx.cs">
+      <DependentUpon>Pages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\Pages.aspx.designer.cs">
+      <DependentUpon>Pages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\PropertyAddEdit.aspx.cs">
+      <DependentUpon>PropertyAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\PropertyAddEdit.aspx.designer.cs">
+      <DependentUpon>PropertyAddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\BaseMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Config.cs" />
+    <Compile Include="Utilities\ConvertListToDataTable.cs" />
+    <Compile Include="Utilities\jQueryDataTableParamModel.cs" />
+    <Compile Include="Utilities\LZString.cs" />
+    <Compile Include="Utilities\SendEmail.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Home.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\sys.lang.ar.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>sys.lang.ar.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\sys.lang.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>sys.lang.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49600</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49600/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

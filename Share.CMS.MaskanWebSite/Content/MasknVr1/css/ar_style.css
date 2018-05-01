@@ -1,0 +1,120 @@
+
+@font-face {
+    font-family: "js-flat";
+    src: url('../fonts/JF-Flat-regular.eot');
+    src: url('../fonts/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/JF-Flat-regular.woff') format('woff'),
+    url('../fonts/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body,.newsLeftImg h5.description_content,.matches h2{
+    font-family: "js-flat";
+    direction: rtl;
+
+}
+nav ul li{
+    float: left;
+}
+ul:not(.browser-default){
+    padding-right: 0;
+}
+.side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a li>a>[class*="mdi-"], .side-nav li>a>i.material-icons{
+    margin: 0 ;
+}
+.media-body a h5.media-heading{
+    font-size: 1.2em;
+}
+.buldImg h6.description_content, .newsLeftImg h5.description_content{
+    text-align: right;
+    font-size: 1.2em ;
+}
+
+.row .col{
+    float: right;
+}
+.media > .pull-right{
+    margin-top: 18px;
+    width: 50px;
+}
+.brokers .userDetails .userName{
+    text-align: right;
+}
+.brokers .about{
+    text-align: right;
+}
+.rating{
+    float: right;
+}
+a.fav{
+    float: left;
+}
+a.fav:hover{
+    color: red;
+}
+.buildings .BuildRight{
+    text-align: right;
+}
+.buildings .BuildRight ul li{
+float: right;
+}
+.buildingsBtn{
+    width: 50%;
+    margin: 0 auto;
+}
+.topDeals .media .media-body{
+    text-align: right;
+}
+.topDeals .media .media-body a h6{
+    color: #ff8f08;
+    margin: .5em 5em;
+}
+.urProperty  h5{
+    font-family: 'js-flat';
+    font-weight: bold;
+}
+.MainContent {
+    margin-top: 80px;
+    text-align: right;
+}
+input[type=text]{
+    text-align: left;
+}
+.sort-list-btn button img{
+    height: 30px;
+}
+.buildingsBtn{
+    width: 100%;
+}.buildings .btn-floating{
+    top:71px;
+ }
+ .filter .col-md-2{
+     float: right;
+     text-align: right;
+ }
+
+.loginRight .row{
+    border-right: none;
+    border-left: 2px solid #ff8d0d;;
+}
+input[type=text]{
+    text-align: right;
+}
+.navbar-fixed form{
+    margin-top: 15px;
+    margin-right: 0;
+    margin-left: 50px;
+}
+.left-addon .fa{
+    position: absolute;
+    padding: 14px 0;
+    pointer-events: none;
+    left: 0;
+}.left-addon .fa { left: 0px;}
+.page-footer ul li{
+    float: none;
+    display: block;
+}
+.page-footer ul.pay li {
+    float: right;
+}

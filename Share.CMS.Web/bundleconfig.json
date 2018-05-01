@@ -1,0 +1,143 @@
+[
+  {
+    "outputFileName": "Scripts/sys/addPost.min.js",
+    "inputFiles": [
+      "Scripts/sys/addPost.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sys/featuresManager.min.js",
+    "inputFiles": [
+      "Scripts/sys/featuresManager.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sys/defaultPage.min.js",
+    "inputFiles": [
+      "Scripts/sys/defaultPage.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sys/mastetUtil.min.js",
+    "inputFiles": [
+      "Scripts/sys/mastetUtil.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sys/usersManager.min.js",
+    "inputFiles": [
+      "Scripts/sys/usersManager.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/app/services/DataService.min.js",
+    "inputFiles": [
+      "Scripts/app/services/DataService.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/app/services/Common.min.js",
+    "inputFiles": [
+      "Scripts/app/services/Common.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/app/utiltities/xml2json.min.js",
+    "inputFiles": [
+      "Scripts/app/utiltities/xml2json.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/app/utiltities/jquery.xml2json.min.js",
+    "inputFiles": [
+      "Scripts/app/utiltities/jquery.xml2json.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sys/admin/newsManager.min.js",
+    "inputFiles": [
+      "Scripts/sys/admin/newsManager.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/Common.min.js",
+    "inputFiles": [
+      "Scripts/site/Common.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/DataService.min.js",
+    "inputFiles": [
+      "Scripts/site/DataService.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/jquery.xml2json.min.js",
+    "inputFiles": [
+      "Scripts/site/jquery.xml2json.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/site.services.min.js",
+    "inputFiles": [
+      "Scripts/site/Common.js",
+      "Scripts/site/DataService.js",
+      "Scripts/site/jquery.xml2json.js",
+      "Scripts/site/lz-string.min.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/homeController.min.js",
+    "inputFiles": [
+      "Scripts/site/homeController.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/service.utilities.min.js",
+    "inputFiles": [
+      "Scripts/site/service.utilities.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/controllers/homeMasterController.min.js",
+    "inputFiles": [
+      "Scripts/site/controllers/homeMasterController.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/controllers/newsDetailsController.min.js",
+    "inputFiles": [
+      "Scripts/site/controllers/newsDetailsController.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site/controllers/pageDetailsController.min.js",
+    "inputFiles": [
+      "Scripts/site/controllers/pageDetailsController.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sys/imagesManager.min.js",
+    "inputFiles": [
+      "Scripts/sys/imagesManager.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/datatable/Arabic.min.js",
+    "inputFiles": [
+      "Scripts/datatable/Arabic.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/sys/DataService.min.js",
+    "inputFiles": [
+      "Scripts/sys/DataService.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/sys/assets/js/ace/elements.fileinput.min.js",
+    "inputFiles": [
+      "Content/sys/assets/js/ace/elements.fileinput.js"
+    ]
+  }
+]
